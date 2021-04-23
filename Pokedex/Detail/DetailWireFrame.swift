@@ -12,7 +12,7 @@ import UIKit
 class DetailWireFrame: DetailWireFrameProtocol {
 
     class func createDetailModule() -> UIViewController {
-        let navController = mainStoryboard.instantiateViewController(withIdentifier: "DetailView")
+        let navController = detailStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.detailViewStoryBoardID)
         if let view = navController.children.first as? DetailView {
             let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter()
             let interactor: DetailInteractorInputProtocol & DetailRemoteDataManagerOutputProtocol = DetailInteractor()
@@ -34,8 +34,8 @@ class DetailWireFrame: DetailWireFrameProtocol {
         return UIViewController()
     }
     
-    static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "DetailView", bundle: Bundle.main)
+    static var detailStoryboard: UIStoryboard {
+        return UIStoryboard(name: Constants.StoryBoard.detailViewStoryBoardID, bundle: Bundle.main)
     }
     
 }

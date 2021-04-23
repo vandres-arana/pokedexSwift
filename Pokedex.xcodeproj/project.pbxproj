@@ -23,9 +23,9 @@
 		69E96D3E26324A480048E6B4 /* DetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D3726324A480048E6B4 /* DetailWireFrame.swift */; };
 		69E96D4126324C180048E6B4 /* ListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E96D4026324C180048E6B4 /* ListView.storyboard */; };
 		69E96D4626324DA10048E6B4 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E96D4526324DA10048E6B4 /* DetailView.storyboard */; };
+		69E96D4C26336A7A0048E6B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D4B26336A7A0048E6B4 /* Constants.swift */; };
 		69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBA263203ED00420B32 /* AppDelegate.swift */; };
 		69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBC263203ED00420B32 /* SceneDelegate.swift */; };
-		69F76EBF263203ED00420B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBE263203ED00420B32 /* ViewController.swift */; };
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -47,10 +47,10 @@
 		69E96D3726324A480048E6B4 /* DetailWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireFrame.swift; sourceTree = "<group>"; };
 		69E96D4026324C180048E6B4 /* ListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListView.storyboard; sourceTree = "<group>"; };
 		69E96D4526324DA10048E6B4 /* DetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
+		69E96D4B26336A7A0048E6B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		69F76EB7263203ED00420B32 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F76EBA263203ED00420B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69F76EBC263203ED00420B32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69F76EBE263203ED00420B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69F76EC3263203EF00420B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +97,15 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		69E96D48263369D90048E6B4 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				69F76EC8263203EF00420B32 /* Info.plist */,
+				69E96D4B26336A7A0048E6B4 /* Constants.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		69F76EAE263203ED00420B32 = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +127,11 @@
 			children = (
 				69E96D3026324A3B0048E6B4 /* Detail */,
 				69E96D1F263249E40048E6B4 /* List */,
+				69E96D48263369D90048E6B4 /* Supporting */,
 				69F76EBA263203ED00420B32 /* AppDelegate.swift */,
 				69F76EBC263203ED00420B32 /* SceneDelegate.swift */,
-				69F76EBE263203ED00420B32 /* ViewController.swift */,
 				69F76EC3263203EF00420B32 /* Assets.xcassets */,
 				69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */,
-				69F76EC8263203EF00420B32 /* Info.plist */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -200,8 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E96D2B26324A000048E6B4 /* ListView.swift in Sources */,
+				69E96D4C26336A7A0048E6B4 /* Constants.swift in Sources */,
 				69E96D3E26324A480048E6B4 /* DetailWireFrame.swift in Sources */,
-				69F76EBF263203ED00420B32 /* ViewController.swift in Sources */,
 				69E96D3926324A480048E6B4 /* DetailLocalDataManager.swift in Sources */,
 				69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */,
 				69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */,
@@ -356,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VFG22J23H;
-				INFOPLIST_FILE = Pokedex/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VFG22J23H;
-				INFOPLIST_FILE = Pokedex/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

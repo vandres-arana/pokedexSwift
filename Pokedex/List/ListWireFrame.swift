@@ -12,7 +12,7 @@ import UIKit
 class ListWireFrame: ListWireFrameProtocol {
 
     class func createListModule() -> UIViewController {
-        let navController = mainStoryboard.instantiateViewController(withIdentifier: "ListView")
+        let navController = listStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.listViewStoryBoardID)
         if let view = navController.children.first as? ListView {
             let presenter: ListPresenterProtocol & ListInteractorOutputProtocol = ListPresenter()
             let interactor: ListInteractorInputProtocol & ListRemoteDataManagerOutputProtocol = ListInteractor()
@@ -34,8 +34,8 @@ class ListWireFrame: ListWireFrameProtocol {
         return UIViewController()
     }
     
-    static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "ListView", bundle: Bundle.main)
+    static var listStoryboard: UIStoryboard {
+        return UIStoryboard(name: Constants.StoryBoard.listViewStoryBoardID, bundle: Bundle.main)
     }
     
 }
