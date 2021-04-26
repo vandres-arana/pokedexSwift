@@ -29,7 +29,6 @@
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
-		7E21B1942637179F0068518A /* Hola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E21B1932637179F0068518A /* Hola.swift */; };
 		7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7EA11CDC2636566100D5E7F2 /* list.graphql */; };
 		7EA12C84263637080094951E /* PokeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA12C83263637080094951E /* PokeApiService.swift */; };
 		7EA12C9526363AAD0094951E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA12C9426363AAD0094951E /* schema.json */; };
@@ -61,7 +60,6 @@
 		69F76EC3263203EF00420B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E21B1932637179F0068518A /* Hola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hola.swift; sourceTree = "<group>"; };
 		7EA11CDC2636566100D5E7F2 /* list.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = list.graphql; sourceTree = "<group>"; };
 		7EA12C83263637080094951E /* PokeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiService.swift; sourceTree = "<group>"; };
 		7EA12C9426363AAD0094951E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 			children = (
 				7EC885B3263712DD0065CA92 /* API.swift */,
 				7EA12C83263637080094951E /* PokeApiService.swift */,
-				7E21B1932637179F0068518A /* Hola.swift */,
 			);
 			path = NetworkingServices;
 			sourceTree = "<group>";
@@ -342,7 +339,6 @@
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
-				7E21B1942637179F0068518A /* Hola.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,
 				69E96D2C26324A000048E6B4 /* ListRemoteDataManager.swift in Sources */,
 			);
