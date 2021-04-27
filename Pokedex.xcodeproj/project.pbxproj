@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69CE1A7B2637841700BEBF3D /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE1A792637841700BEBF3D /* GenerationCollectionViewCell.swift */; };
+		69CE1A7C2637841700BEBF3D /* GenerationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CE1A7A2637841700BEBF3D /* GenerationCollectionViewCell.xib */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
 		69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */; };
 		69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2226324A000048E6B4 /* ListProtocols.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69CE1A792637841700BEBF3D /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
+		69CE1A7A2637841700BEBF3D /* GenerationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationCollectionViewCell.xib; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLocalDataManager.swift; sourceTree = "<group>"; };
 		69E96D2226324A000048E6B4 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -82,9 +86,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69CE1A75263783A100BEBF3D /* Generations */ = {
+			isa = PBXGroup;
+			children = (
+				69CE1A76263783A800BEBF3D /* CollectionViewCell */,
+			);
+			path = Generations;
+			sourceTree = "<group>";
+		};
+		69CE1A76263783A800BEBF3D /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69CE1A792637841700BEBF3D /* GenerationCollectionViewCell.swift */,
+				69CE1A7A2637841700BEBF3D /* GenerationCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		69E96D1F263249E40048E6B4 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				69CE1A75263783A100BEBF3D /* Generations */,
 				69E96D2026324A000048E6B4 /* ListPresenter.swift */,
 				69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */,
 				69E96D2226324A000048E6B4 /* ListProtocols.swift */,
@@ -243,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CE1A7C2637841700BEBF3D /* GenerationCollectionViewCell.xib in Resources */,
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
@@ -334,6 +357,7 @@
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
 				69E96D2A26324A000048E6B4 /* ListInteractor.swift in Sources */,
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
+				69CE1A7B2637841700BEBF3D /* GenerationCollectionViewCell.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
