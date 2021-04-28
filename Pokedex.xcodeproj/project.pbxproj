@@ -29,6 +29,8 @@
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
+		7E7B290C263850A600C16E97 /* FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B290A263850A600C16E97 /* FilterMenu.swift */; };
+		7E7B290D263850A600C16E97 /* FilterMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7B290B263850A600C16E97 /* FilterMenu.xib */; };
 		7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7EA11CDC2636566100D5E7F2 /* list.graphql */; };
 		7EA12C84263637080094951E /* PokeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA12C83263637080094951E /* PokeApiService.swift */; };
 		7EA12C9526363AAD0094951E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA12C9426363AAD0094951E /* schema.json */; };
@@ -60,6 +62,8 @@
 		69F76EC3263203EF00420B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E7B290A263850A600C16E97 /* FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenu.swift; sourceTree = "<group>"; };
+		7E7B290B263850A600C16E97 /* FilterMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterMenu.xib; sourceTree = "<group>"; };
 		7EA11CDC2636566100D5E7F2 /* list.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = list.graphql; sourceTree = "<group>"; };
 		7EA12C83263637080094951E /* PokeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiService.swift; sourceTree = "<group>"; };
 		7EA12C9426363AAD0094951E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		69E96D1F263249E40048E6B4 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				7E7B29092638507800C16E97 /* FilterMenu */,
 				69E96D2026324A000048E6B4 /* ListPresenter.swift */,
 				69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */,
 				69E96D2226324A000048E6B4 /* ListProtocols.swift */,
@@ -155,6 +160,15 @@
 				69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */,
 			);
 			path = Pokedex;
+			sourceTree = "<group>";
+		};
+		7E7B29092638507800C16E97 /* FilterMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7E7B290A263850A600C16E97 /* FilterMenu.swift */,
+				7E7B290B263850A600C16E97 /* FilterMenu.xib */,
+			);
+			path = FilterMenu;
 			sourceTree = "<group>";
 		};
 		7EC8857F263703850065CA92 /* NetworkingServices */ = {
@@ -245,6 +259,7 @@
 			files = (
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
+				7E7B290D263850A600C16E97 /* FilterMenu.xib in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
 				69E96D4126324C180048E6B4 /* ListView.storyboard in Resources */,
 				69E96D4626324DA10048E6B4 /* DetailView.storyboard in Resources */,
@@ -328,6 +343,7 @@
 				69E96D4C26336A7A0048E6B4 /* Constants.swift in Sources */,
 				69E96D3E26324A480048E6B4 /* DetailWireFrame.swift in Sources */,
 				69E96D3926324A480048E6B4 /* DetailLocalDataManager.swift in Sources */,
+				7E7B290C263850A600C16E97 /* FilterMenu.swift in Sources */,
 				69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */,
 				69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
