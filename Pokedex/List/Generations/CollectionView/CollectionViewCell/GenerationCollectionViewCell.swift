@@ -12,9 +12,14 @@ class GenerationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var View: UIView!
     @IBOutlet weak var pokeball: UIImageView!
     
+    @IBOutlet weak var firstImage: UIImageView!
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var thirdImage: UIImageView!
+    
+    @IBOutlet weak var generationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code 
+        // Initialization code
     }
-
 }

@@ -79,7 +79,11 @@
             <size key="customSize" width="243" height="195"/>
             <connections>
                 <outlet property="View" destination="0Vp-Zo-EE4" id="PcO-mH-JIB"/>
+                <outlet property="firstImage" destination="0oT-yz-jYP" id="OeK-MD-Hvn"/>
+                <outlet property="generationLabel" destination="QHV-Xn-0Wr" id="oUK-5I-haH"/>
                 <outlet property="pokeball" destination="D6G-Bk-rt0" id="lca-ng-zj1"/>
+                <outlet property="secondImage" destination="r7t-ME-3Gt" id="8N3-AY-7bh"/>
+                <outlet property="thirdImage" destination="faH-xP-lFQ" id="MIj-zT-wAc"/>
             </connections>
             <point key="canvasLocation" x="87" y="143"/>
         </collectionViewCell>

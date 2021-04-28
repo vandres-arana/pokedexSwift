@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693391B22639FAA900C55648 /* GenerationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AB2639FAA900C55648 /* GenerationsPresenter.swift */; };
+		693391B32639FAA900C55648 /* GenerationsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AC2639FAA900C55648 /* GenerationsLocalDataManager.swift */; };
+		693391B42639FAA900C55648 /* GenerationsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AD2639FAA900C55648 /* GenerationsProtocols.swift */; };
+		693391B52639FAA900C55648 /* GenerationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AE2639FAA900C55648 /* GenerationsInteractor.swift */; };
+		693391B62639FAA900C55648 /* GenerationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AF2639FAA900C55648 /* GenerationsView.swift */; };
+		693391B72639FAA900C55648 /* GenerationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391B02639FAA900C55648 /* GenerationsRemoteDataManager.swift */; };
+		693391B82639FAA900C55648 /* GenerationsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391B12639FAA900C55648 /* GenerationsWireFrame.swift */; };
 		69CE1A7B2637841700BEBF3D /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE1A792637841700BEBF3D /* GenerationCollectionViewCell.swift */; };
 		69CE1A7C2637841700BEBF3D /* GenerationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CE1A7A2637841700BEBF3D /* GenerationCollectionViewCell.xib */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
@@ -39,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		693391AB2639FAA900C55648 /* GenerationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsPresenter.swift; sourceTree = "<group>"; };
+		693391AC2639FAA900C55648 /* GenerationsLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsLocalDataManager.swift; sourceTree = "<group>"; };
+		693391AD2639FAA900C55648 /* GenerationsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsProtocols.swift; sourceTree = "<group>"; };
+		693391AE2639FAA900C55648 /* GenerationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsInteractor.swift; sourceTree = "<group>"; };
+		693391AF2639FAA900C55648 /* GenerationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsView.swift; sourceTree = "<group>"; };
+		693391B02639FAA900C55648 /* GenerationsRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManager.swift; sourceTree = "<group>"; };
+		693391B12639FAA900C55648 /* GenerationsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrame.swift; sourceTree = "<group>"; };
 		69CE1A792637841700BEBF3D /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
 		69CE1A7A2637841700BEBF3D /* GenerationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationCollectionViewCell.xib; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
@@ -86,10 +100,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69CE1A75263783A100BEBF3D /* Generations */ = {
+		6911120826384D9F00795C2A /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				69CE1A76263783A800BEBF3D /* CollectionViewCell */,
+				693391AB2639FAA900C55648 /* GenerationsPresenter.swift */,
+				693391AC2639FAA900C55648 /* GenerationsLocalDataManager.swift */,
+				693391AD2639FAA900C55648 /* GenerationsProtocols.swift */,
+				693391AE2639FAA900C55648 /* GenerationsInteractor.swift */,
+				693391AF2639FAA900C55648 /* GenerationsView.swift */,
+				693391B02639FAA900C55648 /* GenerationsRemoteDataManager.swift */,
+				693391B12639FAA900C55648 /* GenerationsWireFrame.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		69CE1A75263783A100BEBF3D /* Generations */ = {
+			isa = PBXGroup;
+			children = (
+				6911120826384D9F00795C2A /* CollectionView */,
 			);
 			path = Generations;
 			sourceTree = "<group>";
@@ -345,9 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693391B82639FAA900C55648 /* GenerationsWireFrame.swift in Sources */,
+				693391B52639FAA900C55648 /* GenerationsInteractor.swift in Sources */,
 				69E96D2B26324A000048E6B4 /* ListView.swift in Sources */,
 				7EC885B4263712DD0065CA92 /* API.swift in Sources */,
 				7EA12C84263637080094951E /* PokeApiService.swift in Sources */,
+				693391B62639FAA900C55648 /* GenerationsView.swift in Sources */,
 				69E96D4C26336A7A0048E6B4 /* Constants.swift in Sources */,
 				69E96D3E26324A480048E6B4 /* DetailWireFrame.swift in Sources */,
 				69E96D3926324A480048E6B4 /* DetailLocalDataManager.swift in Sources */,
@@ -356,11 +388,15 @@
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
 				69E96D2A26324A000048E6B4 /* ListInteractor.swift in Sources */,
+				693391B22639FAA900C55648 /* GenerationsPresenter.swift in Sources */,
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
 				69CE1A7B2637841700BEBF3D /* GenerationCollectionViewCell.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
+				693391B72639FAA900C55648 /* GenerationsRemoteDataManager.swift in Sources */,
+				693391B42639FAA900C55648 /* GenerationsProtocols.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
+				693391B32639FAA900C55648 /* GenerationsLocalDataManager.swift in Sources */,
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,
