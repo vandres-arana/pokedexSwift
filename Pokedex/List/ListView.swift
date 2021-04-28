@@ -19,6 +19,12 @@ class ListView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func onButtonTapped(_ sender: UIButton) {
+        let filterVC = FilterMenu()
+        present(filterVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension ListView: ListViewProtocol {
