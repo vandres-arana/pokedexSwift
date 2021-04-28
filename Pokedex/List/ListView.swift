@@ -22,5 +22,5 @@ class ListView: UIViewController {
 }
 
 extension ListView: ListViewProtocol {
-    // TODO: implement view output methods
+    // TODOs: implement view output methods
 }
