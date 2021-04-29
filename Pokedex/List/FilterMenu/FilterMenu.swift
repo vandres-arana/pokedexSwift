@@ -51,13 +51,15 @@ extension FilterMenu:  UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionView {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuTypeCell.reuseIdentifier, for: indexPath) as? FilterMenuTypeCell {
-                cell.configure(types[indexPath.row])
+                cell.configure(types[indexPath.row].name)
+                cell.isSelected = types[indexPath.row].isSelected
                 return cell
             }
             return UICollectionViewCell()
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuTypeCell.reuseIdentifier, for: indexPath) as? FilterMenuTypeCell {
-                cell.configure(types[indexPath.row])
+                cell.configure(types[indexPath.row].name)
+                cell.isSelected = types[indexPath.row].isSelected
                 return cell
             }
             return UICollectionViewCell()
@@ -76,10 +78,11 @@ extension FilterMenu: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionView {
             let cell = collectionView.cellForItem(at: indexPath)
-            cell?.isSelected = !cell!.isSelected
+            cell?.isSelected = !types[indexPath.row].isSelected
         } else {
             let cell = collectionView.cellForItem(at: indexPath)
-            cell?.isSelected = !cell!.isSelected
+            cell?.isSelected = !types[indexPath.row].isSelected
         }
+        types[indexPath.row].isSelected = !types[indexPath.row].isSelected
     }
 }

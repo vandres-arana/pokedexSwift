@@ -19,25 +19,25 @@ class FilterMenuTypeCell: UICollectionViewCell {
         return "FilterMenuTypeCell"
     }
     
-    var pokemonType: PokemonType?
+    var name: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure(_ pokemonType2: PokemonType) {
-        self.pokemonType = pokemonType2
-        imageView.image = #imageLiteral(resourceName: pokemonType2.name)
-        imageView.tintColor = UIColor(named: pokemonType2.name)
+    func configure(_ name: String) {
+        self.name = name
+        imageView.image = #imageLiteral(resourceName: name)
+        imageView.tintColor = UIColor(named: name)
         imageViewBackground.tintColor = .white
     }
     
     func invertColours() {
         if isSelected {
             imageView.tintColor = .white
-            imageViewBackground.tintColor = UIColor(named: pokemonType!.name)
+            imageViewBackground.tintColor = UIColor(named: name)
         } else {
-            imageView.tintColor = UIColor(named: pokemonType!.name)
+            imageView.tintColor = UIColor(named: name)
             imageViewBackground.tintColor = .white
         }
     }
