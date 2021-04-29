@@ -12,8 +12,8 @@ import UIKit
 class GenerationsWireFrame: GenerationsWireFrameProtocol {
 
     class func createGenerationsModule() -> UIViewController {
-        let navController = mainStoryboard.instantiateViewController(withIdentifier: "Generations")
-        if let view = navController.children.first as? GenerationsView {
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "GenerationsView")
+        if let view = navController as? GenerationsView {
             let presenter: GenerationsPresenterProtocol & GenerationsInteractorOutputProtocol = GenerationsPresenter()
             let interactor: GenerationsInteractorInputProtocol & GenerationsRemoteDataManagerOutputProtocol = GenerationsInteractor()
             let localDataManager: GenerationsLocalDataManagerInputProtocol = GenerationsLocalDataManager()

@@ -12,7 +12,7 @@ class GenerationsRemoteDataManager:GenerationsRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: GenerationsRemoteDataManagerOutputProtocol?
     
-    func externalGetGenerations(){
+    func externalRequestGenerationsNames() {
         PokeApiService.shared.apollo.fetch(query: GetGenerationsQuery()) { result in
             switch result {
             case .success(let getGenerationsQuery) :

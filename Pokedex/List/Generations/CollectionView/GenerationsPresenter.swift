@@ -20,7 +20,7 @@ class GenerationsPresenter  {
 extension GenerationsPresenter: GenerationsPresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
-        interactor?.getGenerations()
+        interactor?.interactorRequestGenerationsNames();
     }
 }
 

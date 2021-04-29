@@ -40,7 +40,7 @@ protocol GenerationsInteractorInputProtocol: AnyObject {
     var localDatamanager: GenerationsLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: GenerationsRemoteDataManagerInputProtocol? { get set }
     
-    func getGenerations();
+    func interactorRequestGenerationsNames();
 }
 
 protocol GenerationsDataManagerInputProtocol: AnyObject {
@@ -50,7 +50,7 @@ protocol GenerationsDataManagerInputProtocol: AnyObject {
 protocol GenerationsRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: GenerationsRemoteDataManagerOutputProtocol? { get set }
-    func externalGetGenerations();
+    func externalRequestGenerationsNames();
 }
 
 protocol GenerationsRemoteDataManagerOutputProtocol: AnyObject {

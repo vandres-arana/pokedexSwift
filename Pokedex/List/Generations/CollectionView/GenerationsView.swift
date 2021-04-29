@@ -19,26 +19,26 @@ class GenerationsView: UIViewController {
     // MARK: Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
         presenter?.viewDidLoad()
+        
+//                PokeApiService.shared.apollo.fetch(query: GetGenerationsQuery()) { result in
+//                    switch result {
+//                    case .success(let getGenerationsQuery) :
+//                        self.generations = getGenerationsQuery.data!.generations;
 //
-//        PokeApiService.shared.apollo.fetch(query: GetGenerationsQuery()) { result in
-//            switch result {
-//            case .success(let getGenerationsQuery) :
-//                self.generations = getGenerationsQuery.data!.generations;
+//                        DispatchQueue.main.async {
+//                            self.generationCollectionView.reloadData()
+//                        }
 //
-//                DispatchQueue.main.async {
-//                    self.generationCollectionView.reloadData()
+//                        print(self.generations)
+//
+//                        break;
+//                    case .failure(let error) :
+//                        print(error);
+//                        break;
+//                    }
 //                }
-//
-//                print(self.generations)
-//
-//                break;
-//            case .failure(let error) :
-//                print(error);
-//                break;
-//            }
-//        }
         
     }
 }
@@ -49,6 +49,7 @@ extension GenerationsView: GenerationsViewProtocol {
         self.generations = receivedData;
         DispatchQueue.main.async {
             self.generationCollectionView.reloadData()
+            print(self.generations)
         }
     }
 }
