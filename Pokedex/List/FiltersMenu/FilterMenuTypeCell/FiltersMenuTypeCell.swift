@@ -7,16 +7,16 @@
 
 import UIKit
 
-class FilterMenuTypeCell: UICollectionViewCell {
+class FiltersMenuTypeCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageViewBackground: UIImageView!
     
     class var reuseIdentifier: String {
-        return "FilterMenuTypeReuseIdentifier"
+        return "FiltersMenuTypeReuseIdentifier"
     }
     class var nibName: String {
-        return "FilterMenuTypeCell"
+        return "FiltersMenuTypeCell"
     }
     
     var name: String = ""

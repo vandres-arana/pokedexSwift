@@ -32,9 +32,9 @@ class FiltersMenuView: UIViewController {
     }
     
     func registerNib() {
-        let nib = UINib(nibName: FilterMenuTypeCell.nibName, bundle: nil)
-        typeCollection?.register(nib, forCellWithReuseIdentifier: FilterMenuTypeCell.reuseIdentifier)
-        weaknessCollection?.register(nib, forCellWithReuseIdentifier: FilterMenuTypeCell.reuseIdentifier)
+        let nib = UINib(nibName: FiltersMenuTypeCell.nibName, bundle: nil)
+        typeCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
+        weaknessCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
         if let flowLayout = self.typeCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
@@ -50,7 +50,7 @@ extension FiltersMenuView:  UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuTypeCell.reuseIdentifier, for: indexPath) as? FilterMenuTypeCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
             var type: PokemonType
             if collectionView == self.typeCollection {
                 type = (presenter?.getPokemonTypeByIndex(index: indexPath.row, collection: 0))!
