@@ -16,7 +16,7 @@ class GenerationsInteractor: GenerationsInteractorInputProtocol {
     var remoteDatamanager: GenerationsRemoteDataManagerInputProtocol?
     
     func getGenerations(){
-        remoteDatamanager?.getGenerations();
+        remoteDatamanager?.externalGetGenerations();
     }
 }
 

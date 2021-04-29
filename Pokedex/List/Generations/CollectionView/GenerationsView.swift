@@ -14,6 +14,7 @@ class GenerationsView: UIViewController {
     // MARK: Properties
     var presenter: GenerationsPresenterProtocol?
     var generations: [GetGenerationsQuery.Data.Generation] = [];
+    var generationsT: [String] = ["1","2"];
     
     @IBOutlet weak var generationCollectionView: UICollectionView!
     
@@ -21,8 +22,21 @@ class GenerationsView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         presenter?.viewDidLoad()
-        generationCollectionView.dataSource = self;
+        
+        PokeApiService.shared.apollo.fetch(query: GetGenerationsQuery()) { result in
+            switch result {
+            case .success(let getGenerationsQuery) :
+                self.generations = getGenerationsQuery.data!.generations;
+                print(self.generations)
+                break;
+            case .failure(let error) :
+                print(error);
+                break;
+            }
+        }
+        
     }
 }
 
@@ -39,14 +53,14 @@ extension GenerationsView: GenerationsViewProtocol {
 extension GenerationsView : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return generations.count;
+        return generationsT.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.IdentifierReusableCell.generationReusableCell, for: indexPath) as! GenerationCollectionViewCell;
         
-        cell.generationLabel.text = generations[indexPath.row].name;
+        cell.updateUI(name: generationsT[indexPath.row]);
         
         return cell;
     }
