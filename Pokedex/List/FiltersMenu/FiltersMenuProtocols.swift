@@ -44,6 +44,8 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     var localDatamanager: FiltersMenuLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: FiltersMenuRemoteDataManagerInputProtocol? { get set }
     
+    func loadPokemonTypeList()
+    
     func getPokemonTypeListCount() -> Int
     
     func getPokemonTypeByIndex(index: Int, collection: Int) -> PokemonType
@@ -65,5 +67,6 @@ protocol FiltersMenuRemoteDataManagerOutputProtocol: AnyObject {
 }
 
 protocol FiltersMenuLocalDataManagerInputProtocol: AnyObject {
+    func loadPokemonTypeList() -> [PokemonType]
     // INTERACTOR -> LOCALDATAMANAGER
 }
