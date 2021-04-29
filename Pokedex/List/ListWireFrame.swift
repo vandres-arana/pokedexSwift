@@ -19,7 +19,6 @@ class ListWireFrame: ListWireFrameProtocol {
             let localDataManager: ListLocalDataManagerInputProtocol = ListLocalDataManager()
             let remoteDataManager: ListRemoteDataManagerInputProtocol = ListRemoteDataManager()
             let wireFrame: ListWireFrameProtocol = ListWireFrame()
-            
             view.presenter = presenter
             presenter.view = view
             presenter.wireFrame = wireFrame
@@ -28,14 +27,11 @@ class ListWireFrame: ListWireFrameProtocol {
             interactor.localDatamanager = localDataManager
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
-            
             return navController
         }
         return UIViewController()
     }
-    
     static var listStoryboard: UIStoryboard {
         return UIStoryboard(name: Constants.StoryBoard.listViewStoryBoardID, bundle: Bundle.main)
     }
-    
 }

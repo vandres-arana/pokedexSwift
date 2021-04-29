@@ -18,5 +18,5 @@ class DetailInteractor: DetailInteractorInputProtocol {
 }
 
 extension DetailInteractor: DetailRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+    // TODOs: Implement use case methods
 }

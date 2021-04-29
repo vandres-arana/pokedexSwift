@@ -18,5 +18,5 @@ class ListInteractor: ListInteractorInputProtocol {
 }
 
 extension ListInteractor: ListRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+    // TODOs: Implement use case methods
 }
