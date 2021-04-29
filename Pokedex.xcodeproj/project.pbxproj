@@ -30,8 +30,14 @@
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
 		7E2B81CC263A8C2D00E39D0F /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */; };
-		7E7B290C263850A600C16E97 /* FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B290A263850A600C16E97 /* FilterMenu.swift */; };
-		7E7B290D263850A600C16E97 /* FilterMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7B290B263850A600C16E97 /* FilterMenu.xib */; };
+		7E2B81DC263AE27D00E39D0F /* FiltersMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81D5263AE27D00E39D0F /* FiltersMenuPresenter.swift */; };
+		7E2B81DD263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81D6263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift */; };
+		7E2B81DE263AE27D00E39D0F /* FiltersMenuProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81D7263AE27D00E39D0F /* FiltersMenuProtocols.swift */; };
+		7E2B81DF263AE27D00E39D0F /* FiltersMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81D8263AE27D00E39D0F /* FiltersMenuInteractor.swift */; };
+		7E2B81E0263AE27D00E39D0F /* FiltersMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81D9263AE27D00E39D0F /* FiltersMenuView.swift */; };
+		7E2B81E1263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81DA263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift */; };
+		7E2B81E2263AE27D00E39D0F /* FiltersMenuWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81DB263AE27D00E39D0F /* FiltersMenuWireFrame.swift */; };
+		7E2B81E4263AE28F00E39D0F /* FiltersMenuView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2B81E3263AE28F00E39D0F /* FiltersMenuView.storyboard */; };
 		7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7EA11CDC2636566100D5E7F2 /* list.graphql */; };
 		7EA12C84263637080094951E /* PokeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA12C83263637080094951E /* PokeApiService.swift */; };
 		7EA12C9526363AAD0094951E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA12C9426363AAD0094951E /* schema.json */; };
@@ -66,8 +72,14 @@
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
-		7E7B290A263850A600C16E97 /* FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenu.swift; sourceTree = "<group>"; };
-		7E7B290B263850A600C16E97 /* FilterMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterMenu.xib; sourceTree = "<group>"; };
+		7E2B81D5263AE27D00E39D0F /* FiltersMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuPresenter.swift; sourceTree = "<group>"; };
+		7E2B81D6263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuLocalDataManager.swift; sourceTree = "<group>"; };
+		7E2B81D7263AE27D00E39D0F /* FiltersMenuProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuProtocols.swift; sourceTree = "<group>"; };
+		7E2B81D8263AE27D00E39D0F /* FiltersMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuInteractor.swift; sourceTree = "<group>"; };
+		7E2B81D9263AE27D00E39D0F /* FiltersMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuView.swift; sourceTree = "<group>"; };
+		7E2B81DA263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuRemoteDataManager.swift; sourceTree = "<group>"; };
+		7E2B81DB263AE27D00E39D0F /* FiltersMenuWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersMenuWireFrame.swift; sourceTree = "<group>"; };
+		7E2B81E3263AE28F00E39D0F /* FiltersMenuView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiltersMenuView.storyboard; sourceTree = "<group>"; };
 		7EA11CDC2636566100D5E7F2 /* list.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = list.graphql; sourceTree = "<group>"; };
 		7EA12C83263637080094951E /* PokeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiService.swift; sourceTree = "<group>"; };
 		7EA12C9426363AAD0094951E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -95,7 +107,7 @@
 		69E96D1F263249E40048E6B4 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				7E7B29092638507800C16E97 /* FilterMenu */,
+				7E2B81D4263AE26A00E39D0F /* FiltersMenu */,
 				69E96D2026324A000048E6B4 /* ListPresenter.swift */,
 				69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */,
 				69E96D2226324A000048E6B4 /* ListProtocols.swift */,
@@ -168,14 +180,29 @@
 			path = Pokedex;
 			sourceTree = "<group>";
 		};
-		7E7B29092638507800C16E97 /* FilterMenu */ = {
+		7E2B81D4263AE26A00E39D0F /* FiltersMenu */ = {
 			isa = PBXGroup;
 			children = (
+				7E2B81E5263AEB7B00E39D0F /* Entities */,
 				7ECF7C69263A0F3A00EB63F9 /* FilterMenuTypeCell */,
-				7E7B290A263850A600C16E97 /* FilterMenu.swift */,
-				7E7B290B263850A600C16E97 /* FilterMenu.xib */,
+				7E2B81D5263AE27D00E39D0F /* FiltersMenuPresenter.swift */,
+				7E2B81D6263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift */,
+				7E2B81D7263AE27D00E39D0F /* FiltersMenuProtocols.swift */,
+				7E2B81D8263AE27D00E39D0F /* FiltersMenuInteractor.swift */,
+				7E2B81D9263AE27D00E39D0F /* FiltersMenuView.swift */,
+				7E2B81DA263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift */,
+				7E2B81DB263AE27D00E39D0F /* FiltersMenuWireFrame.swift */,
+				7E2B81E3263AE28F00E39D0F /* FiltersMenuView.storyboard */,
 			);
-			path = FilterMenu;
+			path = FiltersMenu;
+			sourceTree = "<group>";
+		};
+		7E2B81E5263AEB7B00E39D0F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		7EC8857F263703850065CA92 /* NetworkingServices */ = {
@@ -192,7 +219,6 @@
 			children = (
 				7ECF7C6C263A115D00EB63F9 /* FilterMenuTypeCell.swift */,
 				7ECF7C6D263A115D00EB63F9 /* FilterMenuTypeCell.xib */,
-				7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */,
 			);
 			path = FilterMenuTypeCell;
 			sourceTree = "<group>";
@@ -277,8 +303,8 @@
 			files = (
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
-				7E7B290D263850A600C16E97 /* FilterMenu.xib in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
+				7E2B81E4263AE28F00E39D0F /* FiltersMenuView.storyboard in Resources */,
 				69E96D4126324C180048E6B4 /* ListView.storyboard in Resources */,
 				69E96D4626324DA10048E6B4 /* DetailView.storyboard in Resources */,
 				7ECF7C6F263A115D00EB63F9 /* FilterMenuTypeCell.xib in Resources */,
@@ -377,25 +403,31 @@
 				69E96D2B26324A000048E6B4 /* ListView.swift in Sources */,
 				7EC885B4263712DD0065CA92 /* API.swift in Sources */,
 				7EA12C84263637080094951E /* PokeApiService.swift in Sources */,
+				7E2B81DE263AE27D00E39D0F /* FiltersMenuProtocols.swift in Sources */,
 				69E96D4C26336A7A0048E6B4 /* Constants.swift in Sources */,
 				69E96D3E26324A480048E6B4 /* DetailWireFrame.swift in Sources */,
 				69E96D3926324A480048E6B4 /* DetailLocalDataManager.swift in Sources */,
-				7E7B290C263850A600C16E97 /* FilterMenu.swift in Sources */,
 				69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */,
 				69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */,
 				7E2B81CC263A8C2D00E39D0F /* PokemonType.swift in Sources */,
+				7E2B81E0263AE27D00E39D0F /* FiltersMenuView.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
+				7E2B81DC263AE27D00E39D0F /* FiltersMenuPresenter.swift in Sources */,
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
 				7ECF7C6E263A115D00EB63F9 /* FilterMenuTypeCell.swift in Sources */,
+				7E2B81DF263AE27D00E39D0F /* FiltersMenuInteractor.swift in Sources */,
+				7E2B81DD263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift in Sources */,
 				69E96D2A26324A000048E6B4 /* ListInteractor.swift in Sources */,
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
+				7E2B81E1263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,
 				69E96D2C26324A000048E6B4 /* ListRemoteDataManager.swift in Sources */,
+				7E2B81E2263AE27D00E39D0F /* FiltersMenuWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

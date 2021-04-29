@@ -21,8 +21,8 @@ class ListView: UIViewController {
     }
     
     @IBAction func onButtonTapped(_ sender: UIButton) {
-        let filterVC = FilterMenu()
-        present(filterVC, animated: true, completion: nil)
+        let viewC = FiltersMenuWireFrame.createFiltersMenuModule()
+        present(viewC, animated: true, completion: nil)
     }
     
 }
