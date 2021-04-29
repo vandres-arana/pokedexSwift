@@ -8,18 +8,25 @@
 
 import Foundation
 import UIKit
+import PullUpController
 
-class FiltersMenuView: UIViewController {
+protocol FilterProtocol {
+    func dismissView()
+}
+
+class FiltersMenuView: PullUpController {
 
     // MARK: Properties
     var presenter: FiltersMenuPresenterProtocol?
     @IBOutlet var typeCollection: UICollectionView!
     @IBOutlet var weaknessCollection: UICollectionView!
+    var listView: ListView?
     
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layer.cornerRadius = 30
         typeCollection.dataSource = self
         weaknessCollection.dataSource = self
         typeCollection.delegate = self
@@ -42,6 +49,19 @@ class FiltersMenuView: UIViewController {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
     }
+    
+    override var pullUpControllerMiddleStickyPoints: [CGFloat] {
+        return [0, 200, 400]
+    }
+    
+    override func pullUpControllerDidDrag(to point: CGFloat) {
+        if point == 0 {
+            self.dismiss(animated: false, completion: nil)
+            self.view = nil
+            listView?.dismissView()
+        }
+    }
+    
 }
 
 extension FiltersMenuView:  UICollectionViewDataSource {

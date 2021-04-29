@@ -35,6 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="XxP-8w-EFR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="filterButton" destination="Abb-1u-OKt" id="agA-1d-aQc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66Q-7q-MK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
