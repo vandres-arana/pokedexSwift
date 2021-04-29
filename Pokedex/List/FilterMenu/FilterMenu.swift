@@ -15,6 +15,9 @@ class FilterMenu: UIViewController {
     let types = [PokemonType("bug"), PokemonType("dark"), PokemonType("dragon"), PokemonType("electric"), PokemonType("fairy"), PokemonType("fighting"),
                  PokemonType("fire"), PokemonType("flying"), PokemonType("ghost"), PokemonType("grass"), PokemonType("ground"), PokemonType("ice"),
                  PokemonType("normal"), PokemonType("poison"), PokemonType("psychic"), PokemonType("rock"), PokemonType("steel"), PokemonType("water")]
+    let types1 = [PokemonType("bug"), PokemonType("dark"), PokemonType("dragon"), PokemonType("electric"), PokemonType("fairy"), PokemonType("fighting"),
+                 PokemonType("fire"), PokemonType("flying"), PokemonType("ghost"), PokemonType("grass"), PokemonType("ground"), PokemonType("ice"),
+                 PokemonType("normal"), PokemonType("poison"), PokemonType("psychic"), PokemonType("rock"), PokemonType("steel"), PokemonType("water")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,22 +52,18 @@ extension FilterMenu:  UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.collectionView {
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuTypeCell.reuseIdentifier, for: indexPath) as? FilterMenuTypeCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuTypeCell.reuseIdentifier, for: indexPath) as? FilterMenuTypeCell {
+            if collectionView == self.collectionView {
                 cell.configure(types[indexPath.row].name)
                 cell.isSelected = types[indexPath.row].isSelected
                 return cell
-            }
-            return UICollectionViewCell()
-        } else {
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuTypeCell.reuseIdentifier, for: indexPath) as? FilterMenuTypeCell {
-                cell.configure(types[indexPath.row].name)
-                cell.isSelected = types[indexPath.row].isSelected
+            } else {
+                cell.configure(types1[indexPath.row].name)
+                cell.isSelected = types1[indexPath.row].isSelected
                 return cell
             }
-            return UICollectionViewCell()
         }
-        
+        return UICollectionViewCell()
     }
 }
 
@@ -76,13 +75,13 @@ extension FilterMenu: UICollectionViewDelegateFlowLayout {
 
 extension FilterMenu: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
         if collectionView == self.collectionView {
-            let cell = collectionView.cellForItem(at: indexPath)
             cell?.isSelected = !types[indexPath.row].isSelected
+            types[indexPath.row].isSelected = !types[indexPath.row].isSelected
         } else {
-            let cell = collectionView.cellForItem(at: indexPath)
-            cell?.isSelected = !types[indexPath.row].isSelected
+            cell?.isSelected = !types1[indexPath.row].isSelected
+            types1[indexPath.row].isSelected = !types1[indexPath.row].isSelected
         }
-        types[indexPath.row].isSelected = !types[indexPath.row].isSelected
     }
 }
