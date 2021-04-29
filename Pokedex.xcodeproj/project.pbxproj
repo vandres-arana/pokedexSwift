@@ -29,6 +29,7 @@
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
+		7E2B81CC263A8C2D00E39D0F /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */; };
 		7E7B290C263850A600C16E97 /* FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B290A263850A600C16E97 /* FilterMenu.swift */; };
 		7E7B290D263850A600C16E97 /* FilterMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E7B290B263850A600C16E97 /* FilterMenu.xib */; };
 		7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7EA11CDC2636566100D5E7F2 /* list.graphql */; };
@@ -64,6 +65,7 @@
 		69F76EC3263203EF00420B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		7E7B290A263850A600C16E97 /* FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenu.swift; sourceTree = "<group>"; };
 		7E7B290B263850A600C16E97 /* FilterMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterMenu.xib; sourceTree = "<group>"; };
 		7EA11CDC2636566100D5E7F2 /* list.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = list.graphql; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				7ECF7C6C263A115D00EB63F9 /* FilterMenuTypeCell.swift */,
 				7ECF7C6D263A115D00EB63F9 /* FilterMenuTypeCell.xib */,
+				7E2B81CB263A8C2D00E39D0F /* PokemonType.swift */,
 			);
 			path = FilterMenuTypeCell;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				7E7B290C263850A600C16E97 /* FilterMenu.swift in Sources */,
 				69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */,
 				69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */,
+				7E2B81CC263A8C2D00E39D0F /* PokemonType.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
 				7ECF7C6E263A115D00EB63F9 /* FilterMenuTypeCell.swift in Sources */,

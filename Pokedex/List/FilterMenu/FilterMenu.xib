@@ -50,16 +50,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weaknesses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agK-8B-zWM">
-                    <rect key="frame" x="40" y="292" width="100" height="19"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="MA4-zR-tCr"/>
-                        <constraint firstAttribute="height" constant="19" id="Oep-7j-i3g"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-hU-qXE">
                     <rect key="frame" x="40" y="217" width="374" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -87,6 +77,16 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weaknesses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agK-8B-zWM">
+                    <rect key="frame" x="40" y="292" width="100" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="MA4-zR-tCr"/>
+                        <constraint firstAttribute="height" constant="19" id="Oep-7j-i3g"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
