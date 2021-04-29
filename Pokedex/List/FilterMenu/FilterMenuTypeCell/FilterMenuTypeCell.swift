@@ -24,6 +24,7 @@ class FilterMenuTypeCell: UICollectionViewCell {
     
     func configure(imageName: String) {
         image.image = #imageLiteral(resourceName: imageName)
+        image.tintColor = UIColor(named: imageName)
     }
     
 }
