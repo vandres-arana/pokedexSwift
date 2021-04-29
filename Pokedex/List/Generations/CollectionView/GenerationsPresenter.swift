@@ -20,13 +20,14 @@ class GenerationsPresenter  {
 extension GenerationsPresenter: GenerationsPresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
+        interactor?.getGenerations()
     }
 }
 
 extension GenerationsPresenter: GenerationsInteractorOutputProtocol {
-    // TODO: implement interactor output methods
-    
-    func getGenerationNames(generations: [GetGenerationsQuery.Data.Generation]) {
-         
+    func interactorPushDataPresenter(receivedData: [GetGenerationsQuery.Data.Generation]) {
+        view?.presenterPushGenerationNames(receivedData: receivedData);
     }
+    
+    // TODO: implement interactor output methods
 }

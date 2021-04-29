@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         
-        let listView = ListWireFrame.createListModule(); 
+        let listView = GenerationsWireFrame.createGenerationsModule(); 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = listView;
         window?.makeKeyAndVisible();

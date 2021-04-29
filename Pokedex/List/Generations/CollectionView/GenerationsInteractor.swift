@@ -24,6 +24,6 @@ extension GenerationsInteractor: GenerationsRemoteDataManagerOutputProtocol {
     // TODO: Implement use case methods
     
     func getGenerationNames(generations: [GetGenerationsQuery.Data.Generation]) {
-        presenter?.getGenerationNames(generations: generations);
+        presenter?.interactorPushDataPresenter(receivedData: generations);
     }
 }

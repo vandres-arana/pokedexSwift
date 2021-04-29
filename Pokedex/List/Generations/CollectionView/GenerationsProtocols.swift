@@ -30,8 +30,8 @@ protocol GenerationsPresenterProtocol: AnyObject {
 }
 
 protocol GenerationsInteractorOutputProtocol: AnyObject {
-// INTERACTOR -> PRESENTER
-    func getGenerationNames(generations: [GetGenerationsQuery.Data.Generation]);
+    // INTERACTOR -> PRESENTER
+    func interactorPushDataPresenter(receivedData: [GetGenerationsQuery.Data.Generation]);
 }
 
 protocol GenerationsInteractorInputProtocol: AnyObject {
