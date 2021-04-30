@@ -3,11 +3,17 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-pro-display-regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Generations View-->
         <scene sceneID="s0d-6b-0kx">
@@ -17,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZD-fP-Fld">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use search for generations to explore your Pokémon!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZD-fP-Fld">
                                 <rect key="frame" x="0.0" y="64.5" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -25,24 +31,39 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RVU-Rm-vDM">
                                 <rect key="frame" x="0.0" y="85" width="414" height="777"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="POG-qk-2oj">
                                     <size key="itemSize" width="160" height="129"/>
                                     <size key="estimatedItemSize" width="160" height="129"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                    <inset key="sectionInset" minX="17" minY="10" maxX="17" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="generationCollectionViewCell" id="EQo-vi-XZy" customClass="GenerationCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="20" width="160" height="129"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenerationCollectionViewCell" id="EQo-vi-XZy" customClass="GenerationCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="10" width="160" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rwJ-Es-kPS">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="jh2-ss-Nbe">
+                                                    <rect key="frame" x="70" y="60" width="110" height="110"/>
+                                                    <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="5iM-ov-Lkt"/>
+                                                        <constraint firstAttribute="width" constant="110" id="M6z-6d-nSB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6x3" translatesAutoresizingMaskIntoConstraints="NO" id="jxP-wX-uP2">
+                                                    <rect key="frame" x="15" y="10" width="80" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="ijP-uq-Aqf"/>
+                                                        <constraint firstAttribute="height" constant="35" id="v5R-7w-Za0"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xam-r7-dce">
-                                                    <rect key="frame" x="17" y="27" width="135" height="45"/>
+                                                    <rect key="frame" x="12.5" y="30" width="135" height="45"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pZN-GH-Ibp">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
@@ -72,21 +93,27 @@
                                                     </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXa-aj-OLG">
-                                                    <rect key="frame" x="17" y="80" width="135" height="21"/>
+                                                    <rect key="frame" x="12.5" y="83" width="135" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="iBw-G5-t6S"/>
                                                         <constraint firstAttribute="width" constant="135" id="izo-AE-dU2"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                                    <color key="textColor" name="GenerationsTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="GenerationsBackground"/>
                                             <constraints>
-                                                <constraint firstItem="Xam-r7-dce" firstAttribute="leading" secondItem="rwJ-Es-kPS" secondAttribute="leading" constant="17" id="1ei-3F-d1N"/>
-                                                <constraint firstItem="WXa-aj-OLG" firstAttribute="leading" secondItem="rwJ-Es-kPS" secondAttribute="leading" constant="17" id="Dz6-jE-aeN"/>
-                                                <constraint firstItem="WXa-aj-OLG" firstAttribute="top" secondItem="Xam-r7-dce" secondAttribute="bottom" constant="8" symbolic="YES" id="FOn-qW-53T"/>
-                                                <constraint firstItem="Xam-r7-dce" firstAttribute="top" secondItem="rwJ-Es-kPS" secondAttribute="top" constant="27" id="ZKN-Qf-y7N"/>
+                                                <constraint firstItem="jh2-ss-Nbe" firstAttribute="leading" secondItem="rwJ-Es-kPS" secondAttribute="leading" constant="70" id="2i8-4b-bZQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="WXa-aj-OLG" secondAttribute="bottom" constant="25" id="3lL-V1-bML"/>
+                                                <constraint firstItem="jxP-wX-uP2" firstAttribute="top" secondItem="rwJ-Es-kPS" secondAttribute="top" constant="10" id="CFO-Hc-dSh"/>
+                                                <constraint firstItem="WXa-aj-OLG" firstAttribute="centerX" secondItem="rwJ-Es-kPS" secondAttribute="centerX" id="MFD-Ly-JlR"/>
+                                                <constraint firstItem="jxP-wX-uP2" firstAttribute="leading" secondItem="rwJ-Es-kPS" secondAttribute="leading" constant="15" id="Wqi-sr-kOr"/>
+                                                <constraint firstItem="Xam-r7-dce" firstAttribute="top" secondItem="rwJ-Es-kPS" secondAttribute="top" constant="30" id="aiF-rf-oeu"/>
+                                                <constraint firstItem="Xam-r7-dce" firstAttribute="centerX" secondItem="rwJ-Es-kPS" secondAttribute="centerX" id="iTk-Z2-PM1"/>
+                                                <constraint firstAttribute="bottom" secondItem="Xam-r7-dce" secondAttribute="bottom" constant="54" id="jEc-Fv-dQZ"/>
+                                                <constraint firstItem="jh2-ss-Nbe" firstAttribute="top" secondItem="rwJ-Es-kPS" secondAttribute="top" constant="60" id="lfK-zC-TdR"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -95,20 +122,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fj-z7-JZY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fj-z7-JZY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUH-W4-eTi">
-                                <rect key="frame" x="329" y="44" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="pressButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vRq-uO-roU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,18 +152,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="94"/>
+            <point key="canvasLocation" x="-7.2463768115942031" y="93.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="001" width="75" height="75"/>
         <image name="004" width="75" height="75"/>
         <image name="007" width="75" height="75"/>
-        <systemColor name="systemBackgroundColor">
+        <image name="6x3" width="171" height="75"/>
+        <image name="pokeball" width="75" height="75"/>
+        <namedColor name="GenerationsBackground">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="GenerationsTextColor">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

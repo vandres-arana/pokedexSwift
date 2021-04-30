@@ -38,6 +38,9 @@
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
 		69FBD5B7263B904300397E62 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBD5B6263B904300397E62 /* Generation.swift */; };
+		69FBD5BC263BC38700397E62 /* sf-pro-display-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5B9263BC38600397E62 /* sf-pro-display-regular.ttf */; };
+		69FBD5BD263BC38700397E62 /* sf-pro-display-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5BA263BC38600397E62 /* sf-pro-display-bold.ttf */; };
+		69FBD5BE263BC38700397E62 /* sf-pro-display-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5BB263BC38700397E62 /* sf-pro-display-medium.ttf */; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
 		7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7EA11CDC2636566100D5E7F2 /* list.graphql */; };
 		7EA12C84263637080094951E /* PokeApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA12C83263637080094951E /* PokeApiService.swift */; };
@@ -80,6 +83,9 @@
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69FBD5B6263B904300397E62 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
+		69FBD5B9263BC38600397E62 /* sf-pro-display-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-regular.ttf"; sourceTree = "<group>"; };
+		69FBD5BA263BC38600397E62 /* sf-pro-display-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-bold.ttf"; sourceTree = "<group>"; };
+		69FBD5BB263BC38700397E62 /* sf-pro-display-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-medium.ttf"; sourceTree = "<group>"; };
 		7EA11CDC2636566100D5E7F2 /* list.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = list.graphql; sourceTree = "<group>"; };
 		7EA12C83263637080094951E /* PokeApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiService.swift; sourceTree = "<group>"; };
 		7EA12C9426363AAD0094951E /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		69F76EB9263203ED00420B32 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				69FBD5B8263BC37100397E62 /* Fonts */,
 				69FBD5B5263B902700397E62 /* DataModels */,
 				7EC8857F263703850065CA92 /* NetworkingServices */,
 				69E96D3026324A3B0048E6B4 /* Detail */,
@@ -217,6 +224,16 @@
 				69FBD5B6263B904300397E62 /* Generation.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		69FBD5B8263BC37100397E62 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				69FBD5BA263BC38600397E62 /* sf-pro-display-bold.ttf */,
+				69FBD5BB263BC38700397E62 /* sf-pro-display-medium.ttf */,
+				69FBD5B9263BC38600397E62 /* sf-pro-display-regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		7EC8857F263703850065CA92 /* NetworkingServices */ = {
@@ -309,10 +326,13 @@
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
 				693391BC263A23C600C55648 /* Generations.storyboard in Resources */,
+				69FBD5BC263BC38700397E62 /* sf-pro-display-regular.ttf in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
+				69FBD5BD263BC38700397E62 /* sf-pro-display-bold.ttf in Resources */,
 				69E96D4126324C180048E6B4 /* ListView.storyboard in Resources */,
 				69E96D4626324DA10048E6B4 /* DetailView.storyboard in Resources */,
 				7EA12C9526363AAD0094951E /* schema.json in Resources */,
+				69FBD5BE263BC38700397E62 /* sf-pro-display-medium.ttf in Resources */,
 				69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
