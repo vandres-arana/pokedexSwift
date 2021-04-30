@@ -18,7 +18,6 @@ class FiltersMenuPresenter  {
 }
 
 extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
-    
     // TODO: implement presenter methods
     func viewDidLoad() {
     }
@@ -33,6 +32,10 @@ extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
     
     func markPokemonFilterByIndex(index: Int, filterId: Int) {
         interactor?.markPokemonFilterByIndex(index: index, filterId: filterId)
+    }
+    
+    func resetFilters() {
+        interactor?.resetFilters()
     }
 }
 

@@ -32,6 +32,8 @@ protocol FiltersMenuPresenterProtocol: AnyObject {
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
     
     func markPokemonFilterByIndex(index: Int, filterId: Int)
+    
+    func resetFilters()
 }
 
 protocol FiltersMenuInteractorOutputProtocol: AnyObject {
@@ -51,6 +53,8 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
     
     func markPokemonFilterByIndex(index: Int, filterId: Int)
+    
+    func resetFilters()
 }
 
 protocol FiltersMenuDataManagerInputProtocol: AnyObject {

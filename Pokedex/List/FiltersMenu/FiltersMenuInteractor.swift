@@ -67,6 +67,10 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
             pokemonWeights[index].isSelected = !pokemonWeights[index].isSelected
         }
     }
+    
+    func resetFilters() {
+        loadPokemonTypeList()
+    }
 
 }
 
