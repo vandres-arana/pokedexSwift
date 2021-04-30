@@ -8,10 +8,13 @@
 
 import Foundation
 import UIKit
+import Apollo
 
 protocol ListViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: ListPresenterProtocol? { get set }
+    func showPokemonList(result: Result<GraphQLResult<GetAllPokemonsWithLimitQuery.Data>, Error>)
+    func showError()
 }
 
 protocol ListWireFrameProtocol: class {
@@ -24,11 +27,15 @@ protocol ListPresenterProtocol: class {
     var view: ListViewProtocol? { get set }
     var interactor: ListInteractorInputProtocol? { get set }
     var wireFrame: ListWireFrameProtocol? { get set }
+    
     func viewDidLoad()
+    func startfetchingPokemonList()
 }
 
 protocol ListInteractorOutputProtocol: class {
 // INTERACTOR -> PRESENTER
+    func PokemonFetchSuccess(result: Result<GraphQLResult<GetAllPokemonsWithLimitQuery.Data>, Error>)
+    func PokemonFetchFail()
 }
 
 protocol ListInteractorInputProtocol: class {
@@ -36,6 +43,7 @@ protocol ListInteractorInputProtocol: class {
     var presenter: ListInteractorOutputProtocol? { get set }
     var localDatamanager: ListLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: ListRemoteDataManagerInputProtocol? { get set }
+    func fetchPokemonList()
 }
 
 protocol ListDataManagerInputProtocol: class {
