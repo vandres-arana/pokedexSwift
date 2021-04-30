@@ -12,9 +12,8 @@ import UIKit
 class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
 
     class func createFiltersMenuModule() -> UIViewController {
-        //let navController = mainStoryboard.instantiateViewController(withIdentifier: "FiltersMenuView")
-        //if let view = navController.children.first as? FiltersMenuView {
-        let view = mainStoryboard.instantiateViewController(withIdentifier: "FiltersMenuView") as! FiltersMenuView
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "FiltersMenuView")
+        if let view = navController as? FiltersMenuView {
             let presenter: FiltersMenuPresenterProtocol & FiltersMenuInteractorOutputProtocol = FiltersMenuPresenter()
             let localDataManager: FiltersMenuLocalDataManagerInputProtocol = FiltersMenuLocalDataManager()
             let interactor: FiltersMenuInteractorInputProtocol & FiltersMenuRemoteDataManagerOutputProtocol = FiltersMenuInteractor()
@@ -31,10 +30,9 @@ class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
             remoteDataManager.remoteRequestHandler = interactor
             interactor.loadPokemonTypeList()
             
-            //return navController
-            return view
-        //}
-        //return UIViewController()
+            return navController
+        }
+        return UIViewController()
     }
     
     static var mainStoryboard: UIStoryboard {
