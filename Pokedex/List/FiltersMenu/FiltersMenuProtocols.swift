@@ -46,7 +46,7 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     
     func loadPokemonTypeList()
     
-    func getPokemonFilterListCount() -> Int
+    func getPokemonFilterListCount(filterId: Int) -> Int
     
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
     
@@ -67,6 +67,10 @@ protocol FiltersMenuRemoteDataManagerOutputProtocol: AnyObject {
 }
 
 protocol FiltersMenuLocalDataManagerInputProtocol: AnyObject {
-    func loadPokemonTypeList() -> [Filter]
     // INTERACTOR -> LOCALDATAMANAGER
+    func loadPokemonTypeFilterList() -> [Filter]
+    
+    func loadPokemonHeightFilterList() -> [Filter]
+    
+    func loadPokemonWeightFilterList() -> [Filter]
 }

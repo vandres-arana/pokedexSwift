@@ -24,7 +24,7 @@ extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
     }
     
     func getPokemonFilterListLength(filterId: Int) -> Int {
-        return interactor?.getPokemonFilterListCount() ?? 0
+        return interactor?.getPokemonFilterListCount(filterId: filterId) ?? 0
     }
     
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {

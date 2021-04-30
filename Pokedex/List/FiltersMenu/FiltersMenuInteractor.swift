@@ -12,6 +12,8 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
     
     var pokemonTypes: [Filter] = []
     var pokemonWeaknesses: [Filter] = []
+    var pokemonHeights: [Filter] = []
+    var pokemonWeights: [Filter] = []
 
     // MARK: Properties
     weak var presenter: FiltersMenuInteractorOutputProtocol?
@@ -19,27 +21,50 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
     var remoteDatamanager: FiltersMenuRemoteDataManagerInputProtocol?
     
     func loadPokemonTypeList() {
-        pokemonTypes = (localDatamanager?.loadPokemonTypeList())!
-        pokemonWeaknesses = (localDatamanager?.loadPokemonTypeList())!
+        pokemonTypes = (localDatamanager?.loadPokemonTypeFilterList())!
+        pokemonWeaknesses = (localDatamanager?.loadPokemonTypeFilterList())!
+        pokemonHeights = (localDatamanager?.loadPokemonHeightFilterList())!
+        pokemonWeights = (localDatamanager?.loadPokemonWeightFilterList())!
     }
     
-    func getPokemonFilterListCount() -> Int {
-        return pokemonTypes.count
+    func getPokemonFilterListCount(filterId: Int) -> Int {
+        switch filterId {
+        case 0:
+            return pokemonTypes.count
+        case 1:
+            return pokemonWeaknesses.count
+        case 2:
+            return pokemonHeights.count
+        case 3:
+            return pokemonWeights.count
+        default:
+            return 0
+        }
     }
     
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {
-        if filterId == 0 {
+        switch filterId {
+        case 0:
             return pokemonTypes[index]
-        } else {
+        case 1:
             return pokemonWeaknesses[index]
+        case 2:
+            return pokemonHeights[index]
+        default:
+            return pokemonWeights[index]
         }
     }
     
     func markPokemonFilterByIndex(index: Int, filterId: Int) {
-        if filterId == 0 {
+        switch filterId {
+        case 0:
             pokemonTypes[index].isSelected = !pokemonTypes[index].isSelected
-        } else {
+        case 1:
             pokemonWeaknesses[index].isSelected = !pokemonWeaknesses[index].isSelected
+        case 2:
+            pokemonHeights[index].isSelected = !pokemonHeights[index].isSelected
+        default:
+            pokemonWeights[index].isSelected = !pokemonWeights[index].isSelected
         }
     }
 
