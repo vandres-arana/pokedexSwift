@@ -22,7 +22,7 @@
             <objects>
                 <viewController storyboardIdentifier="FiltersMenuView" id="Y6W-OH-hqX" customClass="FiltersMenuView" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moI-lg-r6v">
@@ -33,7 +33,7 @@
                                 </constraints>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dag-vT-ucp">
-                                <rect key="frame" x="0.0" y="414" width="414" height="800"/>
+                                <rect key="frame" x="0.0" y="414" width="414" height="886"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRf-NY-Www">
                                         <rect key="frame" x="40" y="30" width="334" height="32"/>
@@ -170,11 +170,11 @@
                                     <constraint firstAttribute="trailing" secondItem="Ltk-Ay-wMF" secondAttribute="trailing" id="LDr-9G-az4"/>
                                     <constraint firstItem="v7y-oe-oNF" firstAttribute="top" secondItem="PVd-27-ctd" secondAttribute="bottom" constant="30" id="P5c-8H-4kg"/>
                                     <constraint firstItem="j3M-K3-R6h" firstAttribute="top" secondItem="v7y-oe-oNF" secondAttribute="bottom" constant="5" id="T13-Dl-YTZ"/>
-                                    <constraint firstAttribute="height" constant="800" id="Ugc-rJ-QLg"/>
                                     <constraint firstItem="v7y-oe-oNF" firstAttribute="leading" secondItem="dag-vT-ucp" secondAttribute="leading" constant="40" id="XBd-nd-B5l"/>
                                     <constraint firstAttribute="trailing" secondItem="lwz-sI-8Ep" secondAttribute="trailing" constant="40" id="auT-Hj-QHu"/>
                                     <constraint firstItem="KSr-gl-tay" firstAttribute="top" secondItem="9OQ-fn-jnp" secondAttribute="bottom" constant="30" id="e38-hm-MXU"/>
                                     <constraint firstItem="zVn-b2-XAU" firstAttribute="leading" secondItem="dag-vT-ucp" secondAttribute="leading" constant="40" id="fub-DM-GJh"/>
+                                    <constraint firstAttribute="height" constant="886" id="hmY-g0-whg"/>
                                     <constraint firstItem="Ltk-Ay-wMF" firstAttribute="leading" secondItem="dag-vT-ucp" secondAttribute="leading" constant="40" id="lMI-7g-yv2"/>
                                     <constraint firstItem="lRf-NY-Www" firstAttribute="top" secondItem="dag-vT-ucp" secondAttribute="top" constant="30" id="mLa-sV-ZoT"/>
                                     <constraint firstAttribute="trailing" secondItem="9OQ-fn-jnp" secondAttribute="trailing" id="mvk-VS-6oF"/>
@@ -202,7 +202,7 @@
                             <constraint firstItem="dag-vT-ucp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xYb-VO-OyS"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="applyButton" destination="lwz-sI-8Ep" id="Lfb-9D-TJa"/>
                         <outlet property="filterView" destination="dag-vT-ucp" id="764-nq-kSc"/>
