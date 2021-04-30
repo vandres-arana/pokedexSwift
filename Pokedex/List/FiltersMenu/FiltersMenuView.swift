@@ -84,7 +84,7 @@ extension FiltersMenuView:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
-            var type: PokemonType
+            var type: Filter
             if collectionView == self.typeCollection {
                 type = (presenter?.getPokemonTypeByIndex(index: indexPath.row, collection: 0))!
                 
@@ -110,7 +110,7 @@ extension FiltersMenuView: UICollectionViewDelegateFlowLayout {
 extension FiltersMenuView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        var type: PokemonType
+        var type: Filter
         if collectionView == self.typeCollection {
             type = (presenter?.getPokemonTypeByIndex(index: indexPath.row, collection: 0))!
             presenter?.markPokemonTypeByIndex(index: indexPath.row, collection: 0)

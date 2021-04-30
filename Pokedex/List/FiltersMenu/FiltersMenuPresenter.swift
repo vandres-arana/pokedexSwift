@@ -26,7 +26,7 @@ extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
         return interactor?.getPokemonTypeListCount() ?? 0
     }
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> PokemonType {
+    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter {
         return (interactor?.getPokemonTypeByIndex(index: index, collection: collection))!
     }
     

@@ -29,7 +29,7 @@ protocol FiltersMenuPresenterProtocol: AnyObject {
     
     func getPokemonTypeListLength() -> Int
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> PokemonType
+    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter
     
     func markPokemonTypeByIndex(index: Int, collection: Int)
 }
@@ -48,7 +48,7 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     
     func getPokemonTypeListCount() -> Int
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> PokemonType
+    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter
     
     func markPokemonTypeByIndex(index: Int, collection: Int)
 }
@@ -67,6 +67,6 @@ protocol FiltersMenuRemoteDataManagerOutputProtocol: AnyObject {
 }
 
 protocol FiltersMenuLocalDataManagerInputProtocol: AnyObject {
-    func loadPokemonTypeList() -> [PokemonType]
+    func loadPokemonTypeList() -> [Filter]
     // INTERACTOR -> LOCALDATAMANAGER
 }

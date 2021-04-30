@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PokemonType {
+class Filter {
     var name: String
     var isSelected: Bool
     init(_ name: String) {

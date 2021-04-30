@@ -10,8 +10,8 @@ import Foundation
 
 class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
     
-    var pokemonTypes: [PokemonType] = []
-    var pokemonWeaknesses: [PokemonType] = []
+    var pokemonTypes: [Filter] = []
+    var pokemonWeaknesses: [Filter] = []
 
     // MARK: Properties
     weak var presenter: FiltersMenuInteractorOutputProtocol?
@@ -27,7 +27,7 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
         return pokemonTypes.count
     }
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> PokemonType {
+    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter {
         if collection == 0 {
             return pokemonTypes[index]
         } else {
