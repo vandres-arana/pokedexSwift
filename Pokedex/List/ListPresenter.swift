@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Apollo
 
 class ListPresenter  {
     
@@ -18,11 +19,22 @@ class ListPresenter  {
 }
 
 extension ListPresenter: ListPresenterProtocol {
-    // TODO: implement presenter methods
+    
+    func startfetchingPokemonList() {
+        self.interactor?.fetchPokemonList()
+    }
+    
     func viewDidLoad() {
     }
 }
 
 extension ListPresenter: ListInteractorOutputProtocol {
-    // TODO: implement interactor output methods
+    
+    func PokemonFetchSuccess(result: Result<GraphQLResult<GetAllPokemonsWithLimitQuery.Data>, Error>) {
+        self.view?.showPokemonList(result: result)
+    }
+    
+    func PokemonFetchFail() {
+        self.view?.showError()
+    }
 }
