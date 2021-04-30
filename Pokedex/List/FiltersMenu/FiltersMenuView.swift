@@ -20,13 +20,19 @@ class FiltersMenuView: PullUpController {
     var presenter: FiltersMenuPresenterProtocol?
     @IBOutlet var typeCollection: UICollectionView!
     @IBOutlet var weaknessCollection: UICollectionView!
+    @IBOutlet var resetButton: UIButton!
+    @IBOutlet var applyButton: UIButton!
     var listView: ListView?
+    
+    
     
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layer.cornerRadius = 30
+        resetButton.layer.cornerRadius = 15
+        applyButton.layer.cornerRadius = 15
         typeCollection.dataSource = self
         weaknessCollection.dataSource = self
         typeCollection.delegate = self
@@ -51,7 +57,7 @@ class FiltersMenuView: PullUpController {
     }
     
     override var pullUpControllerMiddleStickyPoints: [CGFloat] {
-        return [0, 200, 400]
+        return [0, 200, 400, 600]
     }
     
     override func pullUpControllerDidDrag(to point: CGFloat) {
@@ -61,6 +67,13 @@ class FiltersMenuView: PullUpController {
             listView?.dismissView()
         }
     }
+    
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func applyButtonPressed(_ sender: UIButton) {
+    }
+    
     
 }
 

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -69,10 +70,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwz-sI-8Ep">
+                                <rect key="frame" x="214" y="453" width="160" height="60"/>
+                                <color key="backgroundColor" name="selectedBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cCz-c0-HK7"/>
+                                    <constraint firstAttribute="width" constant="160" id="g3a-ej-7UE"/>
+                                </constraints>
+                                <state key="normal" title="Apply">
+                                    <color key="titleColor" name="selectedText"/>
+                                </state>
+                                <connections>
+                                    <action selector="applyButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zsm-FN-gMb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-pF-Q13">
+                                <rect key="frame" x="40" y="453" width="160" height="60"/>
+                                <color key="backgroundColor" name="notSelectedBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7uq-bz-iKa"/>
+                                    <constraint firstAttribute="width" constant="160" id="yYg-ws-F6g"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" name="notSelectedText"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yxw-HV-ZZU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lwz-sI-8Ep" firstAttribute="leading" secondItem="aQV-pF-Q13" secondAttribute="trailing" constant="14" id="2QJ-GP-Uv6"/>
+                            <constraint firstItem="lwz-sI-8Ep" firstAttribute="top" secondItem="PVd-27-ctd" secondAttribute="bottom" constant="62" id="6JA-kn-vPl"/>
                             <constraint firstItem="lRf-NY-Www" firstAttribute="leading" secondItem="zVn-b2-XAU" secondAttribute="leading" id="98J-uF-O3f"/>
                             <constraint firstItem="zVn-b2-XAU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BzO-rO-MK8"/>
                             <constraint firstItem="zVn-b2-XAU" firstAttribute="leading" secondItem="U9C-eR-bgp" secondAttribute="leading" id="CtH-tZ-KHd"/>
@@ -80,6 +111,7 @@
                             <constraint firstItem="KSr-gl-tay" firstAttribute="top" secondItem="9OQ-fn-jnp" secondAttribute="bottom" constant="15" id="E7H-no-m7O"/>
                             <constraint firstItem="PVd-27-ctd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="H9p-6X-P6d"/>
                             <constraint firstItem="9OQ-fn-jnp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Jfz-Ml-l6J"/>
+                            <constraint firstItem="aQV-pF-Q13" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Jp0-Zh-Rel"/>
                             <constraint firstItem="U9C-eR-bgp" firstAttribute="top" secondItem="zVn-b2-XAU" secondAttribute="bottom" constant="35" id="L6v-kq-W6R"/>
                             <constraint firstItem="U9C-eR-bgp" firstAttribute="leading" secondItem="9OQ-fn-jnp" secondAttribute="leading" id="LUY-aH-EGF"/>
                             <constraint firstItem="lRf-NY-Www" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="NZL-tl-8j5"/>
@@ -89,10 +121,14 @@
                             <constraint firstItem="zVn-b2-XAU" firstAttribute="top" secondItem="lRf-NY-Www" secondAttribute="bottom" constant="5" id="bbM-Yc-gX6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KSr-gl-tay" secondAttribute="trailing" constant="274" id="oZQ-Mo-B1k"/>
                             <constraint firstItem="PVd-27-ctd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="sJ2-71-zik"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lwz-sI-8Ep" secondAttribute="trailing" constant="40" id="sJY-gx-LH0"/>
                             <constraint firstItem="lRf-NY-Www" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="tRh-Fh-4VR"/>
+                            <constraint firstItem="aQV-pF-Q13" firstAttribute="top" secondItem="PVd-27-ctd" secondAttribute="bottom" constant="62" id="xbp-OE-Qvy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="applyButton" destination="lwz-sI-8Ep" id="Lfb-9D-TJa"/>
+                        <outlet property="resetButton" destination="aQV-pF-Q13" id="Q5o-et-thS"/>
                         <outlet property="typeCollection" destination="9OQ-fn-jnp" id="q7p-W5-WfX"/>
                         <outlet property="weaknessCollection" destination="PVd-27-ctd" id="ReC-4D-bgi"/>
                     </connections>
@@ -103,6 +139,18 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="notSelectedBackground">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="notSelectedText">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="selectedBackground">
+            <color red="0.91764705882352937" green="0.36470588235294116" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="selectedText">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
