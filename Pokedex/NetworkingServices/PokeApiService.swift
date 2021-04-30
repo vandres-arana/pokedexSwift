@@ -9,7 +9,6 @@ import Foundation
 import Apollo
 
 class PokeApiService {
-    static let shared = PokeApiService()
-    
+  static let shared = PokeApiService()
     private(set) lazy var apollo = ApolloClient(url: URL(string: Constants.PokeApi.graphqlURL)!)
 }
