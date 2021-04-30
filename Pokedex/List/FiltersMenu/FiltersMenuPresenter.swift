@@ -22,16 +22,16 @@ extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
     func viewDidLoad() {
     }
     
-    func getPokemonTypeListLength() -> Int {
-        return interactor?.getPokemonTypeListCount() ?? 0
+    func getPokemonTypeFilterListLength() -> Int {
+        return interactor?.getPokemonTypeFilterListCount() ?? 0
     }
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter {
-        return (interactor?.getPokemonTypeByIndex(index: index, collection: collection))!
+    func getPokemonTypeFilterByIndex(index: Int, collection: Int) -> Filter {
+        return (interactor?.getPokemonTypeFilterByIndex(index: index, collection: collection))!
     }
     
-    func markPokemonTypeByIndex(index: Int, collection: Int) {
-        interactor?.markPokemonTypeByIndex(index: index, collection: collection)
+    func markPokemonTypeFilterByIndex(index: Int, collection: Int) {
+        interactor?.markPokemonTypeFilterByIndex(index: index, collection: collection)
     }
 }
 

@@ -27,11 +27,11 @@ protocol FiltersMenuPresenterProtocol: AnyObject {
     
     func viewDidLoad()
     
-    func getPokemonTypeListLength() -> Int
+    func getPokemonTypeFilterListLength() -> Int
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter
+    func getPokemonTypeFilterByIndex(index: Int, collection: Int) -> Filter
     
-    func markPokemonTypeByIndex(index: Int, collection: Int)
+    func markPokemonTypeFilterByIndex(index: Int, collection: Int)
 }
 
 protocol FiltersMenuInteractorOutputProtocol: AnyObject {
@@ -46,11 +46,11 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     
     func loadPokemonTypeList()
     
-    func getPokemonTypeListCount() -> Int
+    func getPokemonTypeFilterListCount() -> Int
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter
+    func getPokemonTypeFilterByIndex(index: Int, collection: Int) -> Filter
     
-    func markPokemonTypeByIndex(index: Int, collection: Int)
+    func markPokemonTypeFilterByIndex(index: Int, collection: Int)
 }
 
 protocol FiltersMenuDataManagerInputProtocol: AnyObject {

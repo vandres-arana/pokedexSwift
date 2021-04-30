@@ -23,11 +23,11 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
         pokemonWeaknesses = (localDatamanager?.loadPokemonTypeList())!
     }
     
-    func getPokemonTypeListCount() -> Int {
+    func getPokemonTypeFilterListCount() -> Int {
         return pokemonTypes.count
     }
     
-    func getPokemonTypeByIndex(index: Int, collection: Int) -> Filter {
+    func getPokemonTypeFilterByIndex(index: Int, collection: Int) -> Filter {
         if collection == 0 {
             return pokemonTypes[index]
         } else {
@@ -35,7 +35,7 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
         }
     }
     
-    func markPokemonTypeByIndex(index: Int, collection: Int) {
+    func markPokemonTypeFilterByIndex(index: Int, collection: Int) {
         if collection == 0 {
             pokemonTypes[index].isSelected = !pokemonTypes[index].isSelected
         } else {
