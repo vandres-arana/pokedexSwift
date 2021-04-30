@@ -24,9 +24,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abb-1u-OKt">
-                                <rect key="frame" x="184" y="131" width="46" height="30"/>
+                                <rect key="frame" x="319" y="44" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Filter"/>
                                 <connections>
                                     <action selector="onButtonTapped:" destination="Okv-zw-N96" eventType="touchUpInside" id="BSP-JE-F55"/>
                                 </connections>

@@ -26,7 +26,7 @@ class ListView: UIViewController {
         print("Button Pressed")
         let viewC = FiltersMenuWireFrame.createFiltersMenuModule() as! FiltersMenuView
         viewC.listView = self
-        addPullUpController(viewC, initialStickyPointOffset: CGFloat(800), animated: true)
+        addPullUpController(viewC, initialStickyPointOffset: CGFloat(1000), animated: true)
         self.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.7)
     }
     

@@ -77,7 +77,7 @@ class FiltersMenuView: PullUpController {
     }
     
     override var pullUpControllerMiddleStickyPoints: [CGFloat] {
-        return [400, 800, 1000, 1200]
+        return [600, 1000, 1400]
     }
     
     override func pullUpControllerDidDrag(to point: CGFloat) {
