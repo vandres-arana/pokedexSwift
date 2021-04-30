@@ -20,11 +20,11 @@ class FiltersMenuView: PullUpController {
     var presenter: FiltersMenuPresenterProtocol?
     @IBOutlet var typeCollection: UICollectionView!
     @IBOutlet var weaknessCollection: UICollectionView!
+    @IBOutlet var heightFilterCollection: UICollectionView!
+    @IBOutlet var weightFilterCollection: UICollectionView!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var applyButton: UIButton!
     var listView: ListView?
-    
-    
     
     // MARK: Lifecycle
 
@@ -35,12 +35,20 @@ class FiltersMenuView: PullUpController {
         applyButton.layer.cornerRadius = 10
         typeCollection.dataSource = self
         weaknessCollection.dataSource = self
+        heightFilterCollection.dataSource = self
+        weightFilterCollection.dataSource = self
         typeCollection.delegate = self
         weaknessCollection.delegate = self
+        heightFilterCollection.delegate = self
+        weightFilterCollection.delegate = self
         typeCollection.showsHorizontalScrollIndicator = false
         weaknessCollection.showsHorizontalScrollIndicator = false
+        heightFilterCollection.showsHorizontalScrollIndicator = false
+        weightFilterCollection.showsHorizontalScrollIndicator = false
         typeCollection.allowsMultipleSelection = true
         weaknessCollection.allowsMultipleSelection = true
+        heightFilterCollection.allowsMultipleSelection = true
+        weightFilterCollection.allowsMultipleSelection = true
         self.registerNib()
     }
     
@@ -48,16 +56,24 @@ class FiltersMenuView: PullUpController {
         let nib = UINib(nibName: FiltersMenuTypeCell.nibName, bundle: nil)
         typeCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
         weaknessCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
+        heightFilterCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
+        weightFilterCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
         if let flowLayout = self.typeCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
         if let flowLayout = self.weaknessCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
+        if let flowLayout = self.heightFilterCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
+        if let flowLayout = self.weightFilterCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
     }
     
     override var pullUpControllerMiddleStickyPoints: [CGFloat] {
-        return [0, 200, 400, 600]
+        return [0, 400, 800]
     }
     
     override func pullUpControllerDidDrag(to point: CGFloat) {
@@ -79,7 +95,15 @@ class FiltersMenuView: PullUpController {
 
 extension FiltersMenuView:  UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter?.getPokemonFilterListLength(filterId: 0) ?? 0
+        if collectionView == self.typeCollection {
+            return presenter?.getPokemonFilterListLength(filterId: 0) ?? 0
+        } else if collectionView == self.weaknessCollection {
+            return presenter?.getPokemonFilterListLength(filterId: 1) ?? 0
+        } else if collectionView == self.heightFilterCollection {
+            return presenter?.getPokemonFilterListLength(filterId: 2) ?? 0
+        } else {
+            return presenter?.getPokemonFilterListLength(filterId: 3) ?? 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -87,9 +111,12 @@ extension FiltersMenuView:  UICollectionViewDataSource {
             var type: Filter
             if collectionView == self.typeCollection {
                 type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 0))!
-                
-            } else {
+            } else if collectionView == self.weaknessCollection {
                 type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 1))!
+            } else if collectionView == self.heightFilterCollection {
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 2))!
+            } else {
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 3))!
             }
             cell.configure(type.name)
             if type.isSelected {
@@ -114,9 +141,15 @@ extension FiltersMenuView: UICollectionViewDelegate {
         if collectionView == self.typeCollection {
             type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 0))!
             presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 0)
-        } else {
+        } else if collectionView == self.weaknessCollection {
             type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 1))!
             presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 1)
+        } else if collectionView == self.heightFilterCollection {
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 2))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 2)
+        } else {
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 3))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 3)
         }
         cell?.isSelected = type.isSelected
     }
