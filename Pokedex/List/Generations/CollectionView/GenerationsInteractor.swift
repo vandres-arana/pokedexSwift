@@ -7,13 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
 class GenerationsInteractor: GenerationsInteractorInputProtocol {
 
+    var generations = [Generation]()
+    
+    var realm = try! Realm()
     // MARK: Properties
     weak var presenter: GenerationsInteractorOutputProtocol?
     var localDatamanager: GenerationsLocalDataManagerInputProtocol?
     var remoteDatamanager: GenerationsRemoteDataManagerInputProtocol?
+    
     func interactorRequestGenerationsNames() {
         remoteDatamanager?.externalRequestGenerationsNames()
     }
@@ -21,6 +26,16 @@ class GenerationsInteractor: GenerationsInteractorInputProtocol {
 
 extension GenerationsInteractor: GenerationsRemoteDataManagerOutputProtocol {
     func getGenerationNames(receivedData: [GetGenerationsQuery.Data.Generation]) {
-        presenter?.interactorPushDataPresenter(generations: receivedData)
+        for data in receivedData {
+            let generation = Generation()
+            generation.idGeneration = "\(data.id)"
+            generation.name = data.name
+            generations.append(generation)
+
+//            try! realm.write({
+//                realm.add(generation)
+//            })
+        }
+        presenter?.interactorPushDataPresenter(generations: generations)
     }
 }

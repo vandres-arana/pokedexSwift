@@ -13,7 +13,7 @@ class GenerationCollectionViewCell: UICollectionViewCell {
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
-    func setlabel(name: String) {
+    func setlabel(name: String?) {
         label.text = name
     }
 }

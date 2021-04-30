@@ -2613,6 +2613,7 @@ public final class GetGenerationsQuery: GraphQLQuery {
     query getGenerations {
       generations: pokemon_v2_generation {
         __typename
+        id
         name
       }
     }
@@ -2658,6 +2659,7 @@ public final class GetGenerationsQuery: GraphQLQuery {
       public static var selections: [GraphQLSelection] {
         return [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(Int.self))),
           GraphQLField("name", type: .nonNull(.scalar(String.self))),
         ]
       }
@@ -2668,8 +2670,8 @@ public final class GetGenerationsQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(name: String) {
-        self.init(unsafeResultMap: ["__typename": "pokemon_v2_generation", "name": name])
+      public init(id: Int, name: String) {
+        self.init(unsafeResultMap: ["__typename": "pokemon_v2_generation", "id": id, "name": name])
       }
 
       public var __typename: String {
@@ -2678,6 +2680,15 @@ public final class GetGenerationsQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: Int {
+        get {
+          return resultMap["id"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
         }
       }
 

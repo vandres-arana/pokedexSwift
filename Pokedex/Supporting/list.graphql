@@ -93,6 +93,7 @@ query GetPokemonsByGeneration($_gen: Int) {
 
 query getGenerations {
   generations: pokemon_v2_generation {
+    id
     name
   }
 }
