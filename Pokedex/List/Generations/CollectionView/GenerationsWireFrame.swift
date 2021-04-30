@@ -19,7 +19,6 @@ class GenerationsWireFrame: GenerationsWireFrameProtocol {
             let localDataManager: GenerationsLocalDataManagerInputProtocol = GenerationsLocalDataManager()
             let remoteDataManager: GenerationsRemoteDataManagerInputProtocol = GenerationsRemoteDataManager()
             let wireFrame: GenerationsWireFrameProtocol = GenerationsWireFrame()
-            
             view.presenter = presenter
             presenter.view = view
             presenter.wireFrame = wireFrame
@@ -28,14 +27,11 @@ class GenerationsWireFrame: GenerationsWireFrameProtocol {
             interactor.localDatamanager = localDataManager
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
-            
             return navController
         }
         return UIViewController()
     }
-    
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "Generations", bundle: Bundle.main)
     }
-    
 }

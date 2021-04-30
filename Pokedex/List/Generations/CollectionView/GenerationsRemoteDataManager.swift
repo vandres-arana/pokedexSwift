@@ -11,16 +11,13 @@ import Foundation
 class GenerationsRemoteDataManager:GenerationsRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: GenerationsRemoteDataManagerOutputProtocol?
-    
     func externalRequestGenerationsNames() {
         PokeApiService.shared.apollo.fetch(query: GetGenerationsQuery()) { result in
             switch result {
             case .success(let getGenerationsQuery) :
-                self.remoteRequestHandler?.getGenerationNames(generations: getGenerationsQuery.data!.generations);
-                break;
+                self.remoteRequestHandler?.getGenerationNames(receivedData: getGenerationsQuery.data!.generations)
             case .failure(let error) :
-                print(error);
-                break;
+                print(error)
             }
         }
     }

@@ -14,16 +14,13 @@ class GenerationsInteractor: GenerationsInteractorInputProtocol {
     weak var presenter: GenerationsInteractorOutputProtocol?
     var localDatamanager: GenerationsLocalDataManagerInputProtocol?
     var remoteDatamanager: GenerationsRemoteDataManagerInputProtocol?
-    
-    func interactorRequestGenerationsNames(){
-        remoteDatamanager?.externalRequestGenerationsNames();
+    func interactorRequestGenerationsNames() {
+        remoteDatamanager?.externalRequestGenerationsNames()
     }
 }
 
 extension GenerationsInteractor: GenerationsRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
-    
-    func getGenerationNames(generations: [GetGenerationsQuery.Data.Generation]) {
-        presenter?.interactorPushDataPresenter(receivedData: generations);
+    func getGenerationNames(receivedData: [GetGenerationsQuery.Data.Generation]) {
+        presenter?.interactorPushDataPresenter(generations: receivedData)
     }
 }

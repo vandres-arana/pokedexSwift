@@ -22,5 +22,5 @@ class DetailView: UIViewController {
 }
 
 extension DetailView: DetailViewProtocol {
-    // TODO: implement view output methods
+    // TODOs: implement view output methods
 }

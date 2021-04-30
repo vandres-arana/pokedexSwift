@@ -12,7 +12,7 @@ import UIKit
 protocol GenerationsViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: GenerationsPresenterProtocol? { get set }
-    func presenterPushGenerationNames(receivedData: [GetGenerationsQuery.Data.Generation])
+    func presenterPushGenerationNames(generations: [GetGenerationsQuery.Data.Generation])
 }
 
 protocol GenerationsWireFrameProtocol: AnyObject {
@@ -25,13 +25,12 @@ protocol GenerationsPresenterProtocol: AnyObject {
     var view: GenerationsViewProtocol? { get set }
     var interactor: GenerationsInteractorInputProtocol? { get set }
     var wireFrame: GenerationsWireFrameProtocol? { get set }
-    
     func viewDidLoad()
 }
 
 protocol GenerationsInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
-    func interactorPushDataPresenter(receivedData: [GetGenerationsQuery.Data.Generation]);
+    func interactorPushDataPresenter(generations: [GetGenerationsQuery.Data.Generation])
 }
 
 protocol GenerationsInteractorInputProtocol: AnyObject {
@@ -39,8 +38,7 @@ protocol GenerationsInteractorInputProtocol: AnyObject {
     var presenter: GenerationsInteractorOutputProtocol? { get set }
     var localDatamanager: GenerationsLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: GenerationsRemoteDataManagerInputProtocol? { get set }
-    
-    func interactorRequestGenerationsNames();
+    func interactorRequestGenerationsNames()
 }
 
 protocol GenerationsDataManagerInputProtocol: AnyObject {
@@ -50,13 +48,12 @@ protocol GenerationsDataManagerInputProtocol: AnyObject {
 protocol GenerationsRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: GenerationsRemoteDataManagerOutputProtocol? { get set }
-    func externalRequestGenerationsNames();
+    func externalRequestGenerationsNames()
 }
 
 protocol GenerationsRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
-    
-    func getGenerationNames(generations: [GetGenerationsQuery.Data.Generation]);
+    func getGenerationNames(receivedData: [GetGenerationsQuery.Data.Generation])
 }
 
 protocol GenerationsLocalDataManagerInputProtocol: AnyObject {

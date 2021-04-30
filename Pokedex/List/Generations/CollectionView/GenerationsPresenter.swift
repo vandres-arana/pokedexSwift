@@ -8,26 +8,21 @@
 
 import Foundation
 
-class GenerationsPresenter  {
-    
+class GenerationsPresenter {
     // MARK: Properties
     weak var view: GenerationsViewProtocol?
     var interactor: GenerationsInteractorInputProtocol?
     var wireFrame: GenerationsWireFrameProtocol?
-    
 }
 
 extension GenerationsPresenter: GenerationsPresenterProtocol {
-    // TODO: implement presenter methods
     func viewDidLoad() {
-        interactor?.interactorRequestGenerationsNames();
+        interactor?.interactorRequestGenerationsNames()
     }
 }
 
 extension GenerationsPresenter: GenerationsInteractorOutputProtocol {
-    func interactorPushDataPresenter(receivedData: [GetGenerationsQuery.Data.Generation]) {
-        view?.presenterPushGenerationNames(receivedData: receivedData);
+    func interactorPushDataPresenter(generations: [GetGenerationsQuery.Data.Generation]) {
+        view?.presenterPushGenerationNames(generations: generations)
     }
-    
-    // TODO: implement interactor output methods
 }

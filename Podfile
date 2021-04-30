@@ -7,5 +7,7 @@ target 'Pokedex' do
 
   # Pods for Pokedex
   pod 'Apollo'
-
+  pod 'SwiftLint'
+  pod 'Realm'
+  
 end

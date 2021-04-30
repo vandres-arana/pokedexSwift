@@ -24,9 +24,7 @@ protocol ListPresenterProtocol: AnyObject {
     var view: ListViewProtocol? { get set }
     var interactor: ListInteractorInputProtocol? { get set }
     var wireFrame: ListWireFrameProtocol? { get set }
-    
     func viewDidLoad()
-    
 }
 
 protocol ListInteractorOutputProtocol: AnyObject {
@@ -38,7 +36,6 @@ protocol ListInteractorInputProtocol: AnyObject {
     var presenter: ListInteractorOutputProtocol? { get set }
     var localDatamanager: ListLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: ListRemoteDataManagerInputProtocol? { get set }
-    
 }
 
 protocol ListDataManagerInputProtocol: AnyObject {
@@ -52,7 +49,6 @@ protocol ListRemoteDataManagerInputProtocol: AnyObject {
 
 protocol ListRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
-    
 }
 
 protocol ListLocalDataManagerInputProtocol: AnyObject {

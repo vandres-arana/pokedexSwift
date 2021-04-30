@@ -12,12 +12,10 @@ struct Constants {
         static let listViewStoryBoardID = "ListView"
         static let detailViewStoryBoardID = "DetailView"
     }
-    
     struct PokeApi {
         static let graphqlURL = "https://beta.pokeapi.co/graphql/v1beta"
         static let baseURL = "https://pokeapi.co/api/v2/"
     }
-    
     struct IdentifierReusableCell {
         static let generationReusableCell = "GenerationCollectionViewCell"
     }

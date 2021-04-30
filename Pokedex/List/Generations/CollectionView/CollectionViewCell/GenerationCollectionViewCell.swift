@@ -8,15 +8,12 @@
 import UIKit
 
 class GenerationCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var label: UILabel!
     
     override class func awakeFromNib() {
-        super.awakeFromNib();
+        super.awakeFromNib()
     }
-    
     func setlabel(name: String) {
-        label.text = name;
+        label.text = name
     }
-    
 }
