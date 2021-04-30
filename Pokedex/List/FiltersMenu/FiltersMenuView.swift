@@ -81,7 +81,7 @@ class FiltersMenuView: PullUpController {
     }
     
     override func pullUpControllerDidDrag(to point: CGFloat) {
-        if point == 400 {
+        if point == pullUpControllerMiddleStickyPoints[0] {
             self.dismiss(animated: false, completion: nil)
             self.view = nil
             listView?.dismissView()
