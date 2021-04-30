@@ -19,7 +19,6 @@ class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
             let interactor: FiltersMenuInteractorInputProtocol & FiltersMenuRemoteDataManagerOutputProtocol = FiltersMenuInteractor()
             let remoteDataManager: FiltersMenuRemoteDataManagerInputProtocol = FiltersMenuRemoteDataManager()
             let wireFrame: FiltersMenuWireFrameProtocol = FiltersMenuWireFrame()
-            
             view.presenter = presenter
             presenter.view = view
             presenter.wireFrame = wireFrame
@@ -29,14 +28,11 @@ class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
             interactor.loadPokemonTypeList()
-            
             return navController
         }
         return UIViewController()
     }
-    
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "FiltersMenuView", bundle: Bundle.main)
     }
-    
 }

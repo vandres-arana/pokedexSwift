@@ -9,7 +9,6 @@
 import Foundation
 
 class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
-    
     var pokemonTypes: [Filter] = []
     var pokemonWeaknesses: [Filter] = []
     var pokemonHeights: [Filter] = []
@@ -19,14 +18,12 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
     weak var presenter: FiltersMenuInteractorOutputProtocol?
     var localDatamanager: FiltersMenuLocalDataManagerInputProtocol?
     var remoteDatamanager: FiltersMenuRemoteDataManagerInputProtocol?
-    
     func loadPokemonTypeList() {
         pokemonTypes = (localDatamanager?.loadPokemonTypeFilterList())!
         pokemonWeaknesses = (localDatamanager?.loadPokemonTypeFilterList())!
         pokemonHeights = (localDatamanager?.loadPokemonHeightFilterList())!
         pokemonWeights = (localDatamanager?.loadPokemonWeightFilterList())!
     }
-    
     func getPokemonFilterListCount(filterId: Int) -> Int {
         switch filterId {
         case 0:
@@ -41,7 +38,6 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
             return 0
         }
     }
-    
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {
         switch filterId {
         case 0:
@@ -54,7 +50,6 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
             return pokemonWeights[index]
         }
     }
-    
     func markPokemonFilterByIndex(index: Int, filterId: Int) {
         switch filterId {
         case 0:
@@ -67,7 +62,6 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
             pokemonWeights[index].isSelected = !pokemonWeights[index].isSelected
         }
     }
-    
     func resetFilters() {
         loadPokemonTypeList()
     }
@@ -75,5 +69,4 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
 }
 
 extension FiltersMenuInteractor: FiltersMenuRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
 }

@@ -24,15 +24,10 @@ protocol FiltersMenuPresenterProtocol: AnyObject {
     var view: FiltersMenuViewProtocol? { get set }
     var interactor: FiltersMenuInteractorInputProtocol? { get set }
     var wireFrame: FiltersMenuWireFrameProtocol? { get set }
-    
     func viewDidLoad()
-    
     func getPokemonFilterListLength(filterId: Int) -> Int
-    
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
-    
     func markPokemonFilterByIndex(index: Int, filterId: Int)
-    
     func resetFilters()
 }
 
@@ -45,15 +40,10 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     var presenter: FiltersMenuInteractorOutputProtocol? { get set }
     var localDatamanager: FiltersMenuLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: FiltersMenuRemoteDataManagerInputProtocol? { get set }
-    
     func loadPokemonTypeList()
-    
     func getPokemonFilterListCount(filterId: Int) -> Int
-    
     func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
-    
     func markPokemonFilterByIndex(index: Int, filterId: Int)
-    
     func resetFilters()
 }
 
@@ -73,8 +63,6 @@ protocol FiltersMenuRemoteDataManagerOutputProtocol: AnyObject {
 protocol FiltersMenuLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
     func loadPokemonTypeFilterList() -> [Filter]
-    
     func loadPokemonHeightFilterList() -> [Filter]
-    
     func loadPokemonWeightFilterList() -> [Filter]
 }

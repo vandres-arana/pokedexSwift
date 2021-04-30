@@ -9,7 +9,5 @@
 import Foundation
 
 class FiltersMenuRemoteDataManager:FiltersMenuRemoteDataManagerInputProtocol {
-    
     var remoteRequestHandler: FiltersMenuRemoteDataManagerOutputProtocol?
-    
 }

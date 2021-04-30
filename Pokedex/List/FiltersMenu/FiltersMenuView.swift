@@ -27,7 +27,6 @@ class FiltersMenuView: PullUpController {
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var applyButton: UIButton!
     var listView: ListView?
-    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -55,7 +54,6 @@ class FiltersMenuView: PullUpController {
         weightFilterCollection.allowsMultipleSelection = true
         self.registerNib()
     }
-    
     func registerNib() {
         let nib = UINib(nibName: FiltersMenuTypeCell.nibName, bundle: nil)
         typeCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
@@ -75,18 +73,15 @@ class FiltersMenuView: PullUpController {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
     }
-    
     override var pullUpControllerMiddleStickyPoints: [CGFloat] {
         return [600, 1000, 1400]
     }
-    
     override func pullUpControllerDidDrag(to point: CGFloat) {
         if point == pullUpControllerMiddleStickyPoints[0] {
             self.dismiss(animated: false, completion: nil)
             self.view = nil
         }
     }
-    
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         presenter?.resetFilters()
         typeCollection.reloadData()
@@ -94,12 +89,10 @@ class FiltersMenuView: PullUpController {
         heightFilterCollection.reloadData()
         weightFilterCollection.reloadData()
     }
-    
     @IBAction func applyButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
         self.view = nil
     }
-    
 }
 
 extension FiltersMenuView:  UICollectionViewDataSource {
@@ -114,7 +107,6 @@ extension FiltersMenuView:  UICollectionViewDataSource {
             return presenter?.getPokemonFilterListLength(filterId: 3) ?? 0
         }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
             var type: Filter
@@ -165,5 +157,4 @@ extension FiltersMenuView: UICollectionViewDelegate {
 }
 
 extension FiltersMenuView: FiltersMenuViewProtocol {
-    // TODO: implement view output methods
 }
