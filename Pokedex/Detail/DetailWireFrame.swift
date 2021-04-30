@@ -19,7 +19,6 @@ class DetailWireFrame: DetailWireFrameProtocol {
             let localDataManager: DetailLocalDataManagerInputProtocol = DetailLocalDataManager()
             let remoteDataManager: DetailRemoteDataManagerInputProtocol = DetailRemoteDataManager()
             let wireFrame: DetailWireFrameProtocol = DetailWireFrame()
-            
             view.presenter = presenter
             presenter.view = view
             presenter.wireFrame = wireFrame
@@ -28,14 +27,11 @@ class DetailWireFrame: DetailWireFrameProtocol {
             interactor.localDatamanager = localDataManager
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
-            
             return navController
         }
         return UIViewController()
     }
-    
     static var detailStoryboard: UIStoryboard {
         return UIStoryboard(name: Constants.StoryBoard.detailViewStoryBoardID, bundle: Bundle.main)
     }
-    
 }

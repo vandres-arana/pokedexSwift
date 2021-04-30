@@ -24,7 +24,6 @@ protocol ListPresenterProtocol: class {
     var view: ListViewProtocol? { get set }
     var interactor: ListInteractorInputProtocol? { get set }
     var wireFrame: ListWireFrameProtocol? { get set }
-    
     func viewDidLoad()
 }
 
