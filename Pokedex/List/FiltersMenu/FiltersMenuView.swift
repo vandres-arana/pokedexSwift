@@ -31,8 +31,8 @@ class FiltersMenuView: PullUpController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layer.cornerRadius = 30
-        resetButton.layer.cornerRadius = 15
-        applyButton.layer.cornerRadius = 15
+        resetButton.layer.cornerRadius = 10
+        applyButton.layer.cornerRadius = 10
         typeCollection.dataSource = self
         weaknessCollection.dataSource = self
         typeCollection.delegate = self
