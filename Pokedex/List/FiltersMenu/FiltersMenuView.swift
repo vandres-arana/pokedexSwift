@@ -84,7 +84,6 @@ class FiltersMenuView: PullUpController {
         if point == pullUpControllerMiddleStickyPoints[0] {
             self.dismiss(animated: false, completion: nil)
             self.view = nil
-            listView?.dismissView()
         }
     }
     
@@ -99,7 +98,6 @@ class FiltersMenuView: PullUpController {
     @IBAction func applyButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
         self.view = nil
-        listView?.dismissView()
     }
     
 }
