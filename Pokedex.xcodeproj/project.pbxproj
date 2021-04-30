@@ -100,6 +100,7 @@
 		69E96D3026324A3B0048E6B4 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				CEAEDD5F263C269A00D8C9F2 /* Custom Cell */,
 				69E96D3126324A480048E6B4 /* DetailPresenter.swift */,
 				69E96D3226324A480048E6B4 /* DetailLocalDataManager.swift */,
 				69E96D3326324A480048E6B4 /* DetailProtocols.swift */,
@@ -172,6 +173,13 @@
 				F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEAEDD5F263C269A00D8C9F2 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		EFAD1C72A1BB5AD4E85036F4 /* Pods */ = {
