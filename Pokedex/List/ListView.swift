@@ -23,6 +23,7 @@ class ListView: UIViewController {
     }
     
     @IBAction func onButtonTapped(_ sender: UIButton) {
+        print("Button Pressed")
         let viewC = FiltersMenuWireFrame.createFiltersMenuModule() as! FiltersMenuView
         viewC.listView = self
         addPullUpController(viewC, initialStickyPointOffset: CGFloat(800), animated: true)

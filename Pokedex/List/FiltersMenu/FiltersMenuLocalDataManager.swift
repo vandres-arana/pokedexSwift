@@ -18,7 +18,7 @@ class FiltersMenuLocalDataManager:FiltersMenuLocalDataManagerInputProtocol {
     }
     
     func loadPokemonWeightFilterList() -> [Filter] {
-        return [Filter("light"), Filter("normal"), Filter("heavy")]
+        return [Filter("light"), Filter("normalW"), Filter("heavy")]
     }
     
 }

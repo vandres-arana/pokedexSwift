@@ -36,7 +36,7 @@ class FiltersMenuView: PullUpController {
         self.filterView.layer.cornerRadius = 30
         resetButton.layer.cornerRadius = 10
         applyButton.layer.cornerRadius = 10
-        scrollItem.layer.cornerRadius = 5
+        scrollItem.layer.cornerRadius = 2.5
         typeCollection.dataSource = self
         weaknessCollection.dataSource = self
         heightFilterCollection.dataSource = self
