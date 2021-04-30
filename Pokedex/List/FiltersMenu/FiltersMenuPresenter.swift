@@ -18,20 +18,21 @@ class FiltersMenuPresenter  {
 }
 
 extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
+    
     // TODO: implement presenter methods
     func viewDidLoad() {
     }
     
-    func getPokemonTypeFilterListLength() -> Int {
-        return interactor?.getPokemonTypeFilterListCount() ?? 0
+    func getPokemonFilterListLength(filterId: Int) -> Int {
+        return interactor?.getPokemonFilterListCount() ?? 0
     }
     
-    func getPokemonTypeFilterByIndex(index: Int, collection: Int) -> Filter {
-        return (interactor?.getPokemonTypeFilterByIndex(index: index, collection: collection))!
+    func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {
+        return (interactor?.getPokemonFilterByIndex(index: index, filterId: filterId))!
     }
     
-    func markPokemonTypeFilterByIndex(index: Int, collection: Int) {
-        interactor?.markPokemonTypeFilterByIndex(index: index, collection: collection)
+    func markPokemonFilterByIndex(index: Int, filterId: Int) {
+        interactor?.markPokemonFilterByIndex(index: index, filterId: filterId)
     }
 }
 

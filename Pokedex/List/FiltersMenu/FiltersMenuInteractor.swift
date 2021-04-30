@@ -23,20 +23,20 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
         pokemonWeaknesses = (localDatamanager?.loadPokemonTypeList())!
     }
     
-    func getPokemonTypeFilterListCount() -> Int {
+    func getPokemonFilterListCount() -> Int {
         return pokemonTypes.count
     }
     
-    func getPokemonTypeFilterByIndex(index: Int, collection: Int) -> Filter {
-        if collection == 0 {
+    func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {
+        if filterId == 0 {
             return pokemonTypes[index]
         } else {
             return pokemonWeaknesses[index]
         }
     }
     
-    func markPokemonTypeFilterByIndex(index: Int, collection: Int) {
-        if collection == 0 {
+    func markPokemonFilterByIndex(index: Int, filterId: Int) {
+        if filterId == 0 {
             pokemonTypes[index].isSelected = !pokemonTypes[index].isSelected
         } else {
             pokemonWeaknesses[index].isSelected = !pokemonWeaknesses[index].isSelected

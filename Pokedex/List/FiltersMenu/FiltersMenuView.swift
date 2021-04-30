@@ -79,17 +79,17 @@ class FiltersMenuView: PullUpController {
 
 extension FiltersMenuView:  UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter?.getPokemonTypeFilterListLength() ?? 0
+        return presenter?.getPokemonFilterListLength(filterId: 0) ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
             var type: Filter
             if collectionView == self.typeCollection {
-                type = (presenter?.getPokemonTypeFilterByIndex(index: indexPath.row, collection: 0))!
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 0))!
                 
             } else {
-                type = (presenter?.getPokemonTypeFilterByIndex(index: indexPath.row, collection: 1))!
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 1))!
             }
             cell.configure(type.name)
             if type.isSelected {
@@ -112,11 +112,11 @@ extension FiltersMenuView: UICollectionViewDelegate {
         let cell = collectionView.cellForItem(at: indexPath)
         var type: Filter
         if collectionView == self.typeCollection {
-            type = (presenter?.getPokemonTypeFilterByIndex(index: indexPath.row, collection: 0))!
-            presenter?.markPokemonTypeFilterByIndex(index: indexPath.row, collection: 0)
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 0))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 0)
         } else {
-            type = (presenter?.getPokemonTypeFilterByIndex(index: indexPath.row, collection: 1))!
-            presenter?.markPokemonTypeFilterByIndex(index: indexPath.row, collection: 1)
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 1))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 1)
         }
         cell?.isSelected = type.isSelected
     }
