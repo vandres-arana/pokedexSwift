@@ -37,31 +37,44 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
         }
     }
     func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) throws -> Filter {
-        switch collectionFilterId {
-        case CollectionFilter.type:
-            return pokemonTypes[index]
-        case CollectionFilter.weakness:
-            return pokemonWeaknesses[index]
-        case CollectionFilter.height:
-            return pokemonHeights[index]
-        case CollectionFilter.weight:
-            return pokemonWeights[index]
+        if validateIndexRange(index: index, collectionFilterId: collectionFilterId) {
+            switch collectionFilterId {
+            case CollectionFilter.type:
+                return pokemonTypes[index]
+            case CollectionFilter.weakness:
+                return pokemonWeaknesses[index]
+            case CollectionFilter.height:
+                return pokemonHeights[index]
+            case CollectionFilter.weight:
+                return pokemonWeights[index]
+            }
         }
+        throw FiltersMenuError.indexOutOfRange
     }
     func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) throws {
-        switch collectionFilterId {
-        case CollectionFilter.type:
-            pokemonTypes[index].select()
-        case CollectionFilter.weakness:
-            pokemonWeaknesses[index].select()
-        case CollectionFilter.height:
-            pokemonHeights[index].select()
-        case CollectionFilter.weight:
-            pokemonWeights[index].select()
+        if validateIndexRange(index: index, collectionFilterId: collectionFilterId) {
+            switch collectionFilterId {
+            case CollectionFilter.type:
+                pokemonTypes[index].select()
+            case CollectionFilter.weakness:
+                pokemonWeaknesses[index].select()
+            case CollectionFilter.height:
+                pokemonHeights[index].select()
+            case CollectionFilter.weight:
+                pokemonWeights[index].select()
+            }
+        } else {
+            throw FiltersMenuError.indexOutOfRange
         }
     }
     func resetFilters() {
         loadPokemonFiltersList()
+    }
+    func validateIndexRange(index: Int, collectionFilterId: CollectionFilter) -> Bool {
+        if index >= 0 && index < getPokemonFilterListCount(collectionFilterId: collectionFilterId) {
+            return true
+        }
+        return false
     }
 
 }

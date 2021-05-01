@@ -9,25 +9,35 @@ import XCTest
 @testable import Pokedex
 
 class FiltersMenuPresenterTest: XCTestCase {
+    var presenter: FiltersMenuPresenter?
+    let collectionFilter = CollectionFilter.weakness
+    var index: Int = 0
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        presenter = FiltersMenuPresenter()
+        let interactor = FiltersMenuInteractor()
+        let localDataManager: FiltersMenuLocalDataManagerInputProtocol = FiltersMenuLocalDataManager()
+        interactor.localDatamanager = localDataManager
+        presenter?.interactor = interactor
+        interactor.loadPokemonFiltersList()
     }
-
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetPokemonFilterListLength() throws {
+        XCTAssertEqual(presenter?.getPokemonFilterListLength(collectionFilterId: collectionFilter), 18)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testGetPokemonFilterByIndex() throws {
+        XCTAssertNotEqual(presenter?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilter), nil)
     }
-
+    func testGetPokemonFilterByIndexOutOfRange() throws {
+        index = (presenter?.getPokemonFilterListLength(collectionFilterId: collectionFilter))! + 1
+        XCTAssertEqual(presenter?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilter), nil)
+    }
+    func testMarkPokemonFilterInRange() throws {
+        let pokemonFilter = presenter?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilter)
+        XCTAssertEqual(pokemonFilter?.isSelected, false)
+        presenter?.markPokemonFilterByIndex(index: index, collectionFilterId: collectionFilter)
+        let pokemonFilterMarked = presenter?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilter)
+        XCTAssertEqual(pokemonFilterMarked?.isSelected, true)
+    }
 }
