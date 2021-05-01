@@ -9,13 +9,16 @@
 import Foundation
 
 class FiltersMenuLocalDataManager:FiltersMenuLocalDataManagerInputProtocol {
+    let pokemonTypes = ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+    let pokemonHeights = ["short", "medium", "tall"]
+    let pokemonWeights = ["light", "normalW", "heavy"]
     func loadPokemonTypeFilterList() -> [Filter] {
-        return [Filter("bug"), Filter("dark"), Filter("dragon"), Filter("electric"), Filter("fairy"), Filter("fighting"), Filter("fire"), Filter("flying"), Filter("ghost"), Filter("grass"), Filter("ground"), Filter("ice"), Filter("normal"), Filter("poison"), Filter("psychic"), Filter("rock"), Filter("steel"), Filter("water")]
+        return pokemonTypes.map { Filter($0) }
     }
     func loadPokemonHeightFilterList() -> [Filter] {
-        return [Filter("short"), Filter("medium"), Filter("tall")]
+        return pokemonHeights.map { Filter($0) }
     }
     func loadPokemonWeightFilterList() -> [Filter] {
-        return [Filter("light"), Filter("normalW"), Filter("heavy")]
+        return pokemonWeights.map { Filter($0) }
     }
 }

@@ -10,12 +10,6 @@ import UIKit
 class FiltersMenuTypeCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageViewBackground: UIImageView!
-    class var reuseIdentifier: String {
-        return "FiltersMenuTypeReuseIdentifier"
-    }
-    class var nibName: String {
-        return "FiltersMenuTypeCell"
-    }
     var name: String = ""
     override func awakeFromNib() {
         super.awakeFromNib()

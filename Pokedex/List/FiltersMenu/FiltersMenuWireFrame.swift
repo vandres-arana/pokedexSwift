@@ -12,7 +12,7 @@ import UIKit
 class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
 
     class func createFiltersMenuModule() -> UIViewController {
-        let navController = mainStoryboard.instantiateViewController(withIdentifier: "FiltersMenuView")
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.filtersViewStoryBoardID)
         if let view = navController as? FiltersMenuView {
             let presenter: FiltersMenuPresenterProtocol & FiltersMenuInteractorOutputProtocol = FiltersMenuPresenter()
             let localDataManager: FiltersMenuLocalDataManagerInputProtocol = FiltersMenuLocalDataManager()
@@ -33,6 +33,6 @@ class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
         return UIViewController()
     }
     static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "FiltersMenuView", bundle: Bundle.main)
+        return UIStoryboard(name: Constants.StoryBoard.filtersViewStoryBoardID, bundle: Bundle.main)
     }
 }

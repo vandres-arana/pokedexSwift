@@ -25,9 +25,9 @@ protocol FiltersMenuPresenterProtocol: AnyObject {
     var interactor: FiltersMenuInteractorInputProtocol? { get set }
     var wireFrame: FiltersMenuWireFrameProtocol? { get set }
     func viewDidLoad()
-    func getPokemonFilterListLength(filterId: Int) -> Int
-    func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
-    func markPokemonFilterByIndex(index: Int, filterId: Int)
+    func getPokemonFilterListLength(collectionFilterId: CollectionFilter) -> Int
+    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter
+    func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter)
     func resetFilters()
 }
 
@@ -41,9 +41,9 @@ protocol FiltersMenuInteractorInputProtocol: AnyObject {
     var localDatamanager: FiltersMenuLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: FiltersMenuRemoteDataManagerInputProtocol? { get set }
     func loadPokemonTypeList()
-    func getPokemonFilterListCount(filterId: Int) -> Int
-    func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter
-    func markPokemonFilterByIndex(index: Int, filterId: Int)
+    func getPokemonFilterListCount(collectionFilterId: CollectionFilter) -> Int
+    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter
+    func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter)
     func resetFilters()
 }
 

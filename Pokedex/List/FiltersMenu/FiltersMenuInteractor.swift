@@ -24,41 +24,39 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
         pokemonHeights = (localDatamanager?.loadPokemonHeightFilterList())!
         pokemonWeights = (localDatamanager?.loadPokemonWeightFilterList())!
     }
-    func getPokemonFilterListCount(filterId: Int) -> Int {
-        switch filterId {
-        case 0:
+    func getPokemonFilterListCount(collectionFilterId: CollectionFilter) -> Int {
+        switch collectionFilterId {
+        case CollectionFilter.type:
             return pokemonTypes.count
-        case 1:
+        case CollectionFilter.weakness:
             return pokemonWeaknesses.count
-        case 2:
+        case CollectionFilter.height:
             return pokemonHeights.count
-        case 3:
+        case CollectionFilter.weight:
             return pokemonWeights.count
-        default:
-            return 0
         }
     }
-    func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {
-        switch filterId {
-        case 0:
+    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter {
+        switch collectionFilterId {
+        case CollectionFilter.type:
             return pokemonTypes[index]
-        case 1:
+        case CollectionFilter.weakness:
             return pokemonWeaknesses[index]
-        case 2:
+        case CollectionFilter.height:
             return pokemonHeights[index]
-        default:
+        case CollectionFilter.weight:
             return pokemonWeights[index]
         }
     }
-    func markPokemonFilterByIndex(index: Int, filterId: Int) {
-        switch filterId {
-        case 0:
+    func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) {
+        switch collectionFilterId {
+        case CollectionFilter.type:
             pokemonTypes[index].isSelected = !pokemonTypes[index].isSelected
-        case 1:
+        case CollectionFilter.weakness:
             pokemonWeaknesses[index].isSelected = !pokemonWeaknesses[index].isSelected
-        case 2:
+        case CollectionFilter.height:
             pokemonHeights[index].isSelected = !pokemonHeights[index].isSelected
-        default:
+        case CollectionFilter.weight:
             pokemonWeights[index].isSelected = !pokemonWeights[index].isSelected
         }
     }

@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 import PullUpController
 
-protocol FilterProtocol {
-    func dismissView()
-}
-
 class FiltersMenuView: PullUpController {
 
     // MARK: Properties
@@ -32,44 +28,26 @@ class FiltersMenuView: PullUpController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layer.cornerRadius = 30
-        self.filterView.layer.cornerRadius = 30
+        filterView.layer.cornerRadius = 30
         resetButton.layer.cornerRadius = 10
         applyButton.layer.cornerRadius = 10
         scrollItem.layer.cornerRadius = 2.5
-        typeCollection.dataSource = self
-        weaknessCollection.dataSource = self
-        heightFilterCollection.dataSource = self
-        weightFilterCollection.dataSource = self
-        typeCollection.delegate = self
-        weaknessCollection.delegate = self
-        heightFilterCollection.delegate = self
-        weightFilterCollection.delegate = self
-        typeCollection.showsHorizontalScrollIndicator = false
-        weaknessCollection.showsHorizontalScrollIndicator = false
-        heightFilterCollection.showsHorizontalScrollIndicator = false
-        weightFilterCollection.showsHorizontalScrollIndicator = false
-        typeCollection.allowsMultipleSelection = true
-        weaknessCollection.allowsMultipleSelection = true
-        heightFilterCollection.allowsMultipleSelection = true
-        weightFilterCollection.allowsMultipleSelection = true
-        self.registerNib()
+        setupFilterCollection(collectionViewFilter: typeCollection)
+        setupFilterCollection(collectionViewFilter: weaknessCollection)
+        setupFilterCollection(collectionViewFilter: heightFilterCollection)
+        setupFilterCollection(collectionViewFilter: weightFilterCollection)
     }
-    func registerNib() {
-        let nib = UINib(nibName: FiltersMenuTypeCell.nibName, bundle: nil)
-        typeCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
-        weaknessCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
-        heightFilterCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
-        weightFilterCollection?.register(nib, forCellWithReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier)
-        if let flowLayout = self.typeCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
-        }
-        if let flowLayout = self.weaknessCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
-        }
-        if let flowLayout = self.heightFilterCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
-        }
-        if let flowLayout = self.weightFilterCollection?.collectionViewLayout as? UICollectionViewFlowLayout {
+    func setupFilterCollection(collectionViewFilter: UICollectionView) {
+        collectionViewFilter.dataSource = self
+        collectionViewFilter.delegate = self
+        collectionViewFilter.showsHorizontalScrollIndicator = false
+        collectionViewFilter.allowsMultipleSelection = true
+        registerNib(collectionViewFilter: collectionViewFilter)
+    }
+    func registerNib(collectionViewFilter: UICollectionView) {
+        let nib = UINib(nibName: Constants.FiltersMenuCell.nibName, bundle: nil)
+        collectionViewFilter.register(nib, forCellWithReuseIdentifier: Constants.FiltersMenuCell.reuseIdentifier)
+        if let flowLayout = collectionViewFilter.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
     }
@@ -98,26 +76,26 @@ class FiltersMenuView: PullUpController {
 extension FiltersMenuView:  UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.typeCollection {
-            return presenter?.getPokemonFilterListLength(filterId: 0) ?? 0
+            return presenter?.getPokemonFilterListLength(collectionFilterId : CollectionFilter.type) ?? 0
         } else if collectionView == self.weaknessCollection {
-            return presenter?.getPokemonFilterListLength(filterId: 1) ?? 0
+            return presenter?.getPokemonFilterListLength(collectionFilterId : CollectionFilter.weakness) ?? 0
         } else if collectionView == self.heightFilterCollection {
-            return presenter?.getPokemonFilterListLength(filterId: 2) ?? 0
+            return presenter?.getPokemonFilterListLength(collectionFilterId : CollectionFilter.height) ?? 0
         } else {
-            return presenter?.getPokemonFilterListLength(filterId: 3) ?? 0
+            return presenter?.getPokemonFilterListLength(collectionFilterId : CollectionFilter.weight) ?? 0
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FiltersMenuTypeCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.FiltersMenuCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
             var type: Filter
             if collectionView == self.typeCollection {
-                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 0))!
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId: CollectionFilter.type))!
             } else if collectionView == self.weaknessCollection {
-                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 1))!
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId: CollectionFilter.weakness))!
             } else if collectionView == self.heightFilterCollection {
-                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 2))!
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.height))!
             } else {
-                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 3))!
+                type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weight))!
             }
             cell.configure(type.name)
             if type.isSelected {
@@ -140,17 +118,17 @@ extension FiltersMenuView: UICollectionViewDelegate {
         let cell = collectionView.cellForItem(at: indexPath)
         var type: Filter
         if collectionView == self.typeCollection {
-            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 0))!
-            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 0)
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.type))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.type)
         } else if collectionView == self.weaknessCollection {
-            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 1))!
-            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 1)
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weakness))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weakness)
         } else if collectionView == self.heightFilterCollection {
-            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 2))!
-            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 2)
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.height))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.height)
         } else {
-            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, filterId: 3))!
-            presenter?.markPokemonFilterByIndex(index: indexPath.row, filterId: 3)
+            type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weight))!
+            presenter?.markPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weight)
         }
         cell?.isSelected = type.isSelected
     }

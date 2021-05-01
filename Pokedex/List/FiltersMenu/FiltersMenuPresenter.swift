@@ -17,14 +17,14 @@ class FiltersMenuPresenter {
 extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
     func viewDidLoad() {
     }
-    func getPokemonFilterListLength(filterId: Int) -> Int {
-        return interactor?.getPokemonFilterListCount(filterId: filterId) ?? 0
+    func getPokemonFilterListLength(collectionFilterId: CollectionFilter) -> Int {
+        return interactor?.getPokemonFilterListCount(collectionFilterId: collectionFilterId) ?? 0
     }
-    func getPokemonFilterByIndex(index: Int, filterId: Int) -> Filter {
-        return (interactor?.getPokemonFilterByIndex(index: index, filterId: filterId))!
+    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter {
+        return (interactor?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilterId))!
     }
-    func markPokemonFilterByIndex(index: Int, filterId: Int) {
-        interactor?.markPokemonFilterByIndex(index: index, filterId: filterId)
+    func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) {
+        interactor?.markPokemonFilterByIndex(index: index, collectionFilterId: collectionFilterId)
     }
     func resetFilters() {
         interactor?.resetFilters()
