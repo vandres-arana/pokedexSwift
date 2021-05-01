@@ -27,15 +27,18 @@ class FiltersMenuView: PullUpController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupElementBorderRadius()
+        setupFilterCollection(collectionViewFilter: typeCollection)
+        setupFilterCollection(collectionViewFilter: weaknessCollection)
+        setupFilterCollection(collectionViewFilter: heightFilterCollection)
+        setupFilterCollection(collectionViewFilter: weightFilterCollection)
+    }
+    func setupElementBorderRadius() {
         self.view.layer.cornerRadius = 30
         filterView.layer.cornerRadius = 30
         resetButton.layer.cornerRadius = 10
         applyButton.layer.cornerRadius = 10
         scrollItem.layer.cornerRadius = 2.5
-        setupFilterCollection(collectionViewFilter: typeCollection)
-        setupFilterCollection(collectionViewFilter: weaknessCollection)
-        setupFilterCollection(collectionViewFilter: heightFilterCollection)
-        setupFilterCollection(collectionViewFilter: weightFilterCollection)
     }
     func setupFilterCollection(collectionViewFilter: UICollectionView) {
         collectionViewFilter.dataSource = self
