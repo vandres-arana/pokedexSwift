@@ -87,7 +87,7 @@ extension FiltersMenuView:  UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.FiltersMenuCell.reuseIdentifier, for: indexPath) as? FiltersMenuCollectionCell {
-            var type: Filter
+            var type: Filter?
             if collectionView == self.typeCollection {
                 type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId: CollectionFilter.type))!
             } else if collectionView == self.weaknessCollection {
@@ -97,11 +97,13 @@ extension FiltersMenuView:  UICollectionViewDataSource {
             } else {
                 type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weight))!
             }
-            cell.configure(type.name)
-            if type.isSelected {
-                cell.isSelected = type.isSelected
+            if let safeType = type {
+                cell.configure(safeType.name)
+                if safeType.isSelected {
+                    cell.isSelected = safeType.isSelected
+                }
+                return cell
             }
-            return cell
         }
         return UICollectionViewCell()
     }
@@ -116,7 +118,7 @@ extension FiltersMenuView: UICollectionViewDelegateFlowLayout {
 extension FiltersMenuView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        var type: Filter
+        var type: Filter?
         if collectionView == self.typeCollection {
             type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.type))!
             presenter?.markPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.type)
@@ -130,7 +132,9 @@ extension FiltersMenuView: UICollectionViewDelegate {
             type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weight))!
             presenter?.markPokemonFilterByIndex(index: indexPath.row, collectionFilterId : CollectionFilter.weight)
         }
-        cell?.isSelected = type.isSelected
+        if let safeType = type {
+            cell?.isSelected = safeType.isSelected
+        }
     }
 }
 
