@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FiltersMenuTypeCell: UICollectionViewCell {
+class FiltersMenuCollectionCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageViewBackground: UIImageView!
     var name: String = ""

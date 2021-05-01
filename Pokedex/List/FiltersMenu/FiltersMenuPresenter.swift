@@ -20,11 +20,20 @@ extension FiltersMenuPresenter: FiltersMenuPresenterProtocol {
     func getPokemonFilterListLength(collectionFilterId: CollectionFilter) -> Int {
         return interactor?.getPokemonFilterListCount(collectionFilterId: collectionFilterId) ?? 0
     }
-    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter {
-        return (interactor?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilterId))!
+    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter? {
+        do {
+            return try (interactor?.getPokemonFilterByIndex(index: index, collectionFilterId: collectionFilterId))!
+        } catch {
+            print(error)
+        }
+        return nil
     }
     func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) {
-        interactor?.markPokemonFilterByIndex(index: index, collectionFilterId: collectionFilterId)
+        do {
+            try interactor?.markPokemonFilterByIndex(index: index, collectionFilterId: collectionFilterId)
+        } catch {
+            print(error)
+        }
     }
     func resetFilters() {
         interactor?.resetFilters()

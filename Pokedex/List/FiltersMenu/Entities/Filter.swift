@@ -14,4 +14,8 @@ class Filter {
         self.name = name
         self.isSelected = false
     }
+    
+    func select() {
+        self.isSelected = !self.isSelected
+    }
 }

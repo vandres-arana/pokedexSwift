@@ -86,7 +86,7 @@ extension FiltersMenuView:  UICollectionViewDataSource {
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.FiltersMenuCell.reuseIdentifier, for: indexPath) as? FiltersMenuTypeCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.FiltersMenuCell.reuseIdentifier, for: indexPath) as? FiltersMenuCollectionCell {
             var type: Filter
             if collectionView == self.typeCollection {
                 type = (presenter?.getPokemonFilterByIndex(index: indexPath.row, collectionFilterId: CollectionFilter.type))!

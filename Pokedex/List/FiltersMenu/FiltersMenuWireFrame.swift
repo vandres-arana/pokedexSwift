@@ -27,7 +27,7 @@ class FiltersMenuWireFrame: FiltersMenuWireFrameProtocol {
             interactor.localDatamanager = localDataManager
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
-            interactor.loadPokemonTypeList()
+            interactor.loadPokemonFiltersList()
             return navController
         }
         return UIViewController()

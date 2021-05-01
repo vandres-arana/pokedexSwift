@@ -18,7 +18,7 @@ struct Constants {
         static let baseURL = "https://pokeapi.co/api/v2/"
     }
     struct FiltersMenuCell {
-        static let nibName = "FiltersMenuTypeCell"
+        static let nibName = "FiltersMenuCollectionCell"
         static let reuseIdentifier = "FiltersMenuTypeReuseIdentifier"
     }
 }

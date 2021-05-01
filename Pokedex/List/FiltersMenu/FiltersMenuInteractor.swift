@@ -18,7 +18,7 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
     weak var presenter: FiltersMenuInteractorOutputProtocol?
     var localDatamanager: FiltersMenuLocalDataManagerInputProtocol?
     var remoteDatamanager: FiltersMenuRemoteDataManagerInputProtocol?
-    func loadPokemonTypeList() {
+    func loadPokemonFiltersList() {
         pokemonTypes = (localDatamanager?.loadPokemonTypeFilterList())!
         pokemonWeaknesses = (localDatamanager?.loadPokemonTypeFilterList())!
         pokemonHeights = (localDatamanager?.loadPokemonHeightFilterList())!
@@ -36,7 +36,7 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
             return pokemonWeights.count
         }
     }
-    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) -> Filter {
+    func getPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) throws -> Filter {
         switch collectionFilterId {
         case CollectionFilter.type:
             return pokemonTypes[index]
@@ -48,20 +48,20 @@ class FiltersMenuInteractor: FiltersMenuInteractorInputProtocol {
             return pokemonWeights[index]
         }
     }
-    func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) {
+    func markPokemonFilterByIndex(index: Int, collectionFilterId: CollectionFilter) throws {
         switch collectionFilterId {
         case CollectionFilter.type:
-            pokemonTypes[index].isSelected = !pokemonTypes[index].isSelected
+            pokemonTypes[index].select()
         case CollectionFilter.weakness:
-            pokemonWeaknesses[index].isSelected = !pokemonWeaknesses[index].isSelected
+            pokemonWeaknesses[index].select()
         case CollectionFilter.height:
-            pokemonHeights[index].isSelected = !pokemonHeights[index].isSelected
+            pokemonHeights[index].select()
         case CollectionFilter.weight:
-            pokemonWeights[index].isSelected = !pokemonWeights[index].isSelected
+            pokemonWeights[index].select()
         }
     }
     func resetFilters() {
-        loadPokemonTypeList()
+        loadPokemonFiltersList()
     }
 
 }
