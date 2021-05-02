@@ -10,6 +10,7 @@ import UIKit
 class GenerationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     
+    
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -21,9 +22,9 @@ class GenerationCollectionViewCell: UICollectionViewCell {
     }
 }
 
-fileprivate let badChars = CharacterSet.alphanumerics.inverted
 
 extension String {
+    //let badChars = CharacterSet.alphanumerics.inverted
     var uppercasingFirst: String {
         return prefix(1).uppercased() + dropFirst()
     }
@@ -37,7 +38,7 @@ extension String {
             return ""
         }
 
-        let parts = self.components(separatedBy: badChars)
+        let parts = self.components(separatedBy: CharacterSet.alphanumerics.inverted)
 
         let first = String(describing: parts.first!).lowercasingFirst
         let rest = parts.dropFirst().map({String($0).uppercasingFirst})
