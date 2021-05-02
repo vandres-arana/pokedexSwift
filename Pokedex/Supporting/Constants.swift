@@ -21,4 +21,9 @@ struct Constants {
         static let nibName = "FiltersMenuCollectionCell"
         static let reuseIdentifier = "FiltersMenuTypeReuseIdentifier"
     }
+    struct FiltersMenuValues {
+        static let pokemonTypes = ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+        static let pokemonHeights = ["short", "medium", "tall"]
+        static let pokemonWeights = ["light", "normalW", "heavy"]
+    }
 }
