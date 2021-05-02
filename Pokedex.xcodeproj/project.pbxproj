@@ -16,6 +16,7 @@
 		693391B82639FAA900C55648 /* GenerationsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391B12639FAA900C55648 /* GenerationsWireFrame.swift */; };
 		693391BC263A23C600C55648 /* Generations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693391BB263A23C600C55648 /* Generations.storyboard */; };
 		693391C0263ADDDE00C55648 /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391BF263ADDDE00C55648 /* GenerationCollectionViewCell.swift */; };
+		69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B69A89263F5D8E00117D3B /* Enums.swift */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
 		69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */; };
 		69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2226324A000048E6B4 /* ListProtocols.swift */; };
@@ -37,7 +38,6 @@
 		69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBC263203ED00420B32 /* SceneDelegate.swift */; };
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
-		69FBD5B7263B904300397E62 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FBD5B6263B904300397E62 /* Generation.swift */; };
 		69FBD5BC263BC38700397E62 /* sf-pro-display-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5B9263BC38600397E62 /* sf-pro-display-regular.ttf */; };
 		69FBD5BD263BC38700397E62 /* sf-pro-display-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5BA263BC38600397E62 /* sf-pro-display-bold.ttf */; };
 		69FBD5BE263BC38700397E62 /* sf-pro-display-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5BB263BC38700397E62 /* sf-pro-display-medium.ttf */; };
@@ -59,6 +59,7 @@
 		693391B12639FAA900C55648 /* GenerationsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrame.swift; sourceTree = "<group>"; };
 		693391BB263A23C600C55648 /* Generations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Generations.storyboard; sourceTree = "<group>"; };
 		693391BF263ADDDE00C55648 /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
+		69B69A89263F5D8E00117D3B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLocalDataManager.swift; sourceTree = "<group>"; };
 		69E96D2226324A000048E6B4 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		69F76EC3263203EF00420B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69FBD5B6263B904300397E62 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
 		69FBD5B9263BC38600397E62 /* sf-pro-display-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-regular.ttf"; sourceTree = "<group>"; };
 		69FBD5BA263BC38600397E62 /* sf-pro-display-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-bold.ttf"; sourceTree = "<group>"; };
 		69FBD5BB263BC38700397E62 /* sf-pro-display-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-medium.ttf"; sourceTree = "<group>"; };
@@ -179,6 +179,7 @@
 				7EA12C9426363AAD0094951E /* schema.json */,
 				7EA11CDC2636566100D5E7F2 /* list.graphql */,
 				7EC885AA263712670065CA92 /* detail.graphql */,
+				69B69A89263F5D8E00117D3B /* Enums.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -205,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				69FBD5B8263BC37100397E62 /* Fonts */,
-				69FBD5B5263B902700397E62 /* DataModels */,
 				7EC8857F263703850065CA92 /* NetworkingServices */,
 				69E96D3026324A3B0048E6B4 /* Detail */,
 				69E96D1F263249E40048E6B4 /* List */,
@@ -216,14 +216,6 @@
 				69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */,
 			);
 			path = Pokedex;
-			sourceTree = "<group>";
-		};
-		69FBD5B5263B902700397E62 /* DataModels */ = {
-			isa = PBXGroup;
-			children = (
-				69FBD5B6263B904300397E62 /* Generation.swift */,
-			);
-			path = DataModels;
 			sourceTree = "<group>";
 		};
 		69FBD5B8263BC37100397E62 /* Fonts */ = {
@@ -442,8 +434,8 @@
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
 				693391B72639FAA900C55648 /* GenerationsRemoteDataManager.swift in Sources */,
+				69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */,
 				693391B42639FAA900C55648 /* GenerationsProtocols.swift in Sources */,
-				69FBD5B7263B904300397E62 /* Generation.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
 				693391B32639FAA900C55648 /* GenerationsLocalDataManager.swift in Sources */,

@@ -12,8 +12,8 @@ import UIKit
 protocol GenerationsViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: GenerationsPresenterProtocol? { get set }
-    var generations: [Generation] { get set }
-    func presenterPushGenerationNames(generations: [Generation])
+    var generations: [GetGenerationsQuery.Data.Generation] { get set }
+    func presenterPushGenerationNames(generations: [GetGenerationsQuery.Data.Generation])
 }
 
 protocol GenerationsWireFrameProtocol: AnyObject {
@@ -31,7 +31,7 @@ protocol GenerationsPresenterProtocol: AnyObject {
 
 protocol GenerationsInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
-    func interactorPushDataPresenter(generations: [Generation])
+    func interactorPushDataPresenter(generations: [GetGenerationsQuery.Data.Generation])
 }
 
 protocol GenerationsInteractorInputProtocol: AnyObject {
@@ -59,6 +59,4 @@ protocol GenerationsRemoteDataManagerOutputProtocol: AnyObject {
 
 protocol GenerationsLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
-    func addGeneration()
-    func getAllGenerations();
 }

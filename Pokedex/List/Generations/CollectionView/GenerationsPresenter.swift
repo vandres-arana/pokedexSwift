@@ -22,7 +22,7 @@ extension GenerationsPresenter: GenerationsPresenterProtocol {
 }
 
 extension GenerationsPresenter: GenerationsInteractorOutputProtocol {
-    func interactorPushDataPresenter(generations: [Generation]) {
+    func interactorPushDataPresenter(generations: [GetGenerationsQuery.Data.Generation]) {
         view?.presenterPushGenerationNames(generations: generations)
     }
 }

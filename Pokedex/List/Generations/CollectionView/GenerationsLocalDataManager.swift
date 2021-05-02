@@ -7,16 +7,7 @@
 //
 
 import Foundation
-import RealmSwift
 
 class GenerationsLocalDataManager:GenerationsLocalDataManagerInputProtocol {
-    
-    func addGeneration() {
-         
-    }
-    
-    func getAllGenerations() {
-         
-    }
-    
+     
 }
