@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import PullUpController
 
-class GenerationsView: UIViewController {
+class GenerationsView: PullUpController {
     // MARK: Properties
     var presenter: GenerationsPresenterProtocol?
     var generations = [GetGenerationsQuery.Data.Generation]()
+    var generationSelected : GetGenerationsQuery.Data.Generation?
     @IBOutlet var generationCollectionView: UICollectionView!
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -21,13 +23,24 @@ class GenerationsView: UIViewController {
         generationCollectionView.delegate = self
         presenter?.viewDidLoad()
     }
+
+    // MARK: PullUpController methods
+    override var pullUpControllerMiddleStickyPoints: [CGFloat] {
+        return [600, 1000, 1400]
+    }
+    override func pullUpControllerDidDrag(to point: CGFloat) {
+        if point == pullUpControllerMiddleStickyPoints[0] {
+            self.dismiss(animated: false, completion: nil)
+            self.view = nil
+        }
+    }
+
 }
 
 extension GenerationsView: GenerationsViewProtocol {
     func presenterPushGenerationNames(generations: [GetGenerationsQuery.Data.Generation]) {
         self.generations = generations
         self.generationCollectionView.reloadData()
-        
     }
 }
 
@@ -39,13 +52,21 @@ extension GenerationsView : UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.GenerationCell.reuseIdentifier, for: indexPath) as? GenerationCollectionViewCell else {
             fatalError()
         }
+        if let saveFirstImageView = cell.viewWithTag(1) as? UIImageView {
+            saveFirstImageView.image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .GRASS)
+        }
+        if let saveFirstImageView = cell.viewWithTag(2) as? UIImageView {
+            saveFirstImageView.image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .FIRE)
+        }
+        if let saveFirstImageView = cell.viewWithTag(3) as? UIImageView {
+            saveFirstImageView.image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .WATER)
+        }
+        if let saveGenerationsSelected = generationSelected {
+            if (indexPath.row + 1) == saveGenerationsSelected.id {
+                cell.contentView.backgroundColor = UIColor(named: "GenerationsBackgroundSelected")
+            }
+        }
         cell.setlabel(name: generations[indexPath.row].name)
-        
-        let firstImage = cell.viewWithTag(1) as! UIImageView
-        
-        (cell.viewWithTag(1)as! UIImageView).image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .GRASS)
-        (cell.viewWithTag(2)as! UIImageView).image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .FIRE)
-        (cell.viewWithTag(3)as! UIImageView).image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .WATER)
         return cell
     }
     func imageByGenerationId(generationId: Int, pokemonType: PokemonTypes) -> UIImage {
@@ -106,11 +127,7 @@ extension GenerationsView : UICollectionViewDataSource {
 
 extension GenerationsView : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.GenerationCell.reuseIdentifier, for: indexPath) as? GenerationCollectionViewCell else {
-            fatalError()
-        }
-        cell.backgroundColor = UIColor(named: "GenerationsBackgroundSelected")
-        
+        generationSelected = generations[indexPath.row]
         collectionView.reloadData()
     }
 }
