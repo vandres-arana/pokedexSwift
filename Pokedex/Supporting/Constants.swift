@@ -12,6 +12,7 @@ struct Constants {
         static let listViewStoryBoardID = "ListView"
         static let detailViewStoryBoardID = "DetailView"
         static let filtersViewStoryBoardID = "FiltersMenuView"
+        static let generationsViewStoryBoardID = "GenerationsView"
     }
     struct PokeApi {
         static let graphqlURL = "https://beta.pokeapi.co/graphql/v1beta"
@@ -25,5 +26,8 @@ struct Constants {
         static let pokemonTypes = ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
         static let pokemonHeights = ["short", "medium", "tall"]
         static let pokemonWeights = ["light", "normalW", "heavy"]
+    }
+    struct GenerationCell {
+        static let reuseIdentifier = "GenerationReusableCell"
     }
 }

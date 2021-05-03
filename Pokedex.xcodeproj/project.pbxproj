@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		693391B22639FAA900C55648 /* GenerationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AB2639FAA900C55648 /* GenerationsPresenter.swift */; };
-		693391B32639FAA900C55648 /* GenerationsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AC2639FAA900C55648 /* GenerationsLocalDataManager.swift */; };
-		693391B42639FAA900C55648 /* GenerationsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AD2639FAA900C55648 /* GenerationsProtocols.swift */; };
-		693391B52639FAA900C55648 /* GenerationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AE2639FAA900C55648 /* GenerationsInteractor.swift */; };
-		693391B62639FAA900C55648 /* GenerationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391AF2639FAA900C55648 /* GenerationsView.swift */; };
-		693391B72639FAA900C55648 /* GenerationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391B02639FAA900C55648 /* GenerationsRemoteDataManager.swift */; };
-		693391B82639FAA900C55648 /* GenerationsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391B12639FAA900C55648 /* GenerationsWireFrame.swift */; };
-		693391BC263A23C600C55648 /* Generations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693391BB263A23C600C55648 /* Generations.storyboard */; };
-		693391C0263ADDDE00C55648 /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693391BF263ADDDE00C55648 /* GenerationCollectionViewCell.swift */; };
 		69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B69A89263F5D8E00117D3B /* Enums.swift */; };
+		69E75A1B263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */; };
+		69E75A1C263F8BD400E6B8BD /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A13263F8BD400E6B8BD /* GenerationCollectionViewCell.swift */; };
+		69E75A1D263F8BD400E6B8BD /* GenerationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A14263F8BD400E6B8BD /* GenerationsPresenter.swift */; };
+		69E75A1E263F8BD400E6B8BD /* GenerationsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A15263F8BD400E6B8BD /* GenerationsProtocols.swift */; };
+		69E75A1F263F8BD400E6B8BD /* GenerationsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E75A16263F8BD400E6B8BD /* GenerationsView.storyboard */; };
+		69E75A20263F8BD400E6B8BD /* GenerationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A17263F8BD400E6B8BD /* GenerationsInteractor.swift */; };
+		69E75A21263F8BD400E6B8BD /* GenerationsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A18263F8BD400E6B8BD /* GenerationsWireFrame.swift */; };
+		69E75A22263F8BD400E6B8BD /* GenerationsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */; };
+		69E75A23263F8BD400E6B8BD /* GenerationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
 		69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */; };
 		69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2226324A000048E6B4 /* ListProtocols.swift */; };
@@ -38,9 +38,7 @@
 		69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBC263203ED00420B32 /* SceneDelegate.swift */; };
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
-		69FBD5BC263BC38700397E62 /* sf-pro-display-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5B9263BC38600397E62 /* sf-pro-display-regular.ttf */; };
-		69FBD5BD263BC38700397E62 /* sf-pro-display-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5BA263BC38600397E62 /* sf-pro-display-bold.ttf */; };
-		69FBD5BE263BC38700397E62 /* sf-pro-display-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69FBD5BB263BC38700397E62 /* sf-pro-display-medium.ttf */; };
+		69FBD5BC263BC38700397E62 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
 		7E1B9A1E263BA7C4006B42B3 /* sf-pro-display-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B9A1B263BA7C1006B42B3 /* sf-pro-display-bold.ttf */; };
 		7E1B9A1F263BA7C6006B42B3 /* sf-pro-display-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B9A1D263BA7C1006B42B3 /* sf-pro-display-medium.ttf */; };
@@ -80,16 +78,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		693391AB2639FAA900C55648 /* GenerationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsPresenter.swift; sourceTree = "<group>"; };
-		693391AC2639FAA900C55648 /* GenerationsLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsLocalDataManager.swift; sourceTree = "<group>"; };
-		693391AD2639FAA900C55648 /* GenerationsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsProtocols.swift; sourceTree = "<group>"; };
-		693391AE2639FAA900C55648 /* GenerationsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsInteractor.swift; sourceTree = "<group>"; };
-		693391AF2639FAA900C55648 /* GenerationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsView.swift; sourceTree = "<group>"; };
-		693391B02639FAA900C55648 /* GenerationsRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManager.swift; sourceTree = "<group>"; };
-		693391B12639FAA900C55648 /* GenerationsWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrame.swift; sourceTree = "<group>"; };
-		693391BB263A23C600C55648 /* Generations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Generations.storyboard; sourceTree = "<group>"; };
-		693391BF263ADDDE00C55648 /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
 		69B69A89263F5D8E00117D3B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManager.swift; sourceTree = "<group>"; };
+		69E75A13263F8BD400E6B8BD /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
+		69E75A14263F8BD400E6B8BD /* GenerationsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsPresenter.swift; sourceTree = "<group>"; };
+		69E75A15263F8BD400E6B8BD /* GenerationsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsProtocols.swift; sourceTree = "<group>"; };
+		69E75A16263F8BD400E6B8BD /* GenerationsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GenerationsView.storyboard; sourceTree = "<group>"; };
+		69E75A17263F8BD400E6B8BD /* GenerationsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsInteractor.swift; sourceTree = "<group>"; };
+		69E75A18263F8BD400E6B8BD /* GenerationsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrame.swift; sourceTree = "<group>"; };
+		69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsLocalDataManager.swift; sourceTree = "<group>"; };
+		69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsView.swift; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLocalDataManager.swift; sourceTree = "<group>"; };
 		69E96D2226324A000048E6B4 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -164,34 +162,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6911120826384D9F00795C2A /* CollectionView */ = {
+		69E75A0F263F8BD400E6B8BD /* Generations */ = {
 			isa = PBXGroup;
 			children = (
-				69CE1A76263783A800BEBF3D /* CollectionViewCell */,
-				693391AB2639FAA900C55648 /* GenerationsPresenter.swift */,
-				693391AC2639FAA900C55648 /* GenerationsLocalDataManager.swift */,
-				693391AD2639FAA900C55648 /* GenerationsProtocols.swift */,
-				693391AE2639FAA900C55648 /* GenerationsInteractor.swift */,
-				693391AF2639FAA900C55648 /* GenerationsView.swift */,
-				693391B02639FAA900C55648 /* GenerationsRemoteDataManager.swift */,
-				693391B12639FAA900C55648 /* GenerationsWireFrame.swift */,
-				693391BB263A23C600C55648 /* Generations.storyboard */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
-		69CE1A75263783A100BEBF3D /* Generations */ = {
-			isa = PBXGroup;
-			children = (
-				6911120826384D9F00795C2A /* CollectionView */,
+				69E75A10263F8BD400E6B8BD /* CollectionView */,
 			);
 			path = Generations;
 			sourceTree = "<group>";
 		};
-		69CE1A76263783A800BEBF3D /* CollectionViewCell */ = {
+		69E75A10263F8BD400E6B8BD /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				693391BF263ADDDE00C55648 /* GenerationCollectionViewCell.swift */,
+				69E75A12263F8BD400E6B8BD /* CollectionViewCell */,
+				69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */,
+				69E75A14263F8BD400E6B8BD /* GenerationsPresenter.swift */,
+				69E75A15263F8BD400E6B8BD /* GenerationsProtocols.swift */,
+				69E75A17263F8BD400E6B8BD /* GenerationsInteractor.swift */,
+				69E75A18263F8BD400E6B8BD /* GenerationsWireFrame.swift */,
+				69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */,
+				69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */,
+				69E75A16263F8BD400E6B8BD /* GenerationsView.storyboard */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		69E75A12263F8BD400E6B8BD /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69E75A13263F8BD400E6B8BD /* GenerationCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -199,6 +197,7 @@
 		69E96D1F263249E40048E6B4 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				69E75A0F263F8BD400E6B8BD /* Generations */,
 				7E2B81D4263AE26A00E39D0F /* FiltersMenu */,
 				69E96D2026324A000048E6B4 /* ListPresenter.swift */,
 				69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */,
@@ -476,10 +475,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E75A1F263F8BD400E6B8BD /* GenerationsView.storyboard in Resources */,
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
-				693391BC263A23C600C55648 /* Generations.storyboard in Resources */,
-				69FBD5BC263BC38700397E62 /* sf-pro-display-regular.ttf in Resources */,
+				69FBD5BC263BC38700397E62 /* (null) in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
 				7E1B9A20263BA7C9006B42B3 /* sf-pro-display-regular.ttf in Resources */,
 				7E2B81E4263AE28F00E39D0F /* FiltersMenuView.storyboard in Resources */,
@@ -587,8 +586,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693391B82639FAA900C55648 /* GenerationsWireFrame.swift in Sources */,
-				693391B52639FAA900C55648 /* GenerationsInteractor.swift in Sources */,
 				69E96D2B26324A000048E6B4 /* ListView.swift in Sources */,
 				7EC885B4263712DD0065CA92 /* API.swift in Sources */,
 				7EA12C84263637080094951E /* PokeApiService.swift in Sources */,
@@ -599,29 +596,33 @@
 				69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */,
 				69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */,
 				7E1B9A25263D7821006B42B3 /* CollectionFilter.swift in Sources */,
+				69E75A21263F8BD400E6B8BD /* GenerationsWireFrame.swift in Sources */,
 				7E2B81CC263A8C2D00E39D0F /* Filter.swift in Sources */,
 				7E2B81E0263AE27D00E39D0F /* FiltersMenuView.swift in Sources */,
+				69E75A22263F8BD400E6B8BD /* GenerationsLocalDataManager.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
 				7E2B81DC263AE27D00E39D0F /* FiltersMenuPresenter.swift in Sources */,
+				69E75A23263F8BD400E6B8BD /* GenerationsView.swift in Sources */,
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
 				7ECF7C6E263A115D00EB63F9 /* FiltersMenuCollectionCell.swift in Sources */,
 				7E2B81DF263AE27D00E39D0F /* FiltersMenuInteractor.swift in Sources */,
+				69E75A1B263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift in Sources */,
 				7E2B81DD263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift in Sources */,
 				69E96D2A26324A000048E6B4 /* ListInteractor.swift in Sources */,
-				693391B22639FAA900C55648 /* GenerationsPresenter.swift in Sources */,
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
-				693391B72639FAA900C55648 /* GenerationsRemoteDataManager.swift in Sources */,
 				69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */,
-				693391B42639FAA900C55648 /* GenerationsProtocols.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
+				69E75A20263F8BD400E6B8BD /* GenerationsInteractor.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
+				69E75A1E263F8BD400E6B8BD /* GenerationsProtocols.swift in Sources */,
 				7E1B9A60263DC7E2006B42B3 /* FiltersMenuError.swift in Sources */,
+				69E75A1D263F8BD400E6B8BD /* GenerationsPresenter.swift in Sources */,
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
 				7E2B81E1263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift in Sources */,
+				69E75A1C263F8BD400E6B8BD /* GenerationCollectionViewCell.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,
-				693391C0263ADDDE00C55648 /* GenerationCollectionViewCell.swift in Sources */,
 				69E96D2C26324A000048E6B4 /* ListRemoteDataManager.swift in Sources */,
 				7E2B81E2263AE27D00E39D0F /* FiltersMenuWireFrame.swift in Sources */,
 			);

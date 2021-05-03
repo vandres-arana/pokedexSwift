@@ -12,7 +12,7 @@ import UIKit
 class GenerationsWireFrame: GenerationsWireFrameProtocol {
 
     class func createGenerationsModule() -> UIViewController {
-        let navController = mainStoryboard.instantiateViewController(withIdentifier: "GenerationsView")
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.generationsViewStoryBoardID)
         if let view = navController as? GenerationsView {
             let presenter: GenerationsPresenterProtocol & GenerationsInteractorOutputProtocol = GenerationsPresenter()
             let interactor: GenerationsInteractorInputProtocol & GenerationsRemoteDataManagerOutputProtocol = GenerationsInteractor()
@@ -32,6 +32,6 @@ class GenerationsWireFrame: GenerationsWireFrameProtocol {
         return UIViewController()
     }
     static var mainStoryboard: UIStoryboard {
-        return UIStoryboard(name: "Generations", bundle: Bundle.main)
+        return UIStoryboard(name: Constants.StoryBoard.generationsViewStoryBoardID, bundle: Bundle.main)
     }
 }

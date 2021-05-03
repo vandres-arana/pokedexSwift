@@ -40,7 +40,7 @@
                                     <inset key="sectionInset" minX="17" minY="10" maxX="17" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenerationCollectionViewCell" id="EQo-vi-XZy" customClass="GenerationCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenerationReusableCell" id="EQo-vi-XZy" customClass="GenerationCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="17" y="10" width="160" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rwJ-Es-kPS">
