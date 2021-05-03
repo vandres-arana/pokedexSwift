@@ -21,5 +21,5 @@ class ListView: UIViewController {
 }
 
 extension ListView: ListViewProtocol {
-    
+
 }

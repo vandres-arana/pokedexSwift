@@ -17,6 +17,7 @@
 		69E75A21263F8BD400E6B8BD /* GenerationsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A18263F8BD400E6B8BD /* GenerationsWireFrame.swift */; };
 		69E75A22263F8BD400E6B8BD /* GenerationsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */; };
 		69E75A23263F8BD400E6B8BD /* GenerationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */; };
+		69E75A2526401DB900E6B8BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A2426401DB900E6B8BD /* Extensions.swift */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
 		69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */; };
 		69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2226324A000048E6B4 /* ListProtocols.swift */; };
@@ -88,6 +89,7 @@
 		69E75A18263F8BD400E6B8BD /* GenerationsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrame.swift; sourceTree = "<group>"; };
 		69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsLocalDataManager.swift; sourceTree = "<group>"; };
 		69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsView.swift; sourceTree = "<group>"; };
+		69E75A2426401DB900E6B8BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLocalDataManager.swift; sourceTree = "<group>"; };
 		69E96D2226324A000048E6B4 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				7EA11CDC2636566100D5E7F2 /* list.graphql */,
 				7EC885AA263712670065CA92 /* detail.graphql */,
 				69B69A89263F5D8E00117D3B /* Enums.swift */,
+				69E75A2426401DB900E6B8BD /* Extensions.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
 				7E2B81E1263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift in Sources */,
 				69E75A1C263F8BD400E6B8BD /* GenerationCollectionViewCell.swift in Sources */,
+				69E75A2526401DB900E6B8BD /* Extensions.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,
 				69E96D2C26324A000048E6B4 /* ListRemoteDataManager.swift in Sources */,
