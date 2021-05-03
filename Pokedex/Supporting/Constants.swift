@@ -30,4 +30,9 @@ struct Constants {
     struct GenerationCell {
         static let reuseIdentifier = "GenerationReusableCell"
     }
+    struct GenerationColors {
+        static let generationsDotsImageStartColor = "GenerationsDotsImageStartColor"
+        static let generationsDotsImageEndColor = "GenerationsDotsImageEndColor"
+        static let generationsBackgroundSelected = "GenerationsBackgroundSelected"
+    }
 }

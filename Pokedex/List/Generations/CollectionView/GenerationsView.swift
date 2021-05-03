@@ -88,14 +88,14 @@ extension GenerationsView : UICollectionViewDataSource {
             saveFirstImageView.image = self.imageByGenerationId(generationId: self.generations[indexPath.row].id, pokemonType: .WATER)
         }
         if let saveDotsImage = cell.viewWithTag(4) as? UIImageView, let saveDotsImageView = cell.viewWithTag(6) {
-            self.createGradientImage(saveDotsImageView, saveDotsImage, UIColor(named: "GenerationsDotsImageStartColor")!, UIColor(named: "GenerationsDotsImageEndColor")!)
+            self.createGradientImage(saveDotsImageView, saveDotsImage, UIColor(named: Constants.GenerationColors.generationsDotsImageStartColor)!, UIColor(named: Constants.GenerationColors.generationsDotsImageEndColor)!)
         }
         if let savePokeballImage = cell.viewWithTag(5) as? UIImageView, let savePokeballImageView = cell.viewWithTag(7) {
-            self.createGradientImage(savePokeballImageView, savePokeballImage, UIColor(named: "GenerationsDotsImageStartColor")!, UIColor(named: "GenerationsDotsImageEndColor")!)
+            self.createGradientImage(savePokeballImageView, savePokeballImage, UIColor(named: Constants.GenerationColors.generationsDotsImageStartColor)!, UIColor(named: Constants.GenerationColors.generationsDotsImageEndColor)!)
         }
         if let saveGenerationsSelected = generationSelected {
             if (indexPath.row + 1) == saveGenerationsSelected.id {
-                cell.contentView.backgroundColor = UIColor(named: "GenerationsBackgroundSelected")
+                cell.contentView.backgroundColor = UIColor(named: Constants.GenerationColors.generationsBackgroundSelected)
             }
         }
         cell.layer.cornerRadius = 10
