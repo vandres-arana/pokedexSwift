@@ -9,7 +9,6 @@
 import Foundation
 
 class ListPresenter {
-    
     // MARK: Properties
     weak var view: ListViewProtocol?
     var interactor: ListInteractorInputProtocol?

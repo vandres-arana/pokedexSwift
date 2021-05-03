@@ -59,6 +59,12 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>sf-pro-display-bold.ttf</string>
+		<string>sf-pro-display-medium.ttf</string>
+		<string>sf-pro-display-regular.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -11,12 +11,19 @@ struct Constants {
     struct StoryBoard {
         static let listViewStoryBoardID = "ListView"
         static let detailViewStoryBoardID = "DetailView"
+        static let filtersViewStoryBoardID = "FiltersMenuView"
     }
     struct PokeApi {
         static let graphqlURL = "https://beta.pokeapi.co/graphql/v1beta"
         static let baseURL = "https://pokeapi.co/api/v2/"
     }
-    struct IdentifierReusableCell {
-        static let generationReusableCell = "GenerationCollectionViewCell"
+    struct FiltersMenuCell {
+        static let nibName = "FiltersMenuCollectionCell"
+        static let reuseIdentifier = "FiltersMenuTypeReuseIdentifier"
+    }
+    struct FiltersMenuValues {
+        static let pokemonTypes = ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"]
+        static let pokemonHeights = ["short", "medium", "tall"]
+        static let pokemonWeights = ["light", "normalW", "heavy"]
     }
 }
