@@ -34,6 +34,7 @@
 		7EA12C9526363AAD0094951E /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EA12C9426363AAD0094951E /* schema.json */; };
 		7EC885AB263712670065CA92 /* detail.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7EC885AA263712670065CA92 /* detail.graphql */; };
 		7EC885B4263712DD0065CA92 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC885B3263712DD0065CA92 /* API.swift */; };
+		CEECFA76263C915F00EAE6D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECFA75263C915F00EAE6D9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		7EC885AA263712670065CA92 /* detail.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = detail.graphql; sourceTree = "<group>"; };
 		7EC885B3263712DD0065CA92 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A80A91E01D29DDC2ED5E62DA /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
+		CEECFA75263C915F00EAE6D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D4707FE863147B40D898CF80 /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 		F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				69F76EC8263203EF00420B32 /* Info.plist */,
+				CEECFA75263C915F00EAE6D9 /* Extensions.swift */,
 				69E96D4B26336A7A0048E6B4 /* Constants.swift */,
 				7EA12C9426363AAD0094951E /* schema.json */,
 				7EA11CDC2636566100D5E7F2 /* list.graphql */,
@@ -356,6 +359,7 @@
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
+				CEECFA76263C915F00EAE6D9 /* Extensions.swift in Sources */,
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,

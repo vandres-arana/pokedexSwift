@@ -2,21 +2,25 @@ PODS:
   - Apollo (0.42.0):
     - Apollo/Core (= 0.42.0)
   - Apollo/Core (0.42.0)
+  - Kingfisher (6.3.0)
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
   - Apollo
+  - Kingfisher (~> 6.0)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Apollo
+    - Kingfisher
     - SwiftLint
 
 SPEC CHECKSUMS:
   Apollo: c3f1cc3bfb36e1c4bbb642f44184ad759ad42a87
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 68c81edd7f741b860fe7a2d1d12f433673e04233
+PODFILE CHECKSUM: c84f6410fc53cfc56355f0edda00c49377fbdac5
 
 COCOAPODS: 1.10.1

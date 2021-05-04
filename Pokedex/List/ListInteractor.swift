@@ -10,20 +10,23 @@ import Foundation
 import Apollo
 
 class ListInteractor: ListInteractorInputProtocol {
-    
     // MARK: Properties
     weak var presenter: ListInteractorOutputProtocol?
     var localDatamanager: ListLocalDataManagerInputProtocol?
     var remoteDatamanager: ListRemoteDataManagerInputProtocol?
-    
     func fetchPokemonList() {
-        PokeApiService.shared.apollo.fetch(query: GetAllPokemonsWithLimitQuery(limit: 10)) { (result) in
-            self.presenter?.PokemonFetchSuccess(result: result)
-        }
+        remoteDatamanager?.fethPokemonList()
     }
-
+    func fetchMorePokemons() {
+        remoteDatamanager?.fetchMorePokemons()
+    }
 }
 
 extension ListInteractor: ListRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
+    func fetchSuccess(list: GetAllPokemonsWithLimitQuery.Data) {
+        presenter?.pokemonFetchSuccess(list: list)
+    }
+    func fetchFail() {
+        presenter?.pokemonFetchFail()
+    }
 }

@@ -8,5 +8,6 @@ target 'Pokedex' do
   # Pods for Pokedex
   pod 'Apollo'
   pod 'SwiftLint'
+  pod 'Kingfisher', '~> 6.0'
 
 end

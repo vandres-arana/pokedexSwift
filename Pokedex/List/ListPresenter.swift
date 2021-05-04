@@ -10,7 +10,6 @@ import Foundation
 import Apollo
 
 class ListPresenter {
-    
     // MARK: Properties
     weak var view: ListViewProtocol?
     var interactor: ListInteractorInputProtocol?
@@ -18,22 +17,21 @@ class ListPresenter {
 }
 
 extension ListPresenter: ListPresenterProtocol {
-    
     func startfetchingPokemonList() {
         self.interactor?.fetchPokemonList()
     }
-    
+    func fetchMorePokemons() {
+        self.interactor?.fetchMorePokemons()
+    }
     func viewDidLoad() {
     }
 }
 
 extension ListPresenter: ListInteractorOutputProtocol {
-    
-    func PokemonFetchSuccess(result: Result<GraphQLResult<GetAllPokemonsWithLimitQuery.Data>, Error>) {
-        self.view?.showPokemonList(result: result)
+    func pokemonFetchSuccess(list: GetAllPokemonsWithLimitQuery.Data) {
+        self.view?.showPokemonList(list: list)
     }
-    
-    func PokemonFetchFail() {
+    func pokemonFetchFail() {
         self.view?.showError()
     }
 }
