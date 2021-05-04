@@ -28,11 +28,14 @@ struct Constants {
         static let pokemonWeights = ["light", "normalW", "heavy"]
     }
     struct GenerationCell {
+        static let nibName = "GenerationCollectionViewCell"
         static let reuseIdentifier = "GenerationReusableCell"
     }
     struct GenerationColors {
         static let generationsDotsImageStartColor = "GenerationsDotsImageStartColor"
         static let generationsDotsImageEndColor = "GenerationsDotsImageEndColor"
         static let generationsBackgroundSelected = "GenerationsBackgroundSelected"
+        static let generationsBackground = "GenerationsBackground"
+        static let generationsTextColor = "GenerationsTextColor"
     }
 }
