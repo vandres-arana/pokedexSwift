@@ -27,6 +27,7 @@ protocol GenerationsPresenterProtocol: AnyObject {
     var interactor: GenerationsInteractorInputProtocol? { get set }
     var wireFrame: GenerationsWireFrameProtocol? { get set }
     func viewDidLoad()
+    func imageByGenerationId(generationId: Int, pokemonType: PokemonTypes) -> String
 }
 
 protocol GenerationsInteractorOutputProtocol: AnyObject {
