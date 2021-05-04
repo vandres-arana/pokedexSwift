@@ -23,19 +23,6 @@ extension String {
 
         let parts = self.components(separatedBy: " ")
 
-        let first = String(describing: parts.first!).lowercasingFirst
-        let rest = parts.dropFirst().map({String($0).uppercasingFirst})
-
-        return ([first] + rest).joined(separator: " ")
-    }
-
-    var camelizedForPokemonGeneration: String {
-        guard !isEmpty else {
-            return ""
-        }
-
-        let parts = self.components(separatedBy: " ")
-
         let first = String(describing: parts.first!).uppercasingFirst
         let rest = parts.dropFirst().map({String($0).uppercased()})
 

@@ -25,7 +25,7 @@ class GenerationCollectionViewCell: UICollectionViewCell {
     func setlabel(name: String?) {
         if  var safeName = name {
             safeName = safeName.replacingOccurrences(of: "-", with: " ")
-            labelGeneration.text = safeName.camelizedForPokemonGeneration
+            labelGeneration.text = safeName.camelized
         }
     }
 
@@ -36,20 +36,26 @@ class GenerationCollectionViewCell: UICollectionViewCell {
     }
 
     func setSelectedCell(isSelected: Bool) {
+        let dotsImageStartColor = UIColor(named: Constants.GenerationColors.dotsImageStartColor)!
+        let dotsImageEndColor = UIColor(named: Constants.GenerationColors.dotsImageEndColor)!
+        let pokeballImageStartColor = UIColor(named: Constants.GenerationColors.pokeballImageStartColor)!
+        let pokeballImageEndColor = UIColor(named: Constants.GenerationColors.pokeballImageEndColor)!
         if isSelected {
             self.contentView.backgroundColor = UIColor(named: Constants.GenerationColors.backgroundSelected)
             self.labelGeneration.textColor = .white
+            createGradientImage(viewImageDots, imageDots, dotsImageStartColor, dotsImageEndColor,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
+            createGradientImage(viewImagePokeball, imagePokeball, pokeballImageStartColor, pokeballImageEndColor,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
         } else {
             self.contentView.backgroundColor = UIColor(named: Constants.GenerationColors.background)
             self.labelGeneration.textColor = UIColor(named: Constants.GenerationColors.textColor)
-            createGradientImage(viewImageDots, imageDots, UIColor(named: Constants.GenerationColors.dotsImageStartColor)!, UIColor(named: Constants.GenerationColors.dotsImageEndColor)!,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
+            createGradientImage(viewImageDots, imageDots, dotsImageStartColor, dotsImageEndColor,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
+            createGradientImage(viewImagePokeball, imagePokeball, pokeballImageStartColor, pokeballImageEndColor,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
             self.labelGeneration.textColor = UIColor(named: Constants.GenerationColors.textColor)
-            createGradientImage(viewImagePokeball, imagePokeball, UIColor(named: Constants.GenerationColors.pokeballImageStartColor)!, UIColor(named: Constants.GenerationColors.pokeballImageEndColor)!,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
         }
         self.contentView.layer.cornerRadius = 10
     }
 
-    func createGradientImage(_ targetView : UIView,_ imageToGradient: UIImageView ,_ startColor: UIColor, _ endColor: UIColor,_ startAlpha: CGFloat,_ endAlpha: CGFloat,_ startPoint: CGPoint,_ endPoint: CGPoint) {
+    func createGradientImage(_ targetView: UIView,_ imageToGradient: UIImageView ,_ startColor: UIColor, _ endColor: UIColor,_ startAlpha: CGFloat,_ endAlpha: CGFloat,_ startPoint: CGPoint,_ endPoint: CGPoint) {
         let gradientLayer: CAGradientLayer = CAGradientLayer()
         gradientLayer.frame = targetView.bounds
         gradientLayer.colors = [startColor.withAlphaComponent(startAlpha).cgColor, endColor.withAlphaComponent(endAlpha).cgColor, endColor.cgColor]
