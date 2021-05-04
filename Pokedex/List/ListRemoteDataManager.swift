@@ -9,6 +9,5 @@
 import Foundation
 
 class ListRemoteDataManager:ListRemoteDataManagerInputProtocol {
-    
     var remoteRequestHandler: ListRemoteDataManagerOutputProtocol?
 }

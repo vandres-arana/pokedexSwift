@@ -1,9 +1,4 @@
-//
-//  CustomPokemonTableViewCell.swift
-//  Pokedex
-//
-//  Created by user on 4/30/21.
-//
+// created by: Christian Torrico Avila
 
 import UIKit
 
@@ -19,5 +14,4 @@ class CustomPokemonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
