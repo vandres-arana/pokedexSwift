@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69025CCC2640DAB70097855C /* GenerationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69025CCB2640DAB70097855C /* GenerationCollectionViewCell.xib */; };
+		699DEBCB2642040D0001CFB1 /* GenerationsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */; };
 		69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B69A89263F5D8E00117D3B /* Enums.swift */; };
 		69E75A1B263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */; };
 		69E75A1C263F8BD400E6B8BD /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A13263F8BD400E6B8BD /* GenerationCollectionViewCell.swift */; };
@@ -19,7 +20,7 @@
 		69E75A22263F8BD400E6B8BD /* GenerationsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */; };
 		69E75A23263F8BD400E6B8BD /* GenerationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */; };
 		69E75A2526401DB900E6B8BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A2426401DB900E6B8BD /* Extensions.swift */; };
-		69E75A28264039E400E6B8BD /* GenerationsRemoteDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A27264039E400E6B8BD /* GenerationsRemoteDataManagerTest.swift */; };
+		69E75A28264039E400E6B8BD /* GenerationsWireFrameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A27264039E400E6B8BD /* GenerationsWireFrameTest.swift */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
 		69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */; };
 		69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2226324A000048E6B4 /* ListProtocols.swift */; };
@@ -82,6 +83,7 @@
 
 /* Begin PBXFileReference section */
 		69025CCB2640DAB70097855C /* GenerationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationCollectionViewCell.xib; sourceTree = "<group>"; };
+		699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsPresenterTest.swift; sourceTree = "<group>"; };
 		69B69A89263F5D8E00117D3B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManager.swift; sourceTree = "<group>"; };
 		69E75A13263F8BD400E6B8BD /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		69E75A19263F8BD400E6B8BD /* GenerationsLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsLocalDataManager.swift; sourceTree = "<group>"; };
 		69E75A1A263F8BD400E6B8BD /* GenerationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsView.swift; sourceTree = "<group>"; };
 		69E75A2426401DB900E6B8BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		69E75A27264039E400E6B8BD /* GenerationsRemoteDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManagerTest.swift; sourceTree = "<group>"; };
+		69E75A27264039E400E6B8BD /* GenerationsWireFrameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrameTest.swift; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLocalDataManager.swift; sourceTree = "<group>"; };
 		69E96D2226324A000048E6B4 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -204,7 +206,8 @@
 		69E75A262640392F00E6B8BD /* Generations */ = {
 			isa = PBXGroup;
 			children = (
-				69E75A27264039E400E6B8BD /* GenerationsRemoteDataManagerTest.swift */,
+				69E75A27264039E400E6B8BD /* GenerationsWireFrameTest.swift */,
+				699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */,
 			);
 			path = Generations;
 			sourceTree = "<group>";
@@ -652,9 +655,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1B9A52263D897C006B42B3 /* FiltersMenuInteractorTest.swift in Sources */,
+				699DEBCB2642040D0001CFB1 /* GenerationsPresenterTest.swift in Sources */,
 				7E1B9A59263D907C006B42B3 /* FilterTest.swift in Sources */,
 				7E1B9A5B263D909B006B42B3 /* FiltersMenuLocalDataManagerTest.swift in Sources */,
-				69E75A28264039E400E6B8BD /* GenerationsRemoteDataManagerTest.swift in Sources */,
+				69E75A28264039E400E6B8BD /* GenerationsWireFrameTest.swift in Sources */,
 				7E1B9A5D263D9147006B42B3 /* FiltersMenuPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
