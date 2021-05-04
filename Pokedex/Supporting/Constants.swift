@@ -32,10 +32,12 @@ struct Constants {
         static let reuseIdentifier = "GenerationReusableCell"
     }
     struct GenerationColors {
-        static let generationsDotsImageStartColor = "GenerationsDotsImageStartColor"
-        static let generationsDotsImageEndColor = "GenerationsDotsImageEndColor"
-        static let generationsBackgroundSelected = "GenerationsBackgroundSelected"
-        static let generationsBackground = "GenerationsBackground"
-        static let generationsTextColor = "GenerationsTextColor"
+        static let dotsImageStartColor = "GenerationsDotsImageStartColor"
+        static let dotsImageEndColor = "GenerationsDotsImageEndColor"
+        static let pokeballImageStartColor = "GenerationsPokeballImageStartColor"
+        static let pokeballImageEndColor = "GenerationsPokeballImageEndColor"
+        static let backgroundSelected = "GenerationsBackgroundSelected"
+        static let background = "GenerationsBackground"
+        static let textColor = "GenerationsTextColor"
     }
 }

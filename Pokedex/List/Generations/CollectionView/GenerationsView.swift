@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 import PullUpController
 
-class GenerationsView: UIViewController {
+class GenerationsView: PullUpController {
     // MARK: Properties
     @IBOutlet weak var scrollItem: UIButton!
     @IBOutlet weak var generationView: UIView!
     @IBOutlet var generationCollectionView: UICollectionView!
-    
+
     var presenter: GenerationsPresenterProtocol?
     var generations = [GetGenerationsQuery.Data.Generation]()
     var generationSelected : GetGenerationsQuery.Data.Generation?
@@ -40,16 +40,16 @@ class GenerationsView: UIViewController {
     }
 
     // MARK: PullUpController methods
-    //    override var pullUpControllerMiddleStickyPoints: [CGFloat] {
-    //        return [600, 1000, 1400]
-    //    }
-    //
-    //    override func pullUpControllerDidDrag(to point: CGFloat) {
-    //        if point == pullUpControllerMiddleStickyPoints[0] {
-    //            self.dismiss(animated: false, completion: nil)
-    //            self.view = nil
-    //        }
-    //    }
+        override var pullUpControllerMiddleStickyPoints: [CGFloat] {
+            return [600, 1000, 1400]
+        }
+
+        override func pullUpControllerDidDrag(to point: CGFloat) {
+            if point == pullUpControllerMiddleStickyPoints[0] {
+                self.dismiss(animated: false, completion: nil)
+                self.view = nil
+            }
+        }
 }
 
 extension GenerationsView: GenerationsViewProtocol {
