@@ -13,7 +13,6 @@ class ListView: UIViewController {
 
     // MARK: Properties
     var presenter: ListPresenterProtocol?
-
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -22,5 +21,5 @@ class ListView: UIViewController {
 }
 
 extension ListView: ListViewProtocol {
-    // TODOs: implement view output methods
+
 }

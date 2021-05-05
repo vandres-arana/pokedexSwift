@@ -22,5 +22,5 @@ extension ListPresenter: ListPresenterProtocol {
 }
 
 extension ListPresenter: ListInteractorOutputProtocol {
-    // TODOs: implement interactor output methods
+
 }

@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-protocol ListViewProtocol: class {
+protocol ListViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: ListPresenterProtocol? { get set }
 }
 
-protocol ListWireFrameProtocol: class {
+protocol ListWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createListModule() -> UIViewController
 }
 
-protocol ListPresenterProtocol: class {
+protocol ListPresenterProtocol: AnyObject {
     // VIEW -> PRESENTER
     var view: ListViewProtocol? { get set }
     var interactor: ListInteractorInputProtocol? { get set }
@@ -27,30 +27,30 @@ protocol ListPresenterProtocol: class {
     func viewDidLoad()
 }
 
-protocol ListInteractorOutputProtocol: class {
+protocol ListInteractorOutputProtocol: AnyObject {
 // INTERACTOR -> PRESENTER
 }
 
-protocol ListInteractorInputProtocol: class {
+protocol ListInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: ListInteractorOutputProtocol? { get set }
     var localDatamanager: ListLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: ListRemoteDataManagerInputProtocol? { get set }
 }
 
-protocol ListDataManagerInputProtocol: class {
+protocol ListDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> DATAMANAGER
 }
 
-protocol ListRemoteDataManagerInputProtocol: class {
+protocol ListRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: ListRemoteDataManagerOutputProtocol? { get set }
 }
 
-protocol ListRemoteDataManagerOutputProtocol: class {
+protocol ListRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
 }
 
-protocol ListLocalDataManagerInputProtocol: class {
+protocol ListLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
 }
