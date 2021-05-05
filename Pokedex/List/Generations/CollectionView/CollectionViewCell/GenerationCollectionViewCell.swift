@@ -43,26 +43,16 @@ class GenerationCollectionViewCell: UICollectionViewCell {
         if isSelected {
             self.contentView.backgroundColor = UIColor(named: Constants.GenerationColors.backgroundSelected)
             self.labelGeneration.textColor = .white
-            createGradientImage(viewImageDots, imageDots, dotsImageStartColor, dotsImageEndColor,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
-            createGradientImage(viewImagePokeball, imagePokeball, pokeballImageStartColor, pokeballImageEndColor,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
+            Helpers.createGradientImage(viewImageDots, imageDots, dotsImageStartColor, dotsImageEndColor,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
+            Helpers.createGradientImage(viewImagePokeball, imagePokeball, pokeballImageStartColor, pokeballImageEndColor,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
         } else {
             self.contentView.backgroundColor = UIColor(named: Constants.GenerationColors.background)
             self.labelGeneration.textColor = UIColor(named: Constants.GenerationColors.textColor)
-            createGradientImage(viewImageDots, imageDots, dotsImageStartColor, dotsImageEndColor,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
-            createGradientImage(viewImagePokeball, imagePokeball, pokeballImageStartColor, pokeballImageEndColor,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
+            Helpers.createGradientImage(viewImageDots, imageDots, dotsImageStartColor, dotsImageEndColor,1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 1.0,y: 0))
+            Helpers.createGradientImage(viewImagePokeball, imagePokeball, pokeballImageStartColor, pokeballImageEndColor,0.1, 0,CGPoint(x: 0.0, y: 0.0),CGPoint(x: 0.0,y: 1.0))
             self.labelGeneration.textColor = UIColor(named: Constants.GenerationColors.textColor)
         }
         self.contentView.layer.cornerRadius = 10
     }
 
-    func createGradientImage(_ targetView: UIView,_ imageToGradient: UIImageView ,_ startColor: UIColor, _ endColor: UIColor,_ startAlpha: CGFloat,_ endAlpha: CGFloat,_ startPoint: CGPoint,_ endPoint: CGPoint) {
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.frame = targetView.bounds
-        gradientLayer.colors = [startColor.withAlphaComponent(startAlpha).cgColor, endColor.withAlphaComponent(endAlpha).cgColor, endColor.cgColor]
-        gradientLayer.startPoint = startPoint
-        gradientLayer.endPoint = endPoint
-        targetView.layer.addSublayer(gradientLayer)
-        targetView.addSubview(imageToGradient)
-        targetView.layer.mask = imageToGradient.layer
-    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69025CCC2640DAB70097855C /* GenerationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69025CCB2640DAB70097855C /* GenerationCollectionViewCell.xib */; };
+		69976DA22642C7940023933D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DA12642C7940023933D /* Helpers.swift */; };
 		699DEBCB2642040D0001CFB1 /* GenerationsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */; };
 		69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B69A89263F5D8E00117D3B /* Enums.swift */; };
 		69E75A1B263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */; };
@@ -83,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		69025CCB2640DAB70097855C /* GenerationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerationCollectionViewCell.xib; sourceTree = "<group>"; };
+		69976DA12642C7940023933D /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsPresenterTest.swift; sourceTree = "<group>"; };
 		69B69A89263F5D8E00117D3B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		69E75A11263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManager.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				7EC885AA263712670065CA92 /* detail.graphql */,
 				69B69A89263F5D8E00117D3B /* Enums.swift */,
 				69E75A2426401DB900E6B8BD /* Extensions.swift */,
+				69976DA12642C7940023933D /* Helpers.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				69E75A1B263F8BD400E6B8BD /* GenerationsRemoteDataManager.swift in Sources */,
 				7E2B81DD263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift in Sources */,
 				69E96D2A26324A000048E6B4 /* ListInteractor.swift in Sources */,
+				69976DA22642C7940023933D /* Helpers.swift in Sources */,
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
 				69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */,
