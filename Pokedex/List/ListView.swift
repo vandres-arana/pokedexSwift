@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Apollo
+import Kingfisher
 
 class ListView: UIViewController {
 
@@ -30,23 +31,20 @@ class ListView: UIViewController {
 
 extension ListView: ListViewProtocol {
     func showPokemonList(list: GetAllPokemonsWithLimitQuery.Data) {
-        DispatchQueue.main.async {
-            self.fetchMore = false
-            self.data.append(contentsOf: list.pokemons)
-            self.tableView.reloadData()
-        }
+        self.fetchMore = false
+        self.data = list.pokemons
+        self.tableView.reloadData()
     }
     func showError() {
-        print("Error")
     }
 }
 
 extension ListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        if !data.isEmpty {
-            cell.textLabel?.text = data[indexPath.row].name
-            cell.imageView?.image = data[indexPath.row].getImage()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellView.cellIdentifier, for: indexPath)
+        cell.textLabel?.text = data[indexPath.row].name
+        cell.imageView?.kf.setImage(with: self.data[indexPath.row].getImageUrl()) { _ in
+            cell.setNeedsLayout()
         }
         return cell
     }

@@ -10,19 +10,16 @@ import Apollo
 import Kingfisher
 
 extension GetAllPokemonsWithLimitQuery.Data.Pokemon {
-    func getImage() -> UIImage? {
-        var image: UIImage?
+    func getImageUrl() -> URL? {
         let urlStr = "\(Constants.PokeApi.imageURL)\(self.id).png"
         let url = URL(string: urlStr)!
-        let resource = ImageResource(downloadURL: url)
-        KingfisherManager.shared.retrieveImage(with: resource) { result in
-            switch result {
-            case .success(let value):
-                image = value.image
-            case .failure(let error):
-                print(error)
-            }
+        return url
+    }
+    func getTypesList() -> [String] {
+        var typeList: [String] = []
+        for type in self.types {
+            typeList.append(type.pokemonV2Type!.name)
         }
-        return image
+        return typeList
     }
 }
