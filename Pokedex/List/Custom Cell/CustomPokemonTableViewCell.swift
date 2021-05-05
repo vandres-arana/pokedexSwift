@@ -18,7 +18,6 @@ class CustomPokemonTableViewCell: UITableViewCell {
     @IBOutlet weak var pokemonType2: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("Se ejecuto el awakeFromNib")
         self.patterBackground.tintColor = UIColor.white
         self.patternPoints.tintColor = UIColor.white
         cellView.layer.cornerRadius = 10
