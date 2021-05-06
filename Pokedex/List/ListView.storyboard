@@ -30,19 +30,19 @@
                                         <rect key="frame" x="267" y="10" width="21" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" image="Vector"/>
+                                        <state key="normal" image="generationsButton"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBK-tS-os0">
                                         <rect key="frame" x="317" y="11" width="21" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" image="Vector-2"/>
+                                        <state key="normal" image="orderButton"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6B-Qu-ljd">
                                         <rect key="frame" x="368" y="11" width="21" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" image="Vector-3"/>
+                                        <state key="normal" image="FiltersButton"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,10 +110,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FiltersButton" width="21" height="19"/>
         <image name="Title" width="124" height="25"/>
-        <image name="Vector" width="21" height="21"/>
-        <image name="Vector-2" width="21" height="19"/>
-        <image name="Vector-3" width="21" height="19"/>
+        <image name="generationsButton" width="21" height="21"/>
+        <image name="orderButton" width="21" height="19"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
