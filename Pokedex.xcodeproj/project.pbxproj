@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69976DA22642C7940023933D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DA12642C7940023933D /* Helpers.swift */; };
+		69976DB12642C8B30023933D /* GenerationsRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DA62642C8B30023933D /* GenerationsRemoteDataManager.swift */; };
+		69976DB22642C8B30023933D /* GenerationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69976DA82642C8B30023933D /* GenerationCollectionViewCell.xib */; };
+		69976DB32642C8B30023933D /* GenerationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DA92642C8B30023933D /* GenerationCollectionViewCell.swift */; };
+		69976DB42642C8B30023933D /* GenerationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DAA2642C8B30023933D /* GenerationsPresenter.swift */; };
+		69976DB52642C8B30023933D /* GenerationsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DAB2642C8B30023933D /* GenerationsProtocols.swift */; };
+		69976DB62642C8B30023933D /* GenerationsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69976DAC2642C8B30023933D /* GenerationsView.storyboard */; };
+		69976DB72642C8B30023933D /* GenerationsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DAD2642C8B30023933D /* GenerationsInteractor.swift */; };
+		69976DB82642C8B30023933D /* GenerationsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DAE2642C8B30023933D /* GenerationsWireFrame.swift */; };
+		69976DB92642C8B30023933D /* GenerationsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DAF2642C8B30023933D /* GenerationsLocalDataManager.swift */; };
+		69976DBA2642C8B30023933D /* GenerationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69976DB02642C8B30023933D /* GenerationsView.swift */; };
+		699DEBCB2642040D0001CFB1 /* GenerationsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */; };
+		69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B69A89263F5D8E00117D3B /* Enums.swift */; };
+		69E75A2526401DB900E6B8BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A2426401DB900E6B8BD /* Extensions.swift */; };
+		69E75A28264039E400E6B8BD /* GenerationsWireFrameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E75A27264039E400E6B8BD /* GenerationsWireFrameTest.swift */; };
 		69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2026324A000048E6B4 /* ListPresenter.swift */; };
 		69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */; };
 		69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E96D2226324A000048E6B4 /* ListProtocols.swift */; };
@@ -28,6 +43,7 @@
 		69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBC263203ED00420B32 /* SceneDelegate.swift */; };
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
+		69FBD5BC263BC38700397E62 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
 		7E1B9A1E263BA7C4006B42B3 /* sf-pro-display-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B9A1B263BA7C1006B42B3 /* sf-pro-display-bold.ttf */; };
 		7E1B9A1F263BA7C6006B42B3 /* sf-pro-display-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B9A1D263BA7C1006B42B3 /* sf-pro-display-medium.ttf */; };
@@ -71,6 +87,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		69976DA12642C7940023933D /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		69976DA62642C8B30023933D /* GenerationsRemoteDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsRemoteDataManager.swift; sourceTree = "<group>"; };
+		69976DA82642C8B30023933D /* GenerationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenerationCollectionViewCell.xib; sourceTree = "<group>"; };
+		69976DA92642C8B30023933D /* GenerationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationCollectionViewCell.swift; sourceTree = "<group>"; };
+		69976DAA2642C8B30023933D /* GenerationsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsPresenter.swift; sourceTree = "<group>"; };
+		69976DAB2642C8B30023933D /* GenerationsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsProtocols.swift; sourceTree = "<group>"; };
+		69976DAC2642C8B30023933D /* GenerationsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GenerationsView.storyboard; sourceTree = "<group>"; };
+		69976DAD2642C8B30023933D /* GenerationsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsInteractor.swift; sourceTree = "<group>"; };
+		69976DAE2642C8B30023933D /* GenerationsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrame.swift; sourceTree = "<group>"; };
+		69976DAF2642C8B30023933D /* GenerationsLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsLocalDataManager.swift; sourceTree = "<group>"; };
+		69976DB02642C8B30023933D /* GenerationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsView.swift; sourceTree = "<group>"; };
+		699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsPresenterTest.swift; sourceTree = "<group>"; };
+		69B69A89263F5D8E00117D3B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		69E75A2426401DB900E6B8BD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		69E75A27264039E400E6B8BD /* GenerationsWireFrameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationsWireFrameTest.swift; sourceTree = "<group>"; };
 		69E96D2026324A000048E6B4 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		69E96D2126324A000048E6B4 /* ListLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLocalDataManager.swift; sourceTree = "<group>"; };
 		69E96D2226324A000048E6B4 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
@@ -149,9 +180,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69976DA42642C8B30023933D /* Generations */ = {
+			isa = PBXGroup;
+			children = (
+				69976DA52642C8B30023933D /* CollectionView */,
+			);
+			path = Generations;
+			sourceTree = "<group>";
+		};
+		69976DA52642C8B30023933D /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				69976DA72642C8B30023933D /* CollectionViewCell */,
+				69976DA62642C8B30023933D /* GenerationsRemoteDataManager.swift */,
+				69976DAA2642C8B30023933D /* GenerationsPresenter.swift */,
+				69976DAB2642C8B30023933D /* GenerationsProtocols.swift */,
+				69976DAC2642C8B30023933D /* GenerationsView.storyboard */,
+				69976DAD2642C8B30023933D /* GenerationsInteractor.swift */,
+				69976DAE2642C8B30023933D /* GenerationsWireFrame.swift */,
+				69976DAF2642C8B30023933D /* GenerationsLocalDataManager.swift */,
+				69976DB02642C8B30023933D /* GenerationsView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		69976DA72642C8B30023933D /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				69976DA82642C8B30023933D /* GenerationCollectionViewCell.xib */,
+				69976DA92642C8B30023933D /* GenerationCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		69E75A262640392F00E6B8BD /* Generations */ = {
+			isa = PBXGroup;
+			children = (
+				69E75A27264039E400E6B8BD /* GenerationsWireFrameTest.swift */,
+				699DEBCA2642040D0001CFB1 /* GenerationsPresenterTest.swift */,
+			);
+			path = Generations;
+			sourceTree = "<group>";
+		};
 		69E96D1F263249E40048E6B4 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				69976DA42642C8B30023933D /* Generations */,
 				CEAEDD60263C27F000D8C9F2 /* Custom Cell */,
 				7E2B81D4263AE26A00E39D0F /* FiltersMenu */,
 				69E96D2026324A000048E6B4 /* ListPresenter.swift */,
@@ -190,6 +264,9 @@
 				7EA12C9426363AAD0094951E /* schema.json */,
 				7EA11CDC2636566100D5E7F2 /* list.graphql */,
 				7EC885AA263712670065CA92 /* detail.graphql */,
+				69B69A89263F5D8E00117D3B /* Enums.swift */,
+				69E75A2426401DB900E6B8BD /* Extensions.swift */,
+				69976DA12642C7940023933D /* Helpers.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -253,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				CE015C632642D67A004C1F3A /* ListPresenterTest.swift */,
+				69E75A262640392F00E6B8BD /* Generations */,
 				7E1B9A56263D8DBD006B42B3 /* FiltersMenu */,
 			);
 			path = List;
@@ -440,8 +518,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69976DB22642C8B30023933D /* GenerationCollectionViewCell.xib in Resources */,
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
+				69976DB62642C8B30023933D /* GenerationsView.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
+				69FBD5BC263BC38700397E62 /* (null) in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
 				7E1B9A20263BA7C9006B42B3 /* sf-pro-display-regular.ttf in Resources */,
 				7E2B81E4263AE28F00E39D0F /* FiltersMenuView.storyboard in Resources */,
@@ -553,15 +634,20 @@
 				69E96D2B26324A000048E6B4 /* ListView.swift in Sources */,
 				7EA12C84263637080094951E /* PokeApiService.swift in Sources */,
 				7E2B81DE263AE27D00E39D0F /* FiltersMenuProtocols.swift in Sources */,
+				69976DBA2642C8B30023933D /* GenerationsView.swift in Sources */,
 				69E96D4C26336A7A0048E6B4 /* Constants.swift in Sources */,
 				69E96D3E26324A480048E6B4 /* DetailWireFrame.swift in Sources */,
+				69976DB82642C8B30023933D /* GenerationsWireFrame.swift in Sources */,
 				69E96D3926324A480048E6B4 /* DetailLocalDataManager.swift in Sources */,
 				69F76EBB263203ED00420B32 /* AppDelegate.swift in Sources */,
 				69E96D2826324A000048E6B4 /* ListLocalDataManager.swift in Sources */,
 				CEAEDD63263C281B00D8C9F2 /* CustomPokemonTableViewCell.swift in Sources */,
 				7E1B9A25263D7821006B42B3 /* CollectionFilter.swift in Sources */,
+				69976DB42642C8B30023933D /* GenerationsPresenter.swift in Sources */,
 				7E2B81CC263A8C2D00E39D0F /* Filter.swift in Sources */,
 				7E2B81E0263AE27D00E39D0F /* FiltersMenuView.swift in Sources */,
+				69976DB52642C8B30023933D /* GenerationsProtocols.swift in Sources */,
+				69976DB12642C8B30023933D /* GenerationsRemoteDataManager.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
 				7E2B81DC263AE27D00E39D0F /* FiltersMenuPresenter.swift in Sources */,
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
@@ -569,15 +655,21 @@
 				7E2B81DF263AE27D00E39D0F /* FiltersMenuInteractor.swift in Sources */,
 				7E2B81DD263AE27D00E39D0F /* FiltersMenuLocalDataManager.swift in Sources */,
 				69E96D2A26324A000048E6B4 /* ListInteractor.swift in Sources */,
+				69976DA22642C7940023933D /* Helpers.swift in Sources */,
 				69E96D2726324A000048E6B4 /* ListPresenter.swift in Sources */,
+				69976DB92642C8B30023933D /* GenerationsLocalDataManager.swift in Sources */,
 				69E96D2D26324A000048E6B4 /* ListWireFrame.swift in Sources */,
+				69976DB32642C8B30023933D /* GenerationCollectionViewCell.swift in Sources */,
+				69B69A8A263F5D8E00117D3B /* Enums.swift in Sources */,
 				69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */,
 				69E96D3B26324A480048E6B4 /* DetailInteractor.swift in Sources */,
 				CE015C1A2642C94B004C1F3A /* API.swift in Sources */,
 				7E1B9A60263DC7E2006B42B3 /* FiltersMenuError.swift in Sources */,
+				69976DB72642C8B30023933D /* GenerationsInteractor.swift in Sources */,
 				69E96D3D26324A480048E6B4 /* DetailRemoteDataManager.swift in Sources */,
 				7E2B81E1263AE27D00E39D0F /* FiltersMenuRemoteDataManager.swift in Sources */,
 				CE28862226444B3B00B9849E /* Extensions1.swift in Sources */,
+				69E75A2526401DB900E6B8BD /* Extensions.swift in Sources */,
 				69E96D2926324A000048E6B4 /* ListProtocols.swift in Sources */,
 				69E96D3C26324A480048E6B4 /* DetailView.swift in Sources */,
 				69E96D2C26324A000048E6B4 /* ListRemoteDataManager.swift in Sources */,
@@ -591,8 +683,10 @@
 			files = (
 				7E1B9A52263D897C006B42B3 /* FiltersMenuInteractorTest.swift in Sources */,
 				CE015C642642D67A004C1F3A /* ListPresenterTest.swift in Sources */,
+				699DEBCB2642040D0001CFB1 /* GenerationsPresenterTest.swift in Sources */,
 				7E1B9A59263D907C006B42B3 /* FilterTest.swift in Sources */,
 				7E1B9A5B263D909B006B42B3 /* FiltersMenuLocalDataManagerTest.swift in Sources */,
+				69E75A28264039E400E6B8BD /* GenerationsWireFrameTest.swift in Sources */,
 				7E1B9A5D263D9147006B42B3 /* FiltersMenuPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
