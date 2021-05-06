@@ -15,11 +15,16 @@ class CustomPokemonTableViewCell: UITableViewCell {
     @IBOutlet weak var pokemonType1: UILabel!
     @IBOutlet weak var backgroundType2: UIImageView!
     @IBOutlet weak var typeImage2: UIImageView!
+    @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var pokemonType2: UILabel!
+    @IBOutlet weak var widthType2: NSLayoutConstraint!
+    @IBOutlet weak var widthType1: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.patterBackground.tintColor = UIColor.white
-        self.patternPoints.tintColor = UIColor.white
+        self.idPokemon.textColor = UIColor(named: "textColorId")
+        namePokemon.textColor = UIColor(named: "back-pattern")
+        self.patterBackground.tintColor = UIColor(named: "back-pattern")
+        self.patternPoints.tintColor = UIColor(named: "back-pattern")
         cellView.layer.cornerRadius = 10
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,11 +32,12 @@ class CustomPokemonTableViewCell: UITableViewCell {
     }
     func updateContent(pokemonId: String, pokemonName: String, types: [String], pokemonImage: UIImage ) {
         self.idPokemon.text = getIdFormatted(id: pokemonId)
-        self.namePokemon.text = pokemonName
+        self.namePokemon.text = pokemonName.uppercasingFirst
         self.pokemonImage.image = pokemonImage
         updateTypeContent(types: types)
-        addGradient(myView: patternPoints,colorName: types[0])
         changeBackground(pokemonType: types[0])
+        let endColor = UIColor(named: "back-\(types[0])")
+        Helpers.createGradientImage(gradientView, patternPoints, UIColor.white, endColor ?? UIColor.white, 1, 0.2, CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 1))
     }
     func getIdFormatted(id: String) -> String {
         let size = id.count
@@ -51,20 +57,16 @@ class CustomPokemonTableViewCell: UITableViewCell {
         backgroundType1.backgroundColor = UIColor(named: types[0])
         backgroundType1.layer.cornerRadius = 7
         typeImage1.image = UIImage(named: types[0])
-        pokemonType1.text = types[0]
+        pokemonType1.text = types[0].uppercasingFirst
+        pokemonType1.sizeToFit()
+        widthType1.constant = pokemonType1.frame.width + 30
         if types.count > 1 {
             backgroundType2.backgroundColor = UIColor(named: types[1])
             backgroundType2.layer.cornerRadius = 7
             typeImage2.image = UIImage(named: types[1])
-            pokemonType2.text = types[1]
+            pokemonType2.text = types[1].uppercasingFirst
+            pokemonType2.sizeToFit()
+            widthType2.constant = pokemonType2.frame.width + 30
         }
-    }
-    func addGradient(myView: UIView, colorName: String) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: myView.frame.width, height: myView.frame.height)
-        gradientLayer.colors = [UIColor(named: "back-\(colorName)")?.cgColor,UIColor(named: "back-\(colorName)")!.withAlphaComponent(0.1).cgColor]
-                gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
-                gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
-        myView.layer.addSublayer(gradientLayer)
     }
 }

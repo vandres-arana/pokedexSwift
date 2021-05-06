@@ -27,6 +27,9 @@ struct Constants {
         static let pokemonHeights = ["short", "medium", "tall"]
         static let pokemonWeights = ["light", "normalW", "heavy"]
     }
+    struct PokemonCell {
+        static let cellIdentifier = "CustomPokemonTableViewCell"
+    }
     struct GenerationCell {
         static let nibName = "GenerationCollectionViewCell"
         static let reuseIdentifier = "GenerationReusableCell"
