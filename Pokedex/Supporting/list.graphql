@@ -12,8 +12,17 @@ query getAllPokemonsWithLimit($limit: Int) {
   pokemons : pokemon_v2_pokemon (limit: $limit) {
     id
     name
+    height
+    weight
     types : pokemon_v2_pokemontypes {
       pokemon_v2_type {
+        id
+        name
+      }
+    }
+    generationData: pokemon_v2_pokemonspecy {
+      generation: pokemon_v2_generation {
+        id
         name
       }
     }
