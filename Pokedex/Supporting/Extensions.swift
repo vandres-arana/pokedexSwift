@@ -11,7 +11,7 @@ import Kingfisher
 
 extension GetAllPokemonsWithLimitQuery.Data.Pokemon {
     func getImageUrl() -> URL? {
-        let urlStr = "\(Constants.PokeApi.imageURL)\(self.id).png"
+        let urlStr = "\(Constants.PokeApi.officialArtworkImageURL)\(self.id).png"
         let url = URL(string: urlStr)!
         return url
     }

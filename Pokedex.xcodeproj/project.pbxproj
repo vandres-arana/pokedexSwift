@@ -55,6 +55,7 @@
 		7ECF7C6F263A115D00EB63F9 /* FiltersMenuCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECF7C6D263A115D00EB63F9 /* FiltersMenuCollectionCell.xib */; };
 		CE015C1A2642C94B004C1F3A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE015C192642C94B004C1F3A /* API.swift */; };
 		CE015C3F2642CBE0004C1F3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE015C3E2642CBE0004C1F3A /* Extensions.swift */; };
+		CE015C642642D67A004C1F3A /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE015C632642D67A004C1F3A /* ListPresenterTest.swift */; };
 		CEAEDD63263C281B00D8C9F2 /* CustomPokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAEDD61263C281B00D8C9F2 /* CustomPokemonTableViewCell.swift */; };
 		CEAEDD64263C281B00D8C9F2 /* CustomPokemonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAEDD62263C281B00D8C9F2 /* CustomPokemonTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		A80A91E01D29DDC2ED5E62DA /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
 		CE015C192642C94B004C1F3A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../../../../../../Downloads/API.swift; sourceTree = "<group>"; };
 		CE015C3E2642CBE0004C1F3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE015C632642D67A004C1F3A /* ListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTest.swift; sourceTree = "<group>"; };
 		CEAEDD61263C281B00D8C9F2 /* CustomPokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPokemonTableViewCell.swift; sourceTree = "<group>"; };
 		CEAEDD62263C281B00D8C9F2 /* CustomPokemonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPokemonTableViewCell.xib; sourceTree = "<group>"; };
 		D4707FE863147B40D898CF80 /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		7E1B9A55263D8DB6006B42B3 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				CE015C632642D67A004C1F3A /* ListPresenterTest.swift */,
 				7E1B9A56263D8DBD006B42B3 /* FiltersMenu */,
 			);
 			path = List;
@@ -587,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1B9A52263D897C006B42B3 /* FiltersMenuInteractorTest.swift in Sources */,
+				CE015C642642D67A004C1F3A /* ListPresenterTest.swift in Sources */,
 				7E1B9A59263D907C006B42B3 /* FilterTest.swift in Sources */,
 				7E1B9A5B263D909B006B42B3 /* FiltersMenuLocalDataManagerTest.swift in Sources */,
 				7E1B9A5D263D9147006B42B3 /* FiltersMenuPresenterTest.swift in Sources */,
@@ -666,7 +670,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -721,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -740,6 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VFG22J23H;
 				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -760,6 +765,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2VFG22J23H;
 				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -778,7 +784,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V3D2X879V;
 				INFOPLIST_FILE = PokedexTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -799,7 +805,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V3D2X879V;
 				INFOPLIST_FILE = PokedexTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
