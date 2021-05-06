@@ -21,10 +21,10 @@ class CustomPokemonTableViewCell: UITableViewCell {
     @IBOutlet weak var widthType1: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.idPokemon.textColor = UIColor(named: "textColorId")
-        namePokemon.textColor = UIColor(named: "back-pattern")
-        self.patterBackground.tintColor = UIColor(named: "back-pattern")
-        self.patternPoints.tintColor = UIColor(named: "back-pattern")
+        self.idPokemon.textColor = UIColor(named: Constants.PokemonColor.textColorId)
+        namePokemon.textColor = UIColor(named: Constants.PokemonColor.backgroundPattern)
+        self.patterBackground.tintColor = UIColor(named: Constants.PokemonColor.backgroundPattern)
+        self.patternPoints.tintColor = UIColor(named: Constants.PokemonColor.backgroundPattern)
         cellView.layer.cornerRadius = 10
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

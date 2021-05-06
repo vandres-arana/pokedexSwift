@@ -30,6 +30,10 @@ struct Constants {
     struct PokemonCell {
         static let cellIdentifier = "CustomPokemonTableViewCell"
     }
+    struct PokemonColor {
+        static let textColorId = "textColorId"
+        static let backgroundPattern = "back-pattern"
+    }
     struct GenerationCell {
         static let nibName = "GenerationCollectionViewCell"
         static let reuseIdentifier = "GenerationReusableCell"

@@ -9,7 +9,6 @@
 import Foundation
 
 class ListInteractor: ListInteractorInputProtocol {
-    
     // MARK: Properties
     weak var presenter: ListInteractorOutputProtocol?
     var localDatamanager: ListLocalDataManagerInputProtocol?
