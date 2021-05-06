@@ -22,5 +22,11 @@ class ListView: UIViewController {
 }
 
 extension ListView: ListViewProtocol {
-    // TODOs: implement view output methods
+    func dismissView(sortMenu:String) {
+        print(sortMenu)
+        self.view.backgroundColor = UIColor.white
+    }
+    func getCurrentSortMethod() -> String {
+        return "asc"
+    }
 }

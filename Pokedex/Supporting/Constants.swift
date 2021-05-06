@@ -12,6 +12,7 @@ struct Constants {
         static let listViewStoryBoardID = "ListView"
         static let detailViewStoryBoardID = "DetailView"
         static let filtersViewStoryBoardID = "FiltersMenuView"
+        static let MenuViewStoryBoardID = "SortMenuViewController"
     }
     struct PokeApi {
         static let graphqlURL = "https://beta.pokeapi.co/graphql/v1beta"
