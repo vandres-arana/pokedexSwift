@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Apollo
 
 class ListInteractor: ListInteractorInputProtocol {
     
@@ -14,8 +15,19 @@ class ListInteractor: ListInteractorInputProtocol {
     weak var presenter: ListInteractorOutputProtocol?
     var localDatamanager: ListLocalDataManagerInputProtocol?
     var remoteDatamanager: ListRemoteDataManagerInputProtocol?
+    func fetchPokemonList() {
+        remoteDatamanager?.fethPokemonList()
+    }
+    func fetchMorePokemons() {
+        remoteDatamanager?.fetchMorePokemons()
+    }
 }
 
 extension ListInteractor: ListRemoteDataManagerOutputProtocol {
-
+    func fetchSuccess(list: GetAllPokemonsWithLimitQuery.Data) {
+        presenter?.pokemonFetchSuccess(list: list)
+    }
+    func fetchFail() {
+        presenter?.pokemonFetchFail()
+    }
 }

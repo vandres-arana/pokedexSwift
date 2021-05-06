@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Apollo
 
 class ListPresenter {
     // MARK: Properties
@@ -16,11 +17,21 @@ class ListPresenter {
 }
 
 extension ListPresenter: ListPresenterProtocol {
-    // TODOs: implement presenter methods
+    func startfetchingPokemonList() {
+        self.interactor?.fetchPokemonList()
+    }
+    func fetchMorePokemons() {
+        self.interactor?.fetchMorePokemons()
+    }
     func viewDidLoad() {
     }
 }
 
 extension ListPresenter: ListInteractorOutputProtocol {
-
+    func pokemonFetchSuccess(list: GetAllPokemonsWithLimitQuery.Data) {
+        self.view?.showPokemonList(list: list)
+    }
+    func pokemonFetchFail() {
+        self.view?.showError()
+    }
 }

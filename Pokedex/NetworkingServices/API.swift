@@ -1262,7 +1262,7 @@ public final class GetAllPokemonsQuery: GraphQLQuery {
   public let operationDefinition: String =
     """
     query getAllPokemons {
-      gen3_species: pokemon_v2_pokemon {
+      pokemons: pokemon_v2_pokemon {
         __typename
         name
         id
@@ -1284,7 +1284,7 @@ public final class GetAllPokemonsQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("pokemon_v2_pokemon", alias: "gen3_species", type: .nonNull(.list(.nonNull(.object(Gen3Specy.selections))))),
+        GraphQLField("pokemon_v2_pokemon", alias: "pokemons", type: .nonNull(.list(.nonNull(.object(Pokemon.selections))))),
       ]
     }
 
@@ -1294,21 +1294,21 @@ public final class GetAllPokemonsQuery: GraphQLQuery {
       self.resultMap = unsafeResultMap
     }
 
-    public init(gen3Species: [Gen3Specy]) {
-      self.init(unsafeResultMap: ["__typename": "query_root", "gen3_species": gen3Species.map { (value: Gen3Specy) -> ResultMap in value.resultMap }])
+    public init(pokemons: [Pokemon]) {
+      self.init(unsafeResultMap: ["__typename": "query_root", "pokemons": pokemons.map { (value: Pokemon) -> ResultMap in value.resultMap }])
     }
 
     /// fetch data from the table: "pokemon_v2_pokemon"
-    public var gen3Species: [Gen3Specy] {
+    public var pokemons: [Pokemon] {
       get {
-        return (resultMap["gen3_species"] as! [ResultMap]).map { (value: ResultMap) -> Gen3Specy in Gen3Specy(unsafeResultMap: value) }
+        return (resultMap["pokemons"] as! [ResultMap]).map { (value: ResultMap) -> Pokemon in Pokemon(unsafeResultMap: value) }
       }
       set {
-        resultMap.updateValue(newValue.map { (value: Gen3Specy) -> ResultMap in value.resultMap }, forKey: "gen3_species")
+        resultMap.updateValue(newValue.map { (value: Pokemon) -> ResultMap in value.resultMap }, forKey: "pokemons")
       }
     }
 
-    public struct Gen3Specy: GraphQLSelectionSet {
+    public struct Pokemon: GraphQLSelectionSet {
       public static let possibleTypes: [String] = ["pokemon_v2_pokemon"]
 
       public static var selections: [GraphQLSelection] {
@@ -1402,6 +1402,208 @@ public final class GetAllPokemonsQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "type_id")
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class GetAllPokemonsWithLimitQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query getAllPokemonsWithLimit($limit: Int) {
+      pokemons: pokemon_v2_pokemon(limit: $limit) {
+        __typename
+        id
+        name
+        types: pokemon_v2_pokemontypes {
+          __typename
+          pokemon_v2_type {
+            __typename
+            name
+          }
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "getAllPokemonsWithLimit"
+
+  public var limit: Int?
+
+  public init(limit: Int? = nil) {
+    self.limit = limit
+  }
+
+  public var variables: GraphQLMap? {
+    return ["limit": limit]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["query_root"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("pokemon_v2_pokemon", alias: "pokemons", arguments: ["limit": GraphQLVariable("limit")], type: .nonNull(.list(.nonNull(.object(Pokemon.selections))))),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(pokemons: [Pokemon]) {
+      self.init(unsafeResultMap: ["__typename": "query_root", "pokemons": pokemons.map { (value: Pokemon) -> ResultMap in value.resultMap }])
+    }
+
+    /// fetch data from the table: "pokemon_v2_pokemon"
+    public var pokemons: [Pokemon] {
+      get {
+        return (resultMap["pokemons"] as! [ResultMap]).map { (value: ResultMap) -> Pokemon in Pokemon(unsafeResultMap: value) }
+      }
+      set {
+        resultMap.updateValue(newValue.map { (value: Pokemon) -> ResultMap in value.resultMap }, forKey: "pokemons")
+      }
+    }
+
+    public struct Pokemon: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["pokemon_v2_pokemon"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+          GraphQLField("name", type: .nonNull(.scalar(String.self))),
+          GraphQLField("pokemon_v2_pokemontypes", alias: "types", type: .nonNull(.list(.nonNull(.object(`Type`.selections))))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: Int, name: String, types: [`Type`]) {
+        self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemon", "id": id, "name": name, "types": types.map { (value: `Type`) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: Int {
+        get {
+          return resultMap["id"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var name: String {
+        get {
+          return resultMap["name"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      /// An array relationship
+      public var types: [`Type`] {
+        get {
+          return (resultMap["types"] as! [ResultMap]).map { (value: ResultMap) -> `Type` in `Type`(unsafeResultMap: value) }
+        }
+        set {
+          resultMap.updateValue(newValue.map { (value: `Type`) -> ResultMap in value.resultMap }, forKey: "types")
+        }
+      }
+
+      public struct `Type`: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["pokemon_v2_pokemontype"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("pokemon_v2_type", type: .object(PokemonV2Type.selections)),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(pokemonV2Type: PokemonV2Type? = nil) {
+          self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemontype", "pokemon_v2_type": pokemonV2Type.flatMap { (value: PokemonV2Type) -> ResultMap in value.resultMap }])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        /// An object relationship
+        public var pokemonV2Type: PokemonV2Type? {
+          get {
+            return (resultMap["pokemon_v2_type"] as? ResultMap).flatMap { PokemonV2Type(unsafeResultMap: $0) }
+          }
+          set {
+            resultMap.updateValue(newValue?.resultMap, forKey: "pokemon_v2_type")
+          }
+        }
+
+        public struct PokemonV2Type: GraphQLSelectionSet {
+          public static let possibleTypes: [String] = ["pokemon_v2_type"]
+
+          public static var selections: [GraphQLSelection] {
+            return [
+              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            ]
+          }
+
+          public private(set) var resultMap: ResultMap
+
+          public init(unsafeResultMap: ResultMap) {
+            self.resultMap = unsafeResultMap
+          }
+
+          public init(name: String) {
+            self.init(unsafeResultMap: ["__typename": "pokemon_v2_type", "name": name])
+          }
+
+          public var __typename: String {
+            get {
+              return resultMap["__typename"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var name: String {
+            get {
+              return resultMap["name"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "name")
+            }
           }
         }
       }

@@ -1,5 +1,5 @@
 query getAllPokemons {
-  gen3_species: pokemon_v2_pokemon {
+  pokemons: pokemon_v2_pokemon {
     name
     id
     pokemon_v2_pokemontypes {
@@ -7,6 +7,19 @@ query getAllPokemons {
     }
   }
 }
+
+query getAllPokemonsWithLimit($limit: Int) {
+  pokemons : pokemon_v2_pokemon (limit: $limit) {
+    id
+    name
+    types : pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        name
+      }
+    }
+  }
+}
+
 
 query getFilteredPokemons($_minId: Int, $_maxId: Int, $_minH: Int, $_maxH: Int, $_minW: Int, $_maxW: Int) {
     gen3_species: pokemon_v2_pokemon(where: {_and: [

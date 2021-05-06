@@ -9,5 +9,6 @@ target 'Pokedex' do
   pod 'Apollo'
   pod 'SwiftLint'
   pod 'PullUpController'
+  pod 'Kingfisher', '~> 6.0'
 
 end

@@ -16,29 +16,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sp-Hc-H0u">
-                                <rect key="frame" x="173" y="282" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" placeholder="What Pokémon are you looking for?" translatesAutoresizingMaskIntoConstraints="NO" id="B3b-bc-KLo">
+                                <rect key="frame" x="20" y="222" width="374" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="bC4-ko-q6j"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-tH-IE9">
+                                <rect key="frame" x="0.0" y="49" width="414" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-io-dfW">
+                                        <rect key="frame" x="267" y="10" width="21" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="generationsButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBK-tS-os0">
+                                        <rect key="frame" x="317" y="11" width="21" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="orderButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6B-Qu-ljd">
+                                        <rect key="frame" x="368" y="11" width="21" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="FiltersButton"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="eKs-gK-ahF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-TR-TEi">
+                                <rect key="frame" x="0.0" y="294" width="414" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="veN-vb-oVf">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="veN-vb-oVf" id="Jp1-cb-j6B">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="zSX-cS-P1K">
+                                <rect key="frame" x="37" y="113" width="124" height="25"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for Pokémon by name or using the National Pokédex number." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lol-Vc-IBS">
+                                <rect key="frame" x="37" y="146" width="281" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="o69-Nx-ex2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtQ-Ql-LYz">
-                                <rect key="frame" x="173" y="378" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XxP-8w-EFR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="leading" secondItem="gzj-gd-XcP" secondAttribute="leadingMargin" id="6yp-2C-tnF"/>
+                            <constraint firstItem="lol-Vc-IBS" firstAttribute="leading" secondItem="zSX-cS-P1K" secondAttribute="leading" id="8BA-0A-lOH"/>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="centerX" secondItem="6dV-TR-TEi" secondAttribute="centerX" id="ALc-R6-d94"/>
+                            <constraint firstItem="6dV-TR-TEi" firstAttribute="top" secondItem="B3b-bc-KLo" secondAttribute="bottom" constant="15" id="DhD-Bv-KMK"/>
+                            <constraint firstItem="lol-Vc-IBS" firstAttribute="top" secondItem="zSX-cS-P1K" secondAttribute="bottom" constant="8" id="Jct-cK-NPg"/>
+                            <constraint firstItem="XxP-8w-EFR" firstAttribute="trailing" secondItem="lol-Vc-IBS" secondAttribute="trailing" constant="96" id="JfS-8N-3jL"/>
+                            <constraint firstItem="6dV-TR-TEi" firstAttribute="trailing" secondItem="XxP-8w-EFR" secondAttribute="trailing" id="KUa-Kc-D5Z"/>
+                            <constraint firstItem="6dV-TR-TEi" firstAttribute="leading" secondItem="XxP-8w-EFR" secondAttribute="leading" id="PLa-le-6vM"/>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="top" secondItem="lol-Vc-IBS" secondAttribute="bottom" constant="11" id="Q49-iE-i3L"/>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="top" secondItem="gzj-gd-XcP" secondAttribute="top" constant="222" id="hQG-AD-yVr"/>
+                            <constraint firstItem="ZoD-tH-IE9" firstAttribute="trailing" secondItem="XxP-8w-EFR" secondAttribute="trailing" id="hZZ-kz-zHr"/>
+                            <constraint firstItem="ZoD-tH-IE9" firstAttribute="leading" secondItem="XxP-8w-EFR" secondAttribute="leading" id="lZc-2t-Wae"/>
+                            <constraint firstItem="ZoD-tH-IE9" firstAttribute="top" secondItem="XxP-8w-EFR" secondAttribute="top" constant="5" id="sCc-4C-uIW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6dV-TR-TEi" secondAttribute="bottom" id="skH-aY-se8"/>
+                            <constraint firstItem="lol-Vc-IBS" firstAttribute="leading" secondItem="XxP-8w-EFR" secondAttribute="leading" constant="37" id="zNC-0J-RTl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6dV-TR-TEi" id="iFJ-Im-D6Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66Q-7q-MK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="110.49107142857143"/>
+            <point key="canvasLocation" x="-97.101449275362327" y="75"/>
         </scene>
     </scenes>
     <resources>
+        <image name="FiltersButton" width="21" height="19"/>
+        <image name="Title" width="124" height="25"/>
+        <image name="generationsButton" width="21" height="21"/>
+        <image name="orderButton" width="21" height="19"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
