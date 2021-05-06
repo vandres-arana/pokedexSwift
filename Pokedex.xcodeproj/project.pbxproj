@@ -55,6 +55,7 @@
 		7ECF7C6E263A115D00EB63F9 /* FiltersMenuCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF7C6C263A115D00EB63F9 /* FiltersMenuCollectionCell.swift */; };
 		7ECF7C6F263A115D00EB63F9 /* FiltersMenuCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ECF7C6D263A115D00EB63F9 /* FiltersMenuCollectionCell.xib */; };
 		CE04388B2644101F00F92CDF /* PokemonFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04388A2644101F00F92CDF /* PokemonFilters.swift */; };
+		CE043892264459F800F92CDF /* SortMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE043891264459F800F92CDF /* SortMethod.swift */; };
 		CE6A3F30264396E800962F2F /* SortMenuWireFrameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A3F2F264396E800962F2F /* SortMenuWireFrameTest.swift */; };
 		CE6A3F3626439C5700962F2F /* SortMenuPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A3F3526439C5700962F2F /* SortMenuPresenterTest.swift */; };
 		CEADAF7B26402CCC00174F9B /* SortMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEADAF7A26402CCC00174F9B /* SortMenuViewController.storyboard */; };
@@ -129,6 +130,7 @@
 		7ECF7C6D263A115D00EB63F9 /* FiltersMenuCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersMenuCollectionCell.xib; sourceTree = "<group>"; };
 		A80A91E01D29DDC2ED5E62DA /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
 		CE04388A2644101F00F92CDF /* PokemonFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFilters.swift; sourceTree = "<group>"; };
+		CE043891264459F800F92CDF /* SortMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMethod.swift; sourceTree = "<group>"; };
 		CE6A3F2F264396E800962F2F /* SortMenuWireFrameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMenuWireFrameTest.swift; sourceTree = "<group>"; };
 		CE6A3F3526439C5700962F2F /* SortMenuPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortMenuPresenterTest.swift; sourceTree = "<group>"; };
 		CEADAF7A26402CCC00174F9B /* SortMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SortMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -350,6 +352,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE043890264459C500F92CDF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE043891264459F800F92CDF /* SortMethod.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		CE6A3F2E264396A400962F2F /* SortMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +372,7 @@
 		CEADAF7726402C3900174F9B /* SortMenu */ = {
 			isa = PBXGroup;
 			children = (
+				CE043890264459C500F92CDF /* Entities */,
 				CEADAF7A26402CCC00174F9B /* SortMenuViewController.storyboard */,
 				CEADAF7E26402D3000174F9B /* SortMenuViewController.swift */,
 				CEF879A72640CC77006C76EE /* SortMenuWireFrame.swift */,
@@ -592,6 +603,7 @@
 				7E2B81E0263AE27D00E39D0F /* FiltersMenuView.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
 				7E2B81DC263AE27D00E39D0F /* FiltersMenuPresenter.swift in Sources */,
+				CE043892264459F800F92CDF /* SortMethod.swift in Sources */,
 				69E96D3A26324A480048E6B4 /* DetailProtocols.swift in Sources */,
 				7ECF7C6E263A115D00EB63F9 /* FiltersMenuCollectionCell.swift in Sources */,
 				CE04388B2644101F00F92CDF /* PokemonFilters.swift in Sources */,

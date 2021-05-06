@@ -14,24 +14,22 @@ class SortMenuPresenter {
 }
 
 extension SortMenuPresenter: SortMenuPresenterProtocol {
-    func sendSelectedSort(type: Int) -> String {
-        switch type {
-        case 1:
-            return "asc"
-        case 2:
-            return "dsc"
-        case 3:
-            return "az"
-        case 4:
-            return "za"
-        default:
-            return "asc"
-        }
-    }
     func viewDidLoad() {
     }
-    func applySort(sort: String) -> String {
-        return sort
+    func sendSelectedSort(type: SortMethod) -> String {
+        switch type {
+        case .smallestnumberfirst:
+            return "asc"
+        case .highestnumber:
+            return "dsc"
+        case .alphabeticallyAZ:
+            return "az"
+        case .alphabeticallyZA:
+            return "za"
+        }
+    }
+    func applySort(sort: SortMethod) -> String {
+        return "\(sort.rawValue)"
     }
 }
 

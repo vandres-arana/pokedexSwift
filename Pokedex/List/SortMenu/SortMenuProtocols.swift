@@ -24,8 +24,8 @@ protocol SortMenuPresenterProtocol: AnyObject {
     var interactor: SortMenuInteractorInputProtocol? { get set }
     var wireFrame: SortMenuWireFrameProtocol? { get set }
     func viewDidLoad()
-    func applySort(sort: String) -> String
-    func sendSelectedSort(type: Int) -> String 
+    func applySort(sort: SortMethod) -> String
+    func sendSelectedSort(type: SortMethod) -> String
 }
 
 protocol SortMenuInteractorOutputProtocol: AnyObject {

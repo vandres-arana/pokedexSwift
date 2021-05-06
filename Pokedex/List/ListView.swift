@@ -22,11 +22,10 @@ class ListView: UIViewController {
 }
 
 extension ListView: ListViewProtocol {
-    func dismissView(sortMenu:String) {
-        print(sortMenu)
+    func dismissView(sortMenu:SortMethod) {
         self.view.backgroundColor = UIColor.white
     }
-    func getCurrentSortMethod() -> String {
-        return "asc"
+    func getCurrentSortMethod() -> SortMethod {
+        return .smallestnumberfirst
     }
 }

@@ -19,23 +19,23 @@ class SortMenuPresenterTest: XCTestCase {
     }
 
     func testUpgradeSortMethod() throws {
-        let sortMethod = sortMenuPresenter?.applySort(sort: "Highest number first")
-        XCTAssertEqual(sortMethod, "Highest number first")
+        let sortMethod = sortMenuPresenter?.applySort(sort: .highestnumber)
+        XCTAssertEqual(sortMethod, "1")
     }
     func testSelectedSortSmallestFirstsMethod() throws {
-        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: 1)
+        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: .smallestnumberfirst)
         XCTAssertEqual(sortMethod, "asc")
     }
     func testSelectedSortHighestFirstMethod() throws {
-        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: 2)
+        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: .highestnumber)
         XCTAssertEqual(sortMethod, "dsc")
     }
     func testSelectedSortAZMethod() throws {
-        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: 3)
+        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: .alphabeticallyAZ)
         XCTAssertEqual(sortMethod, "az")
     }
     func testSelectedSortZAMethod() throws {
-        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: 4)
+        let sortMethod = sortMenuPresenter?.sendSelectedSort(type: .alphabeticallyZA)
         XCTAssertEqual(sortMethod, "za")
     }
 
