@@ -23,7 +23,6 @@ public final class GetPokemonDetailQuery: GraphQLQuery {
           id
           is_default
           name
-          order
           pokemon_species_id
           weight
           pokemon_v2_pokemonstats(order_by: {stat_id: asc}) {
@@ -301,7 +300,6 @@ public final class GetPokemonDetailQuery: GraphQLQuery {
             GraphQLField("id", type: .nonNull(.scalar(Int.self))),
             GraphQLField("is_default", type: .nonNull(.scalar(Bool.self))),
             GraphQLField("name", type: .nonNull(.scalar(String.self))),
-            GraphQLField("order", type: .scalar(Int.self)),
             GraphQLField("pokemon_species_id", type: .scalar(Int.self)),
             GraphQLField("weight", type: .scalar(Int.self)),
             GraphQLField("pokemon_v2_pokemonstats", arguments: ["order_by": ["stat_id": "asc"]], type: .nonNull(.list(.nonNull(.object(PokemonV2Pokemonstat.selections))))),
@@ -316,8 +314,8 @@ public final class GetPokemonDetailQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(baseExperience: Int? = nil, height: Int? = nil, id: Int, isDefault: Bool, name: String, order: Int? = nil, pokemonSpeciesId: Int? = nil, weight: Int? = nil, pokemonV2Pokemonstats: [PokemonV2Pokemonstat], pokemonV2Pokemonabilities: [PokemonV2Pokemonability], pokemonV2Pokemontypes: [PokemonV2Pokemontype]) {
-          self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemon", "base_experience": baseExperience, "height": height, "id": id, "is_default": isDefault, "name": name, "order": order, "pokemon_species_id": pokemonSpeciesId, "weight": weight, "pokemon_v2_pokemonstats": pokemonV2Pokemonstats.map { (value: PokemonV2Pokemonstat) -> ResultMap in value.resultMap }, "pokemon_v2_pokemonabilities": pokemonV2Pokemonabilities.map { (value: PokemonV2Pokemonability) -> ResultMap in value.resultMap }, "pokemon_v2_pokemontypes": pokemonV2Pokemontypes.map { (value: PokemonV2Pokemontype) -> ResultMap in value.resultMap }])
+        public init(baseExperience: Int? = nil, height: Int? = nil, id: Int, isDefault: Bool, name: String, pokemonSpeciesId: Int? = nil, weight: Int? = nil, pokemonV2Pokemonstats: [PokemonV2Pokemonstat], pokemonV2Pokemonabilities: [PokemonV2Pokemonability], pokemonV2Pokemontypes: [PokemonV2Pokemontype]) {
+          self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemon", "base_experience": baseExperience, "height": height, "id": id, "is_default": isDefault, "name": name, "pokemon_species_id": pokemonSpeciesId, "weight": weight, "pokemon_v2_pokemonstats": pokemonV2Pokemonstats.map { (value: PokemonV2Pokemonstat) -> ResultMap in value.resultMap }, "pokemon_v2_pokemonabilities": pokemonV2Pokemonabilities.map { (value: PokemonV2Pokemonability) -> ResultMap in value.resultMap }, "pokemon_v2_pokemontypes": pokemonV2Pokemontypes.map { (value: PokemonV2Pokemontype) -> ResultMap in value.resultMap }])
         }
 
         public var __typename: String {
@@ -371,15 +369,6 @@ public final class GetPokemonDetailQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "name")
-          }
-        }
-
-        public var order: Int? {
-          get {
-            return resultMap["order"] as? Int
-          }
-          set {
-            resultMap.updateValue(newValue, forKey: "order")
           }
         }
 
