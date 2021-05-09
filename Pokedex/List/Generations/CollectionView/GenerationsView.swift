@@ -47,9 +47,13 @@ class GenerationsView: PullUpController {
 
     override func pullUpControllerDidDrag(to point: CGFloat) {
         if point == pullUpControllerMiddleStickyPoints[0] {
-            self.dismiss(animated: false, completion: nil)
-            self.view = nil
+            self.dismissView()
         }
+    }
+
+    @objc func dismissView() {
+        self.dismiss(animated: true, completion: nil)
+        self.view = nil
     }
 }
 
@@ -85,7 +89,26 @@ extension GenerationsView : UICollectionViewDataSource {
 
 extension GenerationsView : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(dismissView), userInfo: nil, repeats: true)
         generationSelected = generations[indexPath.row]
         collectionView.reloadData()
+    }
+}
+
+extension GenerationsView : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 160, height: 129)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 14
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
     }
 }
