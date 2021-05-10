@@ -10,5 +10,5 @@ target 'Pokedex' do
   pod 'SwiftLint'
   pod 'PullUpController'
   pod 'Kingfisher', '~> 6.0'
-
+  pod 'RangeSeekSlider', '~> 1.8'
 end

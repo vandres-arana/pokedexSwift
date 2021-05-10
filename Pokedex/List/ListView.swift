@@ -28,6 +28,11 @@ class ListView: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
+    @IBAction func onFilterButtonTapped(_ sender: Any) {
+        let filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as! FiltersMenuView
+        filtersMenu.listView = self
+        addPullUpController(filtersMenu, initialStickyPointOffset: CGFloat(1000), animated: true)
+    }
 }
 
 extension ListView: ListViewProtocol {

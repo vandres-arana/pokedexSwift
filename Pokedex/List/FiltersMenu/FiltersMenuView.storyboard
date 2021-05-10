@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -124,7 +124,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="DzG-GR-e1Z">
-                                        <rect key="frame" x="40" y="678" width="334" height="60"/>
+                                        <rect key="frame" x="40" y="720" width="334" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-pF-Q13">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
@@ -154,6 +154,51 @@
                                             <constraint firstItem="lwz-sI-8Ep" firstAttribute="leading" secondItem="aQV-pF-Q13" secondAttribute="trailing" constant="14" id="ptT-HC-P2f"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Range" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjz-QQ-QCJ">
+                                        <rect key="frame" x="40" y="597" width="109" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksW-kJ-FEa" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                        <rect key="frame" x="30" y="639" width="344" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" name="back-dark"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minLabelColor">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColor">
+                                                <color key="value" systemColor="labelColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                                <real key="value" value="1118"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                <real key="value" value="1118"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
+                                                <color key="value" name="GenerationsBackgroundSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="initialColor">
+                                                <color key="value" name="GenerationsBackgroundSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                                <color key="value" name="GenerationsBackgroundSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="handleBorderColor">
+                                                <color key="value" name="GenerationsBackgroundSelected"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -180,7 +225,7 @@
                                     <constraint firstItem="lRf-NY-Www" firstAttribute="top" secondItem="dag-vT-ucp" secondAttribute="top" constant="30" id="mLa-sV-ZoT"/>
                                     <constraint firstAttribute="trailing" secondItem="9OQ-fn-jnp" secondAttribute="trailing" id="mvk-VS-6oF"/>
                                     <constraint firstItem="9OQ-fn-jnp" firstAttribute="top" secondItem="U9C-eR-bgp" secondAttribute="bottom" constant="5" id="pWE-nr-lpc"/>
-                                    <constraint firstItem="DzG-GR-e1Z" firstAttribute="top" secondItem="Ltk-Ay-wMF" secondAttribute="bottom" constant="114" id="ppj-cw-GVH"/>
+                                    <constraint firstItem="DzG-GR-e1Z" firstAttribute="top" secondItem="Ltk-Ay-wMF" secondAttribute="bottom" constant="156" id="ppj-cw-GVH"/>
                                     <constraint firstItem="j3M-K3-R6h" firstAttribute="leading" secondItem="dag-vT-ucp" secondAttribute="leading" constant="40" id="sUd-jA-PcW"/>
                                     <constraint firstAttribute="trailing" secondItem="PVd-27-ctd" secondAttribute="trailing" id="suY-eg-N7X"/>
                                     <constraint firstItem="JK4-Gg-bJh" firstAttribute="top" secondItem="j3M-K3-R6h" secondAttribute="bottom" constant="30" id="uou-yN-cyE"/>
@@ -206,6 +251,7 @@
                         <outlet property="applyButton" destination="lwz-sI-8Ep" id="Lfb-9D-TJa"/>
                         <outlet property="filterView" destination="dag-vT-ucp" id="764-nq-kSc"/>
                         <outlet property="heightFilterCollection" destination="j3M-K3-R6h" id="nVC-Ia-h1f"/>
+                        <outlet property="numberRangeSlider" destination="ksW-kJ-FEa" id="lcs-2s-ga3"/>
                         <outlet property="resetButton" destination="aQV-pF-Q13" id="Q5o-et-thS"/>
                         <outlet property="scrollItem" destination="moI-lg-r6v" id="4Hv-JJ-tK5"/>
                         <outlet property="typeCollection" destination="9OQ-fn-jnp" id="q7p-W5-WfX"/>
@@ -219,6 +265,12 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="GenerationsBackgroundSelected">
+            <color red="0.91764705882352937" green="0.36470588235294116" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="back-dark">
+            <color red="0.43529411764705883" green="0.43137254901960786" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="notSelectedBackground">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -231,6 +283,9 @@
         <namedColor name="selectedText">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

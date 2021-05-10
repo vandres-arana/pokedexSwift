@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import PullUpController
+import RangeSeekSlider
 
 class FiltersMenuView: PullUpController {
 
@@ -22,6 +23,7 @@ class FiltersMenuView: PullUpController {
     @IBOutlet var weightFilterCollection: UICollectionView!
     @IBOutlet var resetButton: UIButton!
     @IBOutlet var applyButton: UIButton!
+    @IBOutlet weak var numberRangeSlider: RangeSeekSlider!
     var listView: ListView?
     // MARK: Lifecycle
 
@@ -32,6 +34,7 @@ class FiltersMenuView: PullUpController {
         setupFilterCollection(collectionViewFilter: weaknessCollection)
         setupFilterCollection(collectionViewFilter: heightFilterCollection)
         setupFilterCollection(collectionViewFilter: weightFilterCollection)
+        setupNumberRange()
     }
     func setupElementBorderRadius() {
         self.view.layer.cornerRadius = 30
@@ -39,6 +42,12 @@ class FiltersMenuView: PullUpController {
         resetButton.layer.cornerRadius = 10
         applyButton.layer.cornerRadius = 10
         scrollItem.layer.cornerRadius = 2.5
+    }
+    func setupNumberRange() {
+        numberRangeSlider.minValue = 1
+        numberRangeSlider.maxValue = 1118
+        numberRangeSlider.selectedMinValue = 1
+        numberRangeSlider.selectedMaxValue = 1118
     }
     func setupFilterCollection(collectionViewFilter: UICollectionView) {
         collectionViewFilter.dataSource = self
@@ -69,6 +78,8 @@ class FiltersMenuView: PullUpController {
         weaknessCollection.reloadData()
         heightFilterCollection.reloadData()
         weightFilterCollection.reloadData()
+        numberRangeSlider.selectedMinValue = 1
+        numberRangeSlider.selectedMaxValue = 1118
     }
     @IBAction func applyButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
