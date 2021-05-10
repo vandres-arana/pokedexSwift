@@ -93,7 +93,7 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generation I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqk-Up-ob7">
-                        <rect key="frame" x="40" y="90" width="80" height="19.5"/>
+                        <rect key="frame" x="0.0" y="90" width="160" height="19.5"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                         <color key="textColor" name="GenerationsTextColor"/>
                         <nil key="highlightedColor"/>
@@ -107,8 +107,8 @@
                     <constraint firstItem="N4p-bV-sg4" firstAttribute="leading" secondItem="6kj-SA-CYk" secondAttribute="leading" constant="15" id="NoH-x1-zgf"/>
                     <constraint firstItem="yqk-Up-ob7" firstAttribute="top" secondItem="vpd-ao-vwY" secondAttribute="bottom" constant="15" id="OnU-fc-kGy"/>
                     <constraint firstItem="m6I-Kt-rnV" firstAttribute="top" secondItem="6kj-SA-CYk" secondAttribute="top" constant="70" id="XOD-8e-PM5"/>
-                    <constraint firstItem="yqk-Up-ob7" firstAttribute="leading" secondItem="6kj-SA-CYk" secondAttribute="leading" constant="40" id="rmF-ax-B1R"/>
-                    <constraint firstAttribute="trailing" secondItem="yqk-Up-ob7" secondAttribute="trailing" constant="40" id="skT-dO-MPf"/>
+                    <constraint firstItem="yqk-Up-ob7" firstAttribute="leading" secondItem="6kj-SA-CYk" secondAttribute="leading" id="rmF-ax-B1R"/>
+                    <constraint firstAttribute="trailing" secondItem="yqk-Up-ob7" secondAttribute="trailing" id="skT-dO-MPf"/>
                     <constraint firstItem="vpd-ao-vwY" firstAttribute="top" secondItem="6kj-SA-CYk" secondAttribute="top" constant="30" id="zWg-BT-fyq"/>
                 </constraints>
             </collectionViewCellContentView>
