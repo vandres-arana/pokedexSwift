@@ -12,6 +12,7 @@ struct Constants {
         static let listViewStoryBoardID = "ListView"
         static let detailViewStoryBoardID = "DetailView"
         static let filtersViewStoryBoardID = "FiltersMenuView"
+        static let MenuViewStoryBoardID = "SortMenuViewController"
         static let generationsViewStoryBoardID = "GenerationsView"
     }
     struct PokeApi {
