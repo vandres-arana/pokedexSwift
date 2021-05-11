@@ -78,8 +78,7 @@ class FiltersMenuView: PullUpController {
         weaknessCollection.reloadData()
         heightFilterCollection.reloadData()
         weightFilterCollection.reloadData()
-        numberRangeSlider.selectedMinValue = 1
-        numberRangeSlider.selectedMaxValue = 1118
+        setupNumberRange()	
     }
     @IBAction func applyButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)

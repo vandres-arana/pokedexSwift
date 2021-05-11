@@ -18,6 +18,7 @@ class ListView: UIViewController {
     var presenter: ListPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
     var data = [GetAllPokemonsWithLimitQuery.Data.Pokemon]()
+    var filtersMenu: FiltersMenuView?
     var fetchMore = false
 
     // MARK: Lifecycle
@@ -27,11 +28,11 @@ class ListView: UIViewController {
         self.presenter?.startfetchingPokemonList()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as? FiltersMenuView
+        self.filtersMenu?.listView = self
     }
     @IBAction func onFilterButtonTapped(_ sender: Any) {
-        let filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as! FiltersMenuView
-        filtersMenu.listView = self
-        addPullUpController(filtersMenu, initialStickyPointOffset: CGFloat(1000), animated: true)
+        addPullUpController(self.filtersMenu!, initialStickyPointOffset: CGFloat(1000), animated: true)
     }
 }
 
