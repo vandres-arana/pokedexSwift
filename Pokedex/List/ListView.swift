@@ -17,6 +17,7 @@ class ListView: UIViewController {
     // MARK: Properties
     var presenter: ListPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
     var data = [GetAllPokemonsWithLimitQuery.Data.Pokemon]()
     var fetchMore = false
 
@@ -27,6 +28,20 @@ class ListView: UIViewController {
         self.presenter?.startfetchingPokemonList()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    func setStyleSearchBar() {
+        let placeholderColor: UIColor = UIColor.init(named: "placeholder")!
+        let background: UIColor = UIColor.init(named: "searchBar")!
+        let placeholderText: String = "What Pokémon are you looking for?"
+        self.searchBar.backgroundColor = background
+        self.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor : placeholderColor])
+        self.searchBar.setPositionAdjustment(UIOffset(horizontal: 12, vertical: 0), for: .search)
+        self.searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 12, vertical: 0)
+        self.searchBar.setSearchFieldBackgroundImage(UIImage(), for: .normal)
+        self.searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        self.searchBar.layer.cornerRadius = 10
+        self.searchBar.clipsToBounds = true
+        self.searchBar.searchTextField.leftView?.tintColor = placeholderColor
     }
     @IBAction func sortMenu(_ sender: UIButton) {
             let view = SortMenuWireFrame.createSortMenuModule() as! SortMenuViewController
