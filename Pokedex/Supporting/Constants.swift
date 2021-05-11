@@ -19,6 +19,8 @@ struct Constants {
         static let graphqlURL = "https://beta.pokeapi.co/graphql/v1beta"
         static let baseURL = "https://pokeapi.co/api/v2/"
         static let officialArtworkImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+        static let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        static let databaseName = "pokemon.sqlite"
     }
     struct CellView {
         static let cellIdentifier = "Cell"

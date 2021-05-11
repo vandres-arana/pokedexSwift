@@ -18,12 +18,8 @@ class PokeApiService {
         }
     }
     func initialize() throws {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(
-            .documentDirectory,
-            .userDomainMask,
-            true).first!
-        let documentsURL = URL(fileURLWithPath: documentsPath)
-        let sqliteFileURL = documentsURL.appendingPathComponent("pokemon.sqlite")
+        let documentsURL = URL(fileURLWithPath: Constants.PokeApi.documentsPath)
+        let sqliteFileURL = documentsURL.appendingPathComponent(Constants.PokeApi.databaseName)
         let sqliteCache = try SQLiteNormalizedCache(fileURL: sqliteFileURL)
         let store = ApolloStore(cache: sqliteCache)
         let interceptorProvider: LegacyInterceptorProvider = LegacyInterceptorProvider(store: store)
