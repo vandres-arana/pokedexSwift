@@ -13,7 +13,7 @@ class ListWireFrame: ListWireFrameProtocol {
 
     class func createListModule() -> UIViewController {
         let navController = listStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.listViewStoryBoardID)
-        if let view = navController.children.first as? ListView {
+        if let view = navController as? ListView {
             let presenter: ListPresenterProtocol & ListInteractorOutputProtocol = ListPresenter()
             let interactor: ListInteractorInputProtocol & ListRemoteDataManagerOutputProtocol = ListInteractor()
             let localDataManager: ListLocalDataManagerInputProtocol = ListLocalDataManager()
