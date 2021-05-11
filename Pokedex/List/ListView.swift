@@ -28,6 +28,13 @@ class ListView: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
+    @IBAction func sortMenu(_ sender: UIButton) {
+            let view = SortMenuWireFrame.createSortMenuModule() as! SortMenuViewController
+            view.listView = self
+            addPullUpController(view, initialStickyPointOffset: CGFloat(1050), animated: true)
+            self.view.backgroundColor = UIColor.gray
+        }
+
 }
 
 extension ListView: ListViewProtocol {
@@ -38,7 +45,12 @@ extension ListView: ListViewProtocol {
     }
     func showError() {
     }
-}
+    func dismissView(sortMenu:SortMethod) {
+        self.view.backgroundColor = UIColor.white
+    }
+    func getCurrentSortMethod() -> SortMethod {
+        return .smallestnumberfirst
+    }}
 
 extension ListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

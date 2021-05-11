@@ -37,6 +37,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" image="orderButton"/>
+                                        <connections>
+                                            <action selector="sortMenu:" destination="Okv-zw-N96" eventType="touchUpInside" id="kPX-dH-hAi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6B-Qu-ljd">
                                         <rect key="frame" x="368" y="11" width="21" height="20"/>
