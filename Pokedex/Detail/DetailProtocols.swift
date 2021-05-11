@@ -9,45 +9,46 @@
 import Foundation
 import UIKit
 
-protocol DetailViewProtocol: class {
+protocol DetailViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: DetailPresenterProtocol? { get set }
 }
 
-protocol DetailWireFrameProtocol: class {
+protocol DetailWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createDetailModule() -> UIViewController
 }
 
-protocol DetailPresenterProtocol: class {
+protocol DetailPresenterProtocol: AnyObject {
     // VIEW -> PRESENTER
     var view: DetailViewProtocol? { get set }
     var interactor: DetailInteractorInputProtocol? { get set }
     var wireFrame: DetailWireFrameProtocol? { get set }
+    var pokemon: Int? { get set }
     func viewDidLoad()
 }
 
-protocol DetailInteractorOutputProtocol: class {
+protocol DetailInteractorOutputProtocol: AnyObject {
 // INTERACTOR -> PRESENTER
 }
 
-protocol DetailInteractorInputProtocol: class {
+protocol DetailInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: DetailInteractorOutputProtocol? { get set }
     var localDatamanager: DetailLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: DetailRemoteDataManagerInputProtocol? { get set }
 }
 
-protocol DetailDataManagerInputProtocol: class {
+protocol DetailDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> DATAMANAGER
 }
 
-protocol DetailRemoteDataManagerInputProtocol: class {
+protocol DetailRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: DetailRemoteDataManagerOutputProtocol? { get set }
 }
 
-protocol DetailRemoteDataManagerOutputProtocol: class {
+protocol DetailRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
 }
 
