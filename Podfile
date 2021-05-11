@@ -10,5 +10,6 @@ target 'Pokedex' do
   pod 'SwiftLint'
   pod 'PullUpController'
   pod 'Kingfisher', '~> 6.0'
+  pod 'Apollo/SQLite'
 
 end
