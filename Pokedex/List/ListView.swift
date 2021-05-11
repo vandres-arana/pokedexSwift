@@ -28,10 +28,11 @@ class ListView: UIViewController {
         self.presenter?.startfetchingPokemonList()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        setStyleSearchBar()
     }
     func setStyleSearchBar() {
-        let placeholderColor: UIColor = UIColor.init(named: "placeholder")!
-        let background: UIColor = UIColor.init(named: "searchBar")!
+        let placeholderColor: UIColor = UIColor.init(named: Constants.SearchbarColors.placeholderColor)!
+        let background: UIColor = UIColor.init(named: Constants.SearchbarColors.backgroundColor)!
         let placeholderText: String = "What Pokémon are you looking for?"
         self.searchBar.backgroundColor = background
         self.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor : placeholderColor])
