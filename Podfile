@@ -11,4 +11,6 @@ target 'Pokedex' do
   pod 'PullUpController'
   pod 'Kingfisher', '~> 6.0'
   pod 'RangeSeekSlider', '~> 1.8'
+  pod 'Apollo/SQLite'
+
 end

@@ -12,12 +12,15 @@ struct Constants {
         static let listViewStoryBoardID = "ListView"
         static let detailViewStoryBoardID = "DetailView"
         static let filtersViewStoryBoardID = "FiltersMenuView"
+        static let MenuViewStoryBoardID = "SortMenuViewController"
         static let generationsViewStoryBoardID = "GenerationsView"
     }
     struct PokeApi {
         static let graphqlURL = "https://beta.pokeapi.co/graphql/v1beta"
         static let baseURL = "https://pokeapi.co/api/v2/"
         static let officialArtworkImageURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+        static let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        static let databaseName = "pokemon.sqlite"
     }
     struct CellView {
         static let cellIdentifier = "Cell"
@@ -76,5 +79,9 @@ struct Constants {
         static let eightGenerationFire = "813"
         static let eightGenerationGrass = "810"
         static let eightGenerationWater = "816"
+    }
+    struct SearchbarColors{
+        static let backgroundColor = "searchBar"
+        static let placeholderColor = "placeholder"
     }
 }

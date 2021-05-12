@@ -17,6 +17,7 @@ class ListView: UIViewController {
     // MARK: Properties
     var presenter: ListPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
     var data = [GetAllPokemonsWithLimitQuery.Data.Pokemon]()
     var filtersMenu: FiltersMenuView?
     var fetchMore = false
@@ -28,8 +29,30 @@ class ListView: UIViewController {
         self.presenter?.startfetchingPokemonList()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        setStyleSearchBar()
         self.filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as? FiltersMenuView
         self.filtersMenu?.listView = self
+    }
+    func setStyleSearchBar() {
+        let placeholderColor: UIColor = UIColor.init(named: Constants.SearchbarColors.placeholderColor)!
+        let background: UIColor = UIColor.init(named: Constants.SearchbarColors.backgroundColor)!
+        let placeholderText: String = "What Pokémon are you looking for?"
+        self.searchBar.backgroundColor = background
+        self.searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor : placeholderColor])
+        self.searchBar.setPositionAdjustment(UIOffset(horizontal: 12, vertical: 0), for: .search)
+        self.searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 12, vertical: 0)
+        self.searchBar.setSearchFieldBackgroundImage(UIImage(), for: .normal)
+        self.searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        self.searchBar.layer.cornerRadius = 10
+        self.searchBar.clipsToBounds = true
+        self.searchBar.searchTextField.leftView?.tintColor = placeholderColor
+    }
+    @IBAction func sortMenu(_ sender: UIButton) {
+            let view = SortMenuWireFrame.createSortMenuModule() as! SortMenuViewController
+            view.listView = self
+            addPullUpController(view, initialStickyPointOffset: CGFloat(1050), animated: true)
+            self.view.backgroundColor = UIColor.gray
+        }
     }
     @IBAction func onFilterButtonTapped(_ sender: Any) {
         addPullUpController(self.filtersMenu!, initialStickyPointOffset: CGFloat(1000), animated: true)
@@ -44,7 +67,12 @@ extension ListView: ListViewProtocol {
     }
     func showError() {
     }
-}
+    func dismissView(sortMenu:SortMethod) {
+        self.view.backgroundColor = UIColor.white
+    }
+    func getCurrentSortMethod() -> SortMethod {
+        return .smallestnumberfirst
+    }}
 
 extension ListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
