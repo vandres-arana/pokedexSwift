@@ -32,6 +32,10 @@ class ListView: UIViewController {
         setStyleSearchBar()
         self.filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as? FiltersMenuView
         self.filtersMenu?.listView = self
+        register()
+    }
+    func register() {
+        tableView.register(UINib(nibName: Constants.PokemonCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.PokemonCell.cellIdentifier)
     }
     func setStyleSearchBar() {
         let placeholderColor: UIColor = UIColor.init(named: Constants.SearchbarColors.placeholderColor)!
@@ -74,14 +78,19 @@ extension ListView: ListViewProtocol {
         return .smallestnumberfirst
     }
 }
-
 extension ListView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellView.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].name
-        cell.imageView?.kf.setImage(with: self.data[indexPath.row].getImageUrl()) { _ in
-            cell.setNeedsLayout()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.PokemonCell.cellIdentifier, for: indexPath) as! CustomPokemonTableViewCell
+        var pokeImage: UIImage?
+        do {
+            pokeImage = try UIImage(withContentsOfUrl: data[indexPath.row].getImageUrl()!)
+        } catch {
+            pokeImage = UIImage()
         }
+        cell.updateContent(pokemonId: String(data[indexPath.row].id), pokemonName: data[indexPath.row].name, types: data[indexPath.row].getTypesList(), pokemonImage: pokeImage! )
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,6 +105,11 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
                 self.presenter?.fetchMorePokemons()
             }
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("se ha presionado")
+        let vc = UIStoryboard.init(name: "DetailView", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailView") as? DetailView
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedPath = tableView.indexPathForSelectedRow else { return }

@@ -21,4 +21,15 @@ class Helpers {
         targetView.addSubview(imageToGradient)
         targetView.layer.mask = imageToGradient.layer
     }
+    static func getIdFormatted(id: String) -> String {
+        let size = id.count
+        switch size {
+        case 1:
+            return "#00\(id)"
+        case 2:
+            return "#0\(id)"
+        default:
+            return "#\(id)"
+        }
+    }
 }

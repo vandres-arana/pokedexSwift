@@ -23,7 +23,12 @@ extension GetAllPokemonsWithLimitQuery.Data.Pokemon {
         return typeList
     }
 }
-
+extension UIImage {
+    convenience init?(withContentsOfUrl url: URL) throws {
+        let imageData = try Data(contentsOf: url)
+        self.init(data: imageData)
+    }
+}
 extension String {
     var uppercasingFirst: String {
         return prefix(1).uppercased() + dropFirst()
