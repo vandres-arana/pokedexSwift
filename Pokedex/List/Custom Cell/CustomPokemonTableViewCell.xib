@@ -61,10 +61,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwO-fw-YE8">
-                                <rect key="frame" x="18" y="23" width="29" height="14"/>
+                                <rect key="frame" x="18" y="23" width="51" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="2bM-cI-eiW"/>
-                                    <constraint firstAttribute="width" constant="29" id="pKr-cf-C6c"/>
+                                    <constraint firstAttribute="width" constant="51" id="pKr-cf-C6c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -95,7 +95,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-Iw-sdP">
                                 <rect key="frame" x="44.5" y="75.5" width="31" height="14"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="31" id="9YK-jr-2sI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="31" id="9YK-jr-2sI"/>
                                     <constraint firstAttribute="height" constant="14" id="XUa-js-P8P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
@@ -124,11 +124,11 @@
                                     <constraint firstAttribute="height" constant="15" id="yDc-UY-t3f"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="electricpants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA7-Tb-BDd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA7-Tb-BDd">
                                 <rect key="frame" x="110.5" y="75.5" width="31" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="Pmr-Hj-Tx7"/>
-                                    <constraint firstAttribute="width" constant="31" id="rez-s1-heJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="31" id="rez-s1-heJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -13,7 +13,6 @@ import Apollo
 import Kingfisher
 
 class ListView: UIViewController {
-    
     // MARK: Properties
     var presenter: ListPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
@@ -21,9 +20,7 @@ class ListView: UIViewController {
     var data = [GetAllPokemonsWithLimitQuery.Data.Pokemon]()
     var filtersMenu: FiltersMenuView?
     var fetchMore = false
-    
     // MARK: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.startfetchingPokemonList()
@@ -32,6 +29,11 @@ class ListView: UIViewController {
         setStyleSearchBar()
         self.filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as? FiltersMenuView
         self.filtersMenu?.listView = self
+        tableView.separatorStyle = .none
+        register()
+    }
+    func register() {
+        tableView.register(UINib(nibName: Constants.PokemonCell.cellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.PokemonCell.cellIdentifier)
     }
     func setStyleSearchBar() {
         let placeholderColor: UIColor = UIColor.init(named: Constants.SearchbarColors.placeholderColor)!
@@ -53,7 +55,6 @@ class ListView: UIViewController {
         addPullUpController(view, initialStickyPointOffset: CGFloat(1050), animated: true)
         self.view.backgroundColor = UIColor.gray
     }
-    
     @IBAction func onFilterButtonTapped(_ sender: Any) {
         addPullUpController(self.filtersMenu!, initialStickyPointOffset: CGFloat(1000), animated: true)
     }
@@ -74,14 +75,17 @@ extension ListView: ListViewProtocol {
         return .smallestnumberfirst
     }
 }
-
 extension ListView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellView.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].name
-        cell.imageView?.kf.setImage(with: self.data[indexPath.row].getImageUrl()) { _ in
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.PokemonCell.cellIdentifier, for: indexPath) as! CustomPokemonTableViewCell
+        cell.selectionStyle = .none
+        cell.pokemonImage.kf.setImage(with: data[indexPath.row].getImageUrl()) { _ in
             cell.setNeedsLayout()
         }
+        cell.updateContent(pokemonId: String(data[indexPath.row].id), pokemonName: data[indexPath.row].name, types: data[indexPath.row].getTypesList())
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,6 +100,9 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
                 self.presenter?.fetchMorePokemons()
             }
         }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedPath = tableView.indexPathForSelectedRow else { return }

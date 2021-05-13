@@ -30,25 +30,13 @@ class CustomPokemonTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    func updateContent(pokemonId: String, pokemonName: String, types: [String], pokemonImage: UIImage ) {
-        self.idPokemon.text = getIdFormatted(id: pokemonId)
+    func updateContent(pokemonId: String, pokemonName: String, types: [String]) {
+        self.idPokemon.text = Helpers.getIdFormatted(id: pokemonId)
         self.namePokemon.text = pokemonName.uppercasingFirst
-        self.pokemonImage.image = pokemonImage
         updateTypeContent(types: types)
         changeBackground(pokemonType: types[0])
         let endColor = UIColor(named: "back-\(types[0])")
         Helpers.createGradientImage(gradientView, patternPoints, UIColor.white, endColor ?? UIColor.white, 1, 0.2, CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 1))
-    }
-    func getIdFormatted(id: String) -> String {
-        let size = id.count
-        switch size {
-        case 1:
-            return "#00\(id)"
-        case 2:
-            return "#0\(id)"
-        default:
-            return "#\(id)"
-        }
     }
     func changeBackground(pokemonType: String) {
         self.cellView.backgroundColor = UIColor(named: "back-\(pokemonType)")

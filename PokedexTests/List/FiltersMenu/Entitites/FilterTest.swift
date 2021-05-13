@@ -9,7 +9,6 @@ import XCTest
 @testable import Pokedex
 
 class FilterTest: XCTestCase {
-    
     var filter: Filter?
     let filterName = "test"
 

@@ -12,7 +12,7 @@ enum PokemonTypes {
     case WATER
     case GRASS
 }
-enum PokemonBackgroundColor: String{
+enum PokemonBackgroundColor: String {
     case bug = "back-bug"
     case dark = "back-dark"
     case dragon = "back-dragon"

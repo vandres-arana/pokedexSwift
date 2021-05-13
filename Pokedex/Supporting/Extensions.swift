@@ -23,7 +23,6 @@ extension GetAllPokemonsWithLimitQuery.Data.Pokemon {
         return typeList
     }
 }
-
 extension String {
     var uppercasingFirst: String {
         return prefix(1).uppercased() + dropFirst()
