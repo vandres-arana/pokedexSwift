@@ -13,7 +13,7 @@ import Apollo
 import Kingfisher
 
 class ListView: UIViewController {
-
+    
     // MARK: Properties
     var presenter: ListPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
@@ -21,9 +21,9 @@ class ListView: UIViewController {
     var data = [GetAllPokemonsWithLimitQuery.Data.Pokemon]()
     var filtersMenu: FiltersMenuView?
     var fetchMore = false
-
+    
     // MARK: Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.startfetchingPokemonList()
@@ -48,12 +48,12 @@ class ListView: UIViewController {
         self.searchBar.searchTextField.leftView?.tintColor = placeholderColor
     }
     @IBAction func sortMenu(_ sender: UIButton) {
-            let view = SortMenuWireFrame.createSortMenuModule() as! SortMenuViewController
-            view.listView = self
-            addPullUpController(view, initialStickyPointOffset: CGFloat(1050), animated: true)
-            self.view.backgroundColor = UIColor.gray
-        }
+        let view = SortMenuWireFrame.createSortMenuModule() as! SortMenuViewController
+        view.listView = self
+        addPullUpController(view, initialStickyPointOffset: CGFloat(1050), animated: true)
+        self.view.backgroundColor = UIColor.gray
     }
+    
     @IBAction func onFilterButtonTapped(_ sender: Any) {
         addPullUpController(self.filtersMenu!, initialStickyPointOffset: CGFloat(1000), animated: true)
     }
@@ -72,7 +72,8 @@ extension ListView: ListViewProtocol {
     }
     func getCurrentSortMethod() -> SortMethod {
         return .smallestnumberfirst
-    }}
+    }
+}
 
 extension ListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
