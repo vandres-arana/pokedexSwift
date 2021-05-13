@@ -107,7 +107,6 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("se ha presionado")
         let vc = UIStoryboard.init(name: "DetailView", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailView") as? DetailView
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
