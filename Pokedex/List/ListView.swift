@@ -82,13 +82,10 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.PokemonCell.cellIdentifier, for: indexPath) as! CustomPokemonTableViewCell
         cell.selectionStyle = .none
-        var pokeImage: UIImage?
-        do {
-            pokeImage = try UIImage(withContentsOfUrl: data[indexPath.row].getImageUrl()!)
-        } catch {
-            pokeImage = UIImage()
+        cell.pokemonImage.kf.setImage(with: data[indexPath.row].getImageUrl()) { _ in
+            cell.setNeedsLayout()
         }
-        cell.updateContent(pokemonId: String(data[indexPath.row].id), pokemonName: data[indexPath.row].name, types: data[indexPath.row].getTypesList(), pokemonImage: pokeImage! )
+        cell.updateContent(pokemonId: String(data[indexPath.row].id), pokemonName: data[indexPath.row].name, types: data[indexPath.row].getTypesList())
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

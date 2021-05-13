@@ -30,10 +30,9 @@ class CustomPokemonTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    func updateContent(pokemonId: String, pokemonName: String, types: [String], pokemonImage: UIImage ) {
+    func updateContent(pokemonId: String, pokemonName: String, types: [String]) {
         self.idPokemon.text = Helpers.getIdFormatted(id: pokemonId)
         self.namePokemon.text = pokemonName.uppercasingFirst
-        self.pokemonImage.image = pokemonImage
         updateTypeContent(types: types)
         changeBackground(pokemonType: types[0])
         let endColor = UIColor(named: "back-\(types[0])")
