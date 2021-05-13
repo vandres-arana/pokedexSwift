@@ -80,7 +80,7 @@ struct Constants {
         static let eightGenerationGrass = "810"
         static let eightGenerationWater = "816"
     }
-    struct SearchbarColors{
+    struct SearchbarColors {
         static let backgroundColor = "searchBar"
         static let placeholderColor = "placeholder"
     }

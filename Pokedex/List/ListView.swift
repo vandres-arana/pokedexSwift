@@ -13,7 +13,6 @@ import Apollo
 import Kingfisher
 
 class ListView: UIViewController {
-    
     // MARK: Properties
     var presenter: ListPresenterProtocol?
     @IBOutlet weak var tableView: UITableView!
@@ -21,9 +20,7 @@ class ListView: UIViewController {
     var data = [GetAllPokemonsWithLimitQuery.Data.Pokemon]()
     var filtersMenu: FiltersMenuView?
     var fetchMore = false
-    
     // MARK: Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.startfetchingPokemonList()
@@ -58,7 +55,6 @@ class ListView: UIViewController {
         addPullUpController(view, initialStickyPointOffset: CGFloat(1050), animated: true)
         self.view.backgroundColor = UIColor.gray
     }
-    
     @IBAction func onFilterButtonTapped(_ sender: Any) {
         addPullUpController(self.filtersMenu!, initialStickyPointOffset: CGFloat(1000), animated: true)
     }
