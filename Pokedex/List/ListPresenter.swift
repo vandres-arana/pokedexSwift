@@ -28,9 +28,6 @@ extension ListPresenter: ListPresenterProtocol {
     }
     func viewDidLoad() {
     }
-    func showFiltersMenu() {
-        wireFrame?.presentFiltersMenu(from: self.view!)
-    }
 }
 
 extension ListPresenter: ListInteractorOutputProtocol {
