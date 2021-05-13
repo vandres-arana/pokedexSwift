@@ -32,6 +32,7 @@ class ListView: UIViewController {
         setStyleSearchBar()
         self.filtersMenu = FiltersMenuWireFrame.createFiltersMenuModule() as? FiltersMenuView
         self.filtersMenu?.listView = self
+        tableView.separatorStyle = .none
         register()
     }
     func register() {
@@ -84,6 +85,7 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.PokemonCell.cellIdentifier, for: indexPath) as! CustomPokemonTableViewCell
+        cell.selectionStyle = .none
         var pokeImage: UIImage?
         do {
             pokeImage = try UIImage(withContentsOfUrl: data[indexPath.row].getImageUrl()!)
@@ -107,7 +109,6 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard.init(name: "DetailView", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailView") as? DetailView
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
