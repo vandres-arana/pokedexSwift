@@ -16,7 +16,7 @@ protocol DetailViewProtocol: AnyObject {
 
 protocol DetailWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
-    static func createDetailModule() -> UIViewController
+    static func createDetailModule(detailview: DetailView, data: GetAllPokemonsWithLimitQuery.Data.Pokemon)
 }
 
 protocol DetailPresenterProtocol: AnyObject {
@@ -24,7 +24,7 @@ protocol DetailPresenterProtocol: AnyObject {
     var view: DetailViewProtocol? { get set }
     var interactor: DetailInteractorInputProtocol? { get set }
     var wireFrame: DetailWireFrameProtocol? { get set }
-    var pokemon: Int? { get set }
+    var pokemon: GetAllPokemonsWithLimitQuery.Data.Pokemon? { get set }
     func viewDidLoad()
 }
 

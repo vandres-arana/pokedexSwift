@@ -17,6 +17,9 @@ class ListPresenter {
 }
 
 extension ListPresenter: ListPresenterProtocol {
+    func showDetailView(detailView: DetailView, with data: GetAllPokemonsWithLimitQuery.Data.Pokemon) {
+        wireFrame?.presentViewDetail(from: view!, to: detailView, withData: data)
+    }
     func startfetchingPokemonList() {
         self.interactor?.fetchPokemonList()
     }

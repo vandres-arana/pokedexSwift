@@ -13,7 +13,7 @@ class DetailPresenter {
     weak var view: DetailViewProtocol?
     var interactor: DetailInteractorInputProtocol?
     var wireFrame: DetailWireFrameProtocol?
-    var pokemon: Int?
+    var pokemon: GetAllPokemonsWithLimitQuery.Data.Pokemon?
 }
 
 extension DetailPresenter: DetailPresenterProtocol {

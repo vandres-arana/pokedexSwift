@@ -20,6 +20,7 @@ protocol ListViewProtocol: AnyObject {
 protocol ListWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createListModule() -> UIViewController
+    func presentViewDetail(from view: ListViewProtocol,to detailView: DetailView, withData: GetAllPokemonsWithLimitQuery.Data.Pokemon)
 }
 
 protocol ListPresenterProtocol: AnyObject {
@@ -30,6 +31,7 @@ protocol ListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func startfetchingPokemonList()
     func fetchMorePokemons()
+    func showDetailView(detailView: DetailView, with data: GetAllPokemonsWithLimitQuery.Data.Pokemon)
 }
 
 protocol ListInteractorOutputProtocol: AnyObject {

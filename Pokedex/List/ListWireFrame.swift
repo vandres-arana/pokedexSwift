@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class ListWireFrame: ListWireFrameProtocol {
-
     class func createListModule() -> UIViewController {
         let navController = listStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.listViewStoryBoardID)
         if let view = navController as? ListView {
@@ -33,5 +32,9 @@ class ListWireFrame: ListWireFrameProtocol {
     }
     static var listStoryboard: UIStoryboard {
         return UIStoryboard(name: Constants.StoryBoard.listViewStoryBoardID, bundle: Bundle.main)
+    }
+
+    func presentViewDetail(from view: ListViewProtocol,to detailView: DetailView, withData: GetAllPokemonsWithLimitQuery.Data.Pokemon) {
+         DetailWireFrame.createDetailModule(detailview: detailView, data: withData)
     }
 }
