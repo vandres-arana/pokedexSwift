@@ -35,7 +35,7 @@ class ListWireFrame: ListWireFrameProtocol {
     static var listStoryboard: UIStoryboard {
         return UIStoryboard(name: Constants.StoryBoard.listViewStoryBoardID, bundle: Bundle.main)
     }
-    func presentFiltersMenu(from listView: ListViewProtocol) {
- 
+    func presentViewDetail(from view: ListViewProtocol,to detailView: DetailView, withData: GetAllPokemonsWithLimitQuery.Data.Pokemon) {
+         DetailWireFrame.createDetailModule(detailview: detailView, data: withData)
     }
 }

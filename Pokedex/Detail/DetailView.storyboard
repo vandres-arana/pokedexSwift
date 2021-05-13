@@ -1,8 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Detail View-->
+        <scene sceneID="YSW-jQ-om2">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="iop-7C-HgD" customClass="DetailView" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zeN-qy-Dv8">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKH-Cx-o5e">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="306"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0Z-Fh-zAy">
+                                        <rect key="frame" x="34" y="62" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="&lt;-">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="iop-7C-HgD" eventType="touchUpInside" id="b71-M0-LIx"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKu-FL-pnq">
+                                        <rect key="frame" x="132" y="108" width="165" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csE-tQ-c9p">
+                                        <rect key="frame" x="47" y="267" width="42" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="About"/>
+                                        <connections>
+                                            <action selector="showAbout:" destination="iop-7C-HgD" eventType="touchUpInside" id="1gZ-uz-uh1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAV-Uo-aHM">
+                                        <rect key="frame" x="196" y="267" width="36" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Stats"/>
+                                        <connections>
+                                            <action selector="showStats:" destination="iop-7C-HgD" eventType="touchUpInside" id="adM-N5-Tpk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO9-TY-jjW">
+                                        <rect key="frame" x="335" y="267" width="63" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Evolution"/>
+                                        <connections>
+                                            <action selector="showEvolution:" destination="iop-7C-HgD" eventType="touchUpInside" id="WIH-nH-8NJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="bug"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="428" id="9SC-W7-bTm"/>
+                                    <constraint firstAttribute="height" constant="306" id="Sqj-lL-a2q"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLJ-gn-tfh">
+                                <rect key="frame" x="0.0" y="306" width="428" height="620"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dej-58-acd">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="620"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dej-58-acd" firstAttribute="top" secondItem="TyQ-Ko-j2h" secondAttribute="top" id="7QJ-dR-f90"/>
+                                    <constraint firstAttribute="trailing" secondItem="dej-58-acd" secondAttribute="trailing" id="Gg3-LG-Tzz"/>
+                                    <constraint firstItem="dej-58-acd" firstAttribute="bottom" secondItem="TyQ-Ko-j2h" secondAttribute="bottom" id="Icf-0z-sLu"/>
+                                    <constraint firstItem="dej-58-acd" firstAttribute="trailing" secondItem="TyQ-Ko-j2h" secondAttribute="trailing" id="Q55-bD-kBv"/>
+                                    <constraint firstAttribute="bottom" secondItem="dej-58-acd" secondAttribute="bottom" id="eN3-yy-Yg0"/>
+                                    <constraint firstItem="dej-58-acd" firstAttribute="leading" secondItem="TyQ-Ko-j2h" secondAttribute="leading" id="sIz-9z-Yb6"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cL0-NI-WyF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="TyQ-Ko-j2h"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hha-75-SJl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tKH-Cx-o5e" firstAttribute="top" secondItem="zeN-qy-Dv8" secondAttribute="top" id="DAY-2h-e64"/>
+                            <constraint firstItem="tKH-Cx-o5e" firstAttribute="trailing" secondItem="hha-75-SJl" secondAttribute="trailing" id="WBP-2R-j2g"/>
+                            <constraint firstAttribute="bottom" secondItem="dLJ-gn-tfh" secondAttribute="bottom" id="WHt-6E-tTU"/>
+                            <constraint firstItem="dLJ-gn-tfh" firstAttribute="top" secondItem="tKH-Cx-o5e" secondAttribute="bottom" id="br0-2k-egT"/>
+                            <constraint firstItem="dLJ-gn-tfh" firstAttribute="leading" secondItem="hha-75-SJl" secondAttribute="leading" id="gJS-SJ-0BZ"/>
+                            <constraint firstItem="dLJ-gn-tfh" firstAttribute="trailing" secondItem="hha-75-SJl" secondAttribute="trailing" id="i8A-pI-WlQ"/>
+                            <constraint firstItem="tKH-Cx-o5e" firstAttribute="leading" secondItem="hha-75-SJl" secondAttribute="leading" id="wZc-85-p4c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="MKu-FL-pnq" id="H5T-xT-0F9"/>
+                        <outlet property="viewForPokemonData" destination="dej-58-acd" id="CLb-Sq-uEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5uS-Ta-B73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186.44859813084111" y="9.0712742980561565"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bug">
+            <color red="0.54900002479553223" green="0.69800001382827759" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
