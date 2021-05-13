@@ -11,6 +11,10 @@ import UIKit
 import PullUpController
 
 class ListWireFrame: ListWireFrameProtocol {
+    func presentFiltersMenu(from: ListViewProtocol) {
+        
+    }
+    
     class func createListModule() -> UIViewController {
         let navController = listStoryboard.instantiateViewController(withIdentifier: Constants.StoryBoard.listViewStoryBoardID)
         if let view = navController as? ListView {
