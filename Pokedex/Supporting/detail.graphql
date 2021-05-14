@@ -73,3 +73,9 @@ query getPokemonDetail($_eq: Int) {
     }
   }
 }
+query getAllPokemonsTypes {
+   type: pokemon_v2_type {
+    name
+    id
+  }
+}
