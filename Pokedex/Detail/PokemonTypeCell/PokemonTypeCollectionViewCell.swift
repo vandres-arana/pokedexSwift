@@ -14,13 +14,16 @@ class PokemonTypeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backgroundColorView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.configureView()
     }
 
-    func buildCell(image: UIImage, damage: String, backgroundColor: UIColor) {
+    func buildCell(image: UIImage, damage: Double, backgroundColor: UIColor) {
         self.typePokemonImage.image = image
-        self.damageLabel.text = damage
+        self.damageLabel.text = String(damage)
         self.backgroundColorView.backgroundColor = backgroundColor
     }
 
+    func configureView() {
+        self.backgroundColorView.layer.cornerRadius = 10
+    }
 }
