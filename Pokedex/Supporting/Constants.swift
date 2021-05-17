@@ -84,4 +84,8 @@ struct Constants {
         static let backgroundColor = "searchBar"
         static let placeholderColor = "placeholder"
     }
+    struct PokemonTypeCell {
+        static let nibName = "PokemonTypeCollectionViewCell"
+        static let reuseIdentifier = "PokemonTypeReusableCell"
+    }
 }
