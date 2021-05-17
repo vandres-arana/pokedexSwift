@@ -22,12 +22,12 @@ class DetailPresenterTest: XCTestCase {
         presenter = nil
         view = nil
     }
-    func testFetchPokemonLocation() throws {
-        presenter?.fetchSuccessPokemonLocation(evYield: "1 Speed", catchRate: "45", baseFriendship: "70", baseExperience: "90", growthRate: "medium-slow")
+    func testFetchPokemonTraining() throws {
+        presenter?.fetchSuccessPokemonTraining(evYield: "1 Speed", catchRate: "45", baseFriendship: "70", baseExperience: "90", growthRate: "medium-slow")
         XCTAssertTrue(view?.loading ?? false)
     }
     func testFetchPokemonLocationFailed() throws {
-        presenter?.fetchFailPokemonLocation()
+        presenter?.fetchFailPokemonTraining()
         XCTAssertTrue(view?.loading ?? false)
     }
 }
@@ -35,12 +35,12 @@ class DetailPresenterTest: XCTestCase {
 class MockDetailView: DetailViewProtocol {
     var presenter: DetailPresenterProtocol?
     var loading = false
-    func showPokemonLocation(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+    func showPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
         // This means that the fetch was done successfully and there is a correct communication between
         // The View and the Presenter
         self.loading = true
     }
-    func showFailPokemonLocation() {
+    func showFailPokemonTraining() {
         self.loading = true
     }
 }
