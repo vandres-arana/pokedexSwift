@@ -24,6 +24,6 @@ class PokemonTypeCollectionViewCell: UICollectionViewCell {
     }
 
     func configureView() {
-        self.backgroundColorView.layer.cornerRadius = 10
+        self.backgroundColorView.layer.cornerRadius = 3
     }
 }

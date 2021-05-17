@@ -52,6 +52,6 @@ protocol DetailRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
 }
 
-protocol DetailLocalDataManagerInputProtocol: class {
+protocol DetailLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
 }
