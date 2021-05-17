@@ -14,9 +14,17 @@ class DetailInteractor: DetailInteractorInputProtocol {
     weak var presenter: DetailInteractorOutputProtocol?
     var localDatamanager: DetailLocalDataManagerInputProtocol?
     var remoteDatamanager: DetailRemoteDataManagerInputProtocol?
-
+    func fetchPokemonTraining(pokemonId: Int) {
+        remoteDatamanager?.fetchPokemonTraining(pokemonId: pokemonId)
+    }
 }
 
 extension DetailInteractor: DetailRemoteDataManagerOutputProtocol {
+    func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+        presenter?.fetchSuccessPokemonTraining(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate)
+    }
+    func fetchFailPokemonTraining() {
+        presenter?.fetchFailPokemonTraining()
+    }
     // TODOs: Implement use case methods
 }

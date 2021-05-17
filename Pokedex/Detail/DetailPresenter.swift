@@ -17,11 +17,20 @@ class DetailPresenter {
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
-    // TODOs: implement presenter methods
     func viewDidLoad() {
+    }
+    func fetchPokemonTraining() {
+        if let safeId = pokemon?.id {
+            interactor?.fetchPokemonTraining(pokemonId: safeId)
+        }
     }
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {
-    // TODOs: implement interactor output methods
+    func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+        view?.showPokemonTraining(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate)
+    }
+    func fetchFailPokemonTraining() {
+        view?.showFailPokemonTraining()
+    }
 }

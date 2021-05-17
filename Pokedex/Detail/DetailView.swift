@@ -14,14 +14,23 @@ class DetailView: UIViewController {
     // MARK: Properties
     var presenter: DetailPresenterProtocol?
     var textViewExample: UITextView = UITextView()
+    var pokemonTraining = [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemon.PokemonV2Pokemonstat]()
     @IBOutlet weak var viewForPokemonData: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var evYieldLabel: UILabel!
+    @IBOutlet weak var catchRateLabel: UILabel!
+    @IBOutlet weak var baseFriendshipLabel: UILabel!
+    @IBOutlet weak var baseExpLabel: UILabel!
+    @IBOutlet weak var growthRateLabel: UILabel!
+    @IBOutlet weak var trainingLabel: UILabel!
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         label.text = presenter?.pokemon?.name
+        trainingLabel.textColor = UIColor(named: (presenter?.pokemon?.getTypesList()[0])!)
+        presenter?.fetchPokemonTraining()
         textViewExample = UITextView(frame: CGRect(x: 20.0, y: 90.0, width: 250.0, height: 100.0))
         textViewExample.contentInsetAdjustmentBehavior = .automatic
         textViewExample.center = viewForPokemonData.center
@@ -48,5 +57,18 @@ class DetailView: UIViewController {
 }
 
 extension DetailView: DetailViewProtocol {
-    // TODOs: implement view output methods
+    func showPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+        let temp = evYield.camelizedDash
+        self.evYieldLabel.text = temp.camelized
+        self.catchRateLabel.text = catchRate
+        self.baseFriendshipLabel.text = baseFriendship
+        self.baseExpLabel.text = baseExperience
+        self.growthRateLabel.text = growthRate.camelizedDash
+    }
+    func showFailPokemonTraining() {
+        let alert = UIAlertController(title: "Pokemon Training Error", message: "Could not fetch pokemon training", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "dismiss", style: .default, handler: nil)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+    }
 }

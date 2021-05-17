@@ -11,6 +11,7 @@ import Apollo
 
 class ListRemoteDataManager:ListRemoteDataManagerInputProtocol {
     var limit = 20
+    var remoteRequestHandler: ListRemoteDataManagerOutputProtocol?
     func fethPokemonList() {
         PokeApiService.shared.apollo.fetch(query: GetAllPokemonsWithLimitQuery(limit: limit)) { (result) in
             switch result {
@@ -34,5 +35,4 @@ class ListRemoteDataManager:ListRemoteDataManagerInputProtocol {
             }
         }
     }
-    var remoteRequestHandler: ListRemoteDataManagerOutputProtocol?
 }
