@@ -30,7 +30,7 @@ class DetailView: UIViewController {
         presenter?.viewDidLoad()
         label.text = presenter?.pokemon?.name
         trainingLabel.textColor = UIColor(named: (presenter?.pokemon?.getTypesList()[0])!)
-        presenter?.fetchPokemonLocation()
+        presenter?.fetchPokemonTraining()
         textViewExample = UITextView(frame: CGRect(x: 20.0, y: 90.0, width: 250.0, height: 100.0))
         textViewExample.contentInsetAdjustmentBehavior = .automatic
         textViewExample.center = viewForPokemonData.center
@@ -57,7 +57,7 @@ class DetailView: UIViewController {
 }
 
 extension DetailView: DetailViewProtocol {
-    func showPokemonLocation(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+    func showPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
         let temp = evYield.camelizedDash
         self.evYieldLabel.text = temp.camelized
         self.catchRateLabel.text = catchRate
@@ -65,8 +65,8 @@ extension DetailView: DetailViewProtocol {
         self.baseExpLabel.text = baseExperience
         self.growthRateLabel.text = growthRate.camelizedDash
     }
-    func showFailPokemonLocation() {
-        let alert = UIAlertController(title: "Pokemon Location Error", message: "Could not fetch pokemon location", preferredStyle: .alert)
+    func showFailPokemonTraining() {
+        let alert = UIAlertController(title: "Pokemon Training Error", message: "Could not fetch pokemon training", preferredStyle: .alert)
         let cancel = UIAlertAction(title: "dismiss", style: .default, handler: nil)
         alert.addAction(cancel)
         self.present(alert, animated: true, completion: nil)

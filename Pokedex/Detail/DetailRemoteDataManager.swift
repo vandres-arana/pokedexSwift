@@ -20,12 +20,14 @@ class DetailRemoteDataManager:DetailRemoteDataManagerInputProtocol {
                     guard let baseFiendship = data[0].baseHappiness else {return}
                     guard let catchRate = data[0].captureRate else {return}
                     let evYield = self.getEvYield(pokemonStats: data[0].pokemonV2Pokemons[0].pokemonV2Pokemonstats)
-                    self.remoteRequestHandler?.fetchSuccessPokemonLocation(evYield: String(evYield), catchRate: String(catchRate), baseFriendship: String(baseFiendship), baseExperience: String(baseExperience), growthRate: String(growthRate))
+                    self.remoteRequestHandler?.fetchSuccessPokemonTraining(evYield: String(evYield),
+                                                                           catchRate: String(catchRate),
+                                                                           baseFriendship: String(baseFiendship),
+                                                                           baseExperience: String(baseExperience),
+                                                                           growthRate: String(growthRate))
                 }
             case .failure(let error):
-                print("failed to bring the training data")
-                print(error)
-                self.remoteRequestHandler?.fetchFailPokemonLocation()
+                self.remoteRequestHandler?.fetchFailPokemonTraining()
             }
         }
     }

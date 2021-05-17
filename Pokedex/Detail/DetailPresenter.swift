@@ -19,18 +19,18 @@ class DetailPresenter {
 extension DetailPresenter: DetailPresenterProtocol {
     func viewDidLoad() {
     }
-    func fetchPokemonLocation() {
+    func fetchPokemonTraining() {
         if let safeId = pokemon?.id {
-            interactor?.fetchPokemonLocation(pokemonId: safeId)
+            interactor?.fetchPokemonTraining(pokemonId: safeId)
         }
     }
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {
-    func fetchSuccessPokemonLocation(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
-        view?.showPokemonLocation(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate)
+    func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+        view?.showPokemonTraining(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate)
     }
-    func fetchFailPokemonLocation() {
-        view?.showFailPokemonLocation()
+    func fetchFailPokemonTraining() {
+        view?.showFailPokemonTraining()
     }
 }

@@ -106,7 +106,6 @@ extension ListView: UITableViewDelegate, UITableViewDataSource {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedPath = tableView.indexPathForSelectedRow else { return }
-        print(selectedPath)
         if segue.destination is DetailView {
             if let safeDetailView = segue.destination as? DetailView {
                 presenter?.showDetailView(detailView: safeDetailView, with: self.data[selectedPath.row])
