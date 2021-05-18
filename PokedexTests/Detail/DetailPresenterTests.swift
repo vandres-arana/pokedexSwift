@@ -1,14 +1,14 @@
 //
-// DetailPresenterTest.swift
+// DetailPresenterTests.swift
 // PokedexTests
-// Created by Christian Torrico Avila on 5/16/21.
+// Created by Christian Torrico Avila on 5/18/21.
 // @locoto
 //
 
 import XCTest
 @testable import Pokedex
 
-class DetailPresenterTest: XCTestCase {
+class DetailPresenterTests: XCTestCase {
 
     var presenter: DetailPresenter?
     var view: MockDetailView?
@@ -17,19 +17,27 @@ class DetailPresenterTest: XCTestCase {
         view = MockDetailView()
         presenter?.view = self.view
     }
-
     override func tearDownWithError() throws {
         presenter = nil
         view = nil
     }
     func testFetchPokemonTraining() throws {
-        presenter?.fetchSuccessPokemonTraining(evYield: "1 Speed", catchRate: "45", baseFriendship: "70", baseExperience: "90", growthRate: "medium-slow")
+        presenter?.fetchSuccessPokemonTraining(evYield: "bulbasaur", catchRate: "45", baseFriendship: "70", baseExperience: "70", growthRate: "12")
+        XCTAssertTrue(view?.loading ?? false)
+    }
+    func testFetchPokemonTrainingFailed() throws {
+        presenter?.fetchFailPokemonTraining()
+        XCTAssertTrue(view?.loading ?? false)
+    }
+    func testFetchPokemonLocation() throws {
+        presenter?.fetchSuccessPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber]())
         XCTAssertTrue(view?.loading ?? false)
     }
     func testFetchPokemonLocationFailed() throws {
         presenter?.fetchFailPokemonTraining()
         XCTAssertTrue(view?.loading ?? false)
     }
+
 }
 
 class MockDetailView: DetailViewProtocol {
@@ -41,6 +49,12 @@ class MockDetailView: DetailViewProtocol {
         self.loading = true
     }
     func showFailPokemonTraining() {
+        self.loading = true
+    }
+    func showPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber]) {
+        self.loading = true
+    }
+    func showFailPokemonLocation() {
         self.loading = true
     }
 }
