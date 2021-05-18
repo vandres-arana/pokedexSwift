@@ -65,6 +65,6 @@ protocol DetailRemoteDataManagerOutputProtocol: AnyObject {
     func fetchFailPokemonTraining()
 }
 
-protocol DetailLocalDataManagerInputProtocol: class {
+protocol DetailLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
 }

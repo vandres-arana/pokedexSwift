@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatsView" customModule="Pokedex" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="gV0-pw-evt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="581"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-xU-iwr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="581"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4P-bk-93c">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="741"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g07-ei-Wgg">
+                                    <rect key="frame" x="187" y="484" width="40" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="741" id="S1h-vJ-x46"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="B4P-bk-93c" firstAttribute="width" secondItem="Ef6-xU-iwr" secondAttribute="width" id="B0l-bk-Nwl"/>
+                        <constraint firstItem="B4P-bk-93c" firstAttribute="leading" secondItem="Ef6-xU-iwr" secondAttribute="leading" id="Wqu-yT-2OG"/>
+                        <constraint firstItem="B4P-bk-93c" firstAttribute="top" secondItem="Ef6-xU-iwr" secondAttribute="top" id="eTv-1S-2CU"/>
+                        <constraint firstAttribute="bottom" secondItem="B4P-bk-93c" secondAttribute="bottom" id="gqa-Pz-LI1"/>
+                        <constraint firstItem="B4P-bk-93c" firstAttribute="height" secondItem="Ef6-xU-iwr" secondAttribute="height" priority="250" id="rxd-5b-uue"/>
+                        <constraint firstAttribute="trailing" secondItem="B4P-bk-93c" secondAttribute="trailing" id="xXx-lZ-3t2"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ef6-xU-iwr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YVW-3y-EMA"/>
+                <constraint firstItem="Ef6-xU-iwr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jko-c1-qpt"/>
+                <constraint firstItem="Ef6-xU-iwr" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="x7F-ko-T5I"/>
+                <constraint firstItem="Ef6-xU-iwr" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="yQa-it-2l1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="107.47767857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
