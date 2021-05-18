@@ -17,14 +17,22 @@ class DetailInteractor: DetailInteractorInputProtocol {
     func fetchPokemonTraining(pokemonId: Int) {
         remoteDatamanager?.fetchPokemonTraining(pokemonId: pokemonId)
     }
+    func fetchPokemonLocation(pokemonId: Int) {
+        remoteDatamanager?.fetchPokemonLocation(pokemonId: pokemonId)
+    }
 }
 
 extension DetailInteractor: DetailRemoteDataManagerOutputProtocol {
+    func fetchSuccessPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber]) {
+        presenter?.fetchSuccessPokemonLocation(pokemonLocations: pokemonLocations)
+    }
+    func fetchFailPokemonLocation() {
+        presenter?.fetchFailPokemonLocation()
+    }
     func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
         presenter?.fetchSuccessPokemonTraining(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate)
     }
     func fetchFailPokemonTraining() {
         presenter?.fetchFailPokemonTraining()
     }
-    // TODOs: Implement use case methods
 }

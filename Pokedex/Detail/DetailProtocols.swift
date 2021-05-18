@@ -14,6 +14,8 @@ protocol DetailViewProtocol: AnyObject {
     var presenter: DetailPresenterProtocol? { get set }
     func showPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String,growthRate: String)
     func showFailPokemonTraining()
+    func showPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber])
+    func showFailPokemonLocation()
 }
 
 protocol DetailWireFrameProtocol: AnyObject {
@@ -28,6 +30,7 @@ protocol DetailPresenterProtocol: AnyObject {
     var wireFrame: DetailWireFrameProtocol? { get set }
     var pokemon: GetAllPokemonsWithLimitQuery.Data.Pokemon? { get set }
     func fetchPokemonTraining()
+    func fetchPokemonLocation()
     func viewDidLoad()
 }
 
@@ -35,6 +38,8 @@ protocol DetailInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
     func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String,growthRate: String)
     func fetchFailPokemonTraining()
+    func fetchSuccessPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber])
+    func fetchFailPokemonLocation()
 }
 
 protocol DetailInteractorInputProtocol: AnyObject {
@@ -43,6 +48,7 @@ protocol DetailInteractorInputProtocol: AnyObject {
     var localDatamanager: DetailLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: DetailRemoteDataManagerInputProtocol? { get set }
     func fetchPokemonTraining(pokemonId: Int)
+    func fetchPokemonLocation(pokemonId: Int)
 }
 
 protocol DetailDataManagerInputProtocol: AnyObject {
@@ -54,6 +60,7 @@ protocol DetailRemoteDataManagerInputProtocol: AnyObject {
     var remoteRequestHandler: DetailRemoteDataManagerOutputProtocol? { get set }
     /// You will fetch all pokemon training by pokemon ID
     func fetchPokemonTraining(pokemonId: Int)
+    func fetchPokemonLocation(pokemonId: Int)
 }
 
 protocol DetailRemoteDataManagerOutputProtocol: AnyObject {
@@ -63,6 +70,8 @@ protocol DetailRemoteDataManagerOutputProtocol: AnyObject {
     func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String,growthRate: String)
     /// Something wrong happened when retrieving the pokemon training
     func fetchFailPokemonTraining()
+    func fetchSuccessPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber])
+    func fetchFailPokemonLocation()
 }
 
 protocol DetailLocalDataManagerInputProtocol: AnyObject {

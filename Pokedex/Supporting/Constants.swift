@@ -93,4 +93,7 @@ struct Constants {
         static let statsView = "StatsView"
         static let evolutionView = "EvolutionView"
     }
+    struct PokemonFontFamily {
+        static let fontName = "SF Pro Display"
+    }
 }
