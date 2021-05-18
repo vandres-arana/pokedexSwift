@@ -45,12 +45,12 @@
 		69F76EBD263203ED00420B32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F76EBC263203ED00420B32 /* SceneDelegate.swift */; };
 		69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC3263203EF00420B32 /* Assets.xcassets */; };
 		69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69F76EC5263203EF00420B32 /* LaunchScreen.storyboard */; };
-		69F77AAB2652BCA700102631 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F77AAA2652BCA700102631 /* About.xib */; };
-		69F77AAD2652BCBB00102631 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F77AAC2652BCBB00102631 /* About.swift */; };
-		69F77AB12653002A00102631 /* Stats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F77AB02653002A00102631 /* Stats.xib */; };
-		69F77AB32653003B00102631 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F77AB22653003B00102631 /* Stats.swift */; };
-		69F77AB52653005300102631 /* Evolution.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F77AB42653005300102631 /* Evolution.xib */; };
-		69F77AB72653006500102631 /* Evolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F77AB62653006500102631 /* Evolution.swift */; };
+		69F77AAB2652BCA700102631 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F77AAA2652BCA700102631 /* AboutView.xib */; };
+		69F77AAD2652BCBB00102631 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F77AAC2652BCBB00102631 /* AboutView.swift */; };
+		69F77AB12653002A00102631 /* StatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F77AB02653002A00102631 /* StatsView.xib */; };
+		69F77AB32653003B00102631 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F77AB22653003B00102631 /* StatsView.swift */; };
+		69F77AB52653005300102631 /* EvolutionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F77AB42653005300102631 /* EvolutionView.xib */; };
+		69F77AB72653006500102631 /* EvolutionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F77AB62653006500102631 /* EvolutionView.swift */; };
 		69FBD5BC263BC38700397E62 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		79A6C7FD4DD0BC8B715F9998 /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4507A8BE8607F8930361447 /* Pods_Pokedex.framework */; };
 		7E1B9A1E263BA7C4006B42B3 /* sf-pro-display-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B9A1B263BA7C1006B42B3 /* sf-pro-display-bold.ttf */; };
@@ -145,12 +145,12 @@
 		69F76EC3263203EF00420B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69F76EC6263203EF00420B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69F76EC8263203EF00420B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69F77AAA2652BCA700102631 /* About.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
-		69F77AAC2652BCBB00102631 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		69F77AB02653002A00102631 /* Stats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Stats.xib; sourceTree = "<group>"; };
-		69F77AB22653003B00102631 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
-		69F77AB42653005300102631 /* Evolution.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Evolution.xib; sourceTree = "<group>"; };
-		69F77AB62653006500102631 /* Evolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evolution.swift; sourceTree = "<group>"; };
+		69F77AAA2652BCA700102631 /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		69F77AAC2652BCBB00102631 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		69F77AB02653002A00102631 /* StatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsView.xib; sourceTree = "<group>"; };
+		69F77AB22653003B00102631 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		69F77AB42653005300102631 /* EvolutionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvolutionView.xib; sourceTree = "<group>"; };
+		69F77AB62653006500102631 /* EvolutionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionView.swift; sourceTree = "<group>"; };
 		7E1B9A1B263BA7C1006B42B3 /* sf-pro-display-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-bold.ttf"; sourceTree = "<group>"; };
 		7E1B9A1C263BA7C1006B42B3 /* sf-pro-display-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-regular.ttf"; sourceTree = "<group>"; };
 		7E1B9A1D263BA7C1006B42B3 /* sf-pro-display-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-display-medium.ttf"; sourceTree = "<group>"; };
@@ -291,9 +291,9 @@
 		69E96D3026324A3B0048E6B4 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				69F77AAF2653001B00102631 /* Evolution */,
-				69F77AAE2653001600102631 /* Stats */,
-				69F77AA92652BC9900102631 /* About */,
+				69F77AAF2653001B00102631 /* EvolutionView */,
+				69F77AAE2653001600102631 /* StatsView */,
+				69F77AA92652BC9900102631 /* AboutView */,
 				69B4D5E8264EB05A0026D9A4 /* PokemonTypeCell */,
 				69E96D3126324A480048E6B4 /* DetailPresenter.swift */,
 				69E96D3226324A480048E6B4 /* DetailLocalDataManager.swift */,
@@ -358,31 +358,31 @@
 			path = Pokedex;
 			sourceTree = "<group>";
 		};
-		69F77AA92652BC9900102631 /* About */ = {
+		69F77AA92652BC9900102631 /* AboutView */ = {
 			isa = PBXGroup;
 			children = (
-				69F77AAA2652BCA700102631 /* About.xib */,
-				69F77AAC2652BCBB00102631 /* About.swift */,
+				69F77AAA2652BCA700102631 /* AboutView.xib */,
+				69F77AAC2652BCBB00102631 /* AboutView.swift */,
 			);
-			path = About;
+			path = AboutView;
 			sourceTree = "<group>";
 		};
-		69F77AAE2653001600102631 /* Stats */ = {
+		69F77AAE2653001600102631 /* StatsView */ = {
 			isa = PBXGroup;
 			children = (
-				69F77AB02653002A00102631 /* Stats.xib */,
-				69F77AB22653003B00102631 /* Stats.swift */,
+				69F77AB02653002A00102631 /* StatsView.xib */,
+				69F77AB22653003B00102631 /* StatsView.swift */,
 			);
-			path = Stats;
+			path = StatsView;
 			sourceTree = "<group>";
 		};
-		69F77AAF2653001B00102631 /* Evolution */ = {
+		69F77AAF2653001B00102631 /* EvolutionView */ = {
 			isa = PBXGroup;
 			children = (
-				69F77AB42653005300102631 /* Evolution.xib */,
-				69F77AB62653006500102631 /* Evolution.swift */,
+				69F77AB42653005300102631 /* EvolutionView.xib */,
+				69F77AB62653006500102631 /* EvolutionView.swift */,
 			);
-			path = Evolution;
+			path = EvolutionView;
 			sourceTree = "<group>";
 		};
 		7E1B9A1A263BA773006B42B3 /* Fonts */ = {
@@ -642,14 +642,14 @@
 				69B4D5EC264EB09C0026D9A4 /* PokemonTypeCollectionViewCell.xib in Resources */,
 				69976DB22642C8B30023933D /* GenerationCollectionViewCell.xib in Resources */,
 				69F76EC7263203EF00420B32 /* LaunchScreen.storyboard in Resources */,
-				69F77AAB2652BCA700102631 /* About.xib in Resources */,
+				69F77AAB2652BCA700102631 /* AboutView.xib in Resources */,
 				69976DB62642C8B30023933D /* GenerationsView.storyboard in Resources */,
 				7EA11CDD2636566100D5E7F2 /* list.graphql in Resources */,
 				69FBD5BC263BC38700397E62 /* (null) in Resources */,
 				7EC885AB263712670065CA92 /* detail.graphql in Resources */,
 				7E1B9A20263BA7C9006B42B3 /* sf-pro-display-regular.ttf in Resources */,
 				7E2B81E4263AE28F00E39D0F /* FiltersMenuView.storyboard in Resources */,
-				69F77AB52653005300102631 /* Evolution.xib in Resources */,
+				69F77AB52653005300102631 /* EvolutionView.xib in Resources */,
 				69E96D4126324C180048E6B4 /* ListView.storyboard in Resources */,
 				7E1B9A1E263BA7C4006B42B3 /* sf-pro-display-bold.ttf in Resources */,
 				CEADAF7B26402CCC00174F9B /* SortMenuViewController.storyboard in Resources */,
@@ -657,7 +657,7 @@
 				7ECF7C6F263A115D00EB63F9 /* FiltersMenuCollectionCell.xib in Resources */,
 				7EA12C9526363AAD0094951E /* schema.json in Resources */,
 				CEAEDD64263C281B00D8C9F2 /* CustomPokemonTableViewCell.xib in Resources */,
-				69F77AB12653002A00102631 /* Stats.xib in Resources */,
+				69F77AB12653002A00102631 /* StatsView.xib in Resources */,
 				7E1B9A1F263BA7C6006B42B3 /* sf-pro-display-medium.ttf in Resources */,
 				69F76EC4263203EF00420B32 /* Assets.xcassets in Resources */,
 			);
@@ -774,11 +774,11 @@
 				7E1B9A25263D7821006B42B3 /* CollectionFilter.swift in Sources */,
 				CEA2FC25264455C4003F4623 /* API.swift in Sources */,
 				69976DB42642C8B30023933D /* GenerationsPresenter.swift in Sources */,
-				69F77AAD2652BCBB00102631 /* About.swift in Sources */,
-				69F77AB32653003B00102631 /* Stats.swift in Sources */,
+				69F77AAD2652BCBB00102631 /* AboutView.swift in Sources */,
+				69F77AB32653003B00102631 /* StatsView.swift in Sources */,
 				7E2B81CC263A8C2D00E39D0F /* Filter.swift in Sources */,
 				7E2B81E0263AE27D00E39D0F /* FiltersMenuView.swift in Sources */,
-				69F77AB72653006500102631 /* Evolution.swift in Sources */,
+				69F77AB72653006500102631 /* EvolutionView.swift in Sources */,
 				69976DB52642C8B30023933D /* GenerationsProtocols.swift in Sources */,
 				69976DB12642C8B30023933D /* GenerationsRemoteDataManager.swift in Sources */,
 				69E96D3826324A480048E6B4 /* DetailPresenter.swift in Sources */,
