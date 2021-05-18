@@ -9,6 +9,19 @@ import Foundation
 import Apollo
 
 class DetailRemoteDataManager:DetailRemoteDataManagerInputProtocol {
+    func fetchPokemonLocation(pokemonId: Int) {
+        PokeApiService.shared.apollo.fetch(query: GetPokemonDetailQuery(_eq: pokemonId)) { result in
+            switch result {
+            case .success(let graphQLResult):
+                if let data = graphQLResult.data?.pokemonV2Pokemonspecies.compactMap({$0}) {
+                    self.remoteRequestHandler?.fetchSuccessPokemonLocation(pokemonLocations: data[0].pokemonV2Pokemondexnumbers)
+                }
+            case .failure(let error):
+                self.remoteRequestHandler?.fetchFailPokemonLocation()
+            }
+        }
+    }
+    
     var remoteRequestHandler: DetailRemoteDataManagerOutputProtocol?
     func fetchPokemonTraining(pokemonId: Int) {
         PokeApiService.shared.apollo.fetch(query: GetPokemonDetailQuery(_eq: pokemonId)) { result in

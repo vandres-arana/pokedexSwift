@@ -17,16 +17,27 @@ class DetailPresenter {
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
+    func fetchPokemonLocation() {
+        if let safePokemonId = pokemon?.id {
+            interactor?.fetchPokemonLocation(pokemonId: safePokemonId)
+        }
+    }
     func viewDidLoad() {
     }
     func fetchPokemonTraining() {
-        if let safeId = pokemon?.id {
-            interactor?.fetchPokemonTraining(pokemonId: safeId)
+        if let safePokemonId = pokemon?.id {
+            interactor?.fetchPokemonTraining(pokemonId: safePokemonId)
         }
     }
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {
+    func fetchSuccessPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber]) {
+        view?.showPokemonLocation(pokemonLocations: pokemonLocations)
+    }
+    func fetchFailPokemonLocation() {
+        view?.showFailPokemonLocation()
+    }
     func fetchSuccessPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
         view?.showPokemonTraining(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate)
     }

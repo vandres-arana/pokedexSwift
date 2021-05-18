@@ -32,6 +32,7 @@ class DetailView: UIViewController {
         super.viewDidLoad()
         presenter?.viewDidLoad()
         presenter?.fetchPokemonTraining()
+        presenter?.fetchPokemonLocation()
         resetButtons()
     }
     func resetButtons() {
@@ -72,8 +73,22 @@ class DetailView: UIViewController {
 }
 
 extension DetailView: DetailViewProtocol {
+    func showPokemonLocation(pokemonLocations: [GetPokemonDetailQuery.Data.PokemonV2Pokemonspecy.PokemonV2Pokemondexnumber]) {
+        self.viewAbout.showPokemonLocation(pokemonLocations: pokemonLocations)
+    }
+    func showFailPokemonLocation() {
+        let alert = UIAlertController(title: "Pokemon Location Failed", message: "please, check your internet connection", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
     func showPokemonTraining(evYield: String, catchRate: String, baseFriendship: String, baseExperience: String, growthRate: String) {
+        self.viewAbout.showPokemonTraining(evYield: evYield, catchRate: catchRate, baseFriendship: baseFriendship, baseExperience: baseExperience, growthRate: growthRate, trainingTextColor: presenter?.pokemon?.getTypesList()[0] ?? "black")
     }
     func showFailPokemonTraining() {
+        let alert = UIAlertController(title: "Pokemon Training Failed", message: "please, check your internet connection", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
     }
 }
