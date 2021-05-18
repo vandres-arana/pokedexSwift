@@ -18,7 +18,7 @@ class AboutView: UIView {
         initSubviews()
     }
     func initSubviews() {
-        Bundle.main.loadNibNamed("AboutView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(Constants.DetailViewContent.aboutView, owner: self, options: nil)
         guard let content = contentView else { return }
         content.frame = self.bounds
         content.autoresizingMask = [.flexibleHeight, .flexibleWidth]

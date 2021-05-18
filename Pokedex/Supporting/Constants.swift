@@ -88,4 +88,9 @@ struct Constants {
         static let nibName = "PokemonTypeCollectionViewCell"
         static let reuseIdentifier = "PokemonTypeReusableCell"
     }
+    struct DetailViewContent {
+        static let aboutView = "AboutView"
+        static let statsView = "StatsView"
+        static let evolutionView = "EvolutionView"
+    }
 }

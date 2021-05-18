@@ -19,7 +19,7 @@ class EvolutionView: UIView {
         initSubviews()
     }
     func initSubviews() {
-        Bundle.main.loadNibNamed("EvolutionView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(Constants.DetailViewContent.evolutionView, owner: self, options: nil)
         guard let content = contentView else { return }
         content.frame = self.bounds
         content.autoresizingMask = [.flexibleHeight, .flexibleWidth]

@@ -18,7 +18,7 @@ class StatsView: UIView {
         initSubviews()
     }
     func initSubviews() {
-        Bundle.main.loadNibNamed("StatsView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(Constants.DetailViewContent.statsView, owner: self, options: nil)
         guard let content = contentView else { return }
         content.frame = self.bounds
         content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
